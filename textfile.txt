@@ -1,0 +1,25 @@
+次のステップ（優先順）
+1. GitHub Secrets に認証情報を登録
+GitHub リポジトリ → Settings → Secrets and variables → Actions で以下を追加：
+
+FOOTBALL_DATA_TOKEN — football-data.org の API トークン
+AWS_ACCESS_KEY_ID — 作成した IAM ユーザーのアクセスキー
+AWS_SECRET_ACCESS_KEY — シークレットキー
+2. update-schedule.yml を修正
+現在のワークフローは OIDC（IAM ロール）を前提としていますが、アクセスキーベースに変更が必要です。
+
+修正すべき箇所：
+
+29行目: node fetch-schedule.mjs → npx tsx scripts/fetch-schedule.ts
+AWS認証部分: OIDC から アクセスキーベース認証に変更
+S3 同期: 実際の S3 バケット名に変更
+CloudFront無効化: CloudFront ディストリビューション ID に変更
+修正していいですか？以下の情報があれば設定を完成させられます：
+
+S3 バケット名 （例: my-sports-calendar-bucket）
+CloudFront ディストリビューション ID（未作成なら、これを先に作成する必要があります）
+AWS リージョン （例: ap-northeast-1）
+3. CloudFront ディストリビューション作成（未作成なら）
+S3 バケットをオリジンとして CloudFront を設定してキャッシュを配信
+
+→ まずは上記 3 つの値を教えてもらえますか？それで更新できます！

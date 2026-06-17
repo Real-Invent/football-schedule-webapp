@@ -1,0 +1,49 @@
+name: Update Schedule
+
+# 毎朝6時(JST)に自動実行。手動実行(workflow_dispatch)も可能。
+on:
+  schedule:
+    - cron: "0 21 * * *"   # UTC 21:00 = JST 06:00
+  workflow_dispatch:
+
+permissions:
+  id-token: write   # OIDCで身分証明（アクセスキー不要）
+  contents: read
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 日程を取得して events.json を生成
+        env:
+          # APIキーはGitHubのSecretsに登録（コードに直書きしない）
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+        run: |
+          mkdir -p public/data
+          node fetch-schedule.mjs
+
+      - name: サイトをビルド
+        run: |
+          npm ci
+          npm run build
+
+      - name: AWSにログイン（キー不要・OIDC）
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::123456789012:role/blog-deploy-role
+          aws-region: ap-northeast-1
+
+      - name: S3へデプロイ
+        run: aws s3 sync ./dist s3://my-sports-calendar --delete
+
+      - name: CloudFrontのキャッシュを更新
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id XXXXXXXXXXXX \
+            --paths "/*"
