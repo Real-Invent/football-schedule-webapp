@@ -166,7 +166,9 @@ async function main() {
     process.exit(1);
   }
 
+  const today = new Date().toISOString().slice(0, 10);
   const events = all
+    .filter((e: Event) => e.date >= today)
     .map(({ _competition, ...rest }: any) => rest)
     .sort((a: Event, b: Event) =>
       (a.date + a.time).localeCompare(b.date + b.time)

@@ -16,6 +16,7 @@ export function SportsCalendar() {
     filtered,
     groups,
     activeFilterCount,
+    isOngoing,
     toggleLeague,
     toggleCast,
     setQuery,
@@ -41,13 +42,15 @@ export function SportsCalendar() {
           style={{ background: "#0B1020" }}
         >
           <div className="flex items-center gap-2 mb-3">
-            <span
-              className="inline-flex items-center gap-1.5 text-[11px] font-bold px-2 py-0.5 rounded-full"
-              style={{ background: "#1FE0A0", color: "#0B1020" }}
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse" />
-              開催中
-            </span>
+            {isOngoing && (
+              <span
+                className="inline-flex items-center gap-1.5 text-[11px] font-bold px-2 py-0.5 rounded-full"
+                style={{ background: "#1FE0A0", color: "#0B1020" }}
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse" />
+                開催中
+              </span>
+            )}
             <span className="text-[11px] tracking-widest text-slate-400 font-semibold">
               観戦カレンダー
             </span>

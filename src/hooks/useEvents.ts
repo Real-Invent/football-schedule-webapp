@@ -37,6 +37,21 @@ export function useEvents() {
     }
   }, [favorites]);
 
+  // 開催中の試合を判定（現在時刻とイベント時刻を毎回比較）
+  const isOngoingNow = useMemo(() => {
+    const now = new Date();
+    const jstNow = new Date(now.getTime() + 9 * 60 * 60 * 1000);
+    const jstDateStr = `${jstNow.getUTCFullYear()}-${String(jstNow.getUTCMonth() + 1).padStart(2, "0")}-${String(jstNow.getUTCDate()).padStart(2, "0")}`;
+    const currentMinutes = jstNow.getUTCHours() * 60 + jstNow.getUTCMinutes();
+
+    return events.some((e) => {
+      if (e.date !== jstDateStr) return false;
+      const [h, m] = e.time.split(":").map(Number);
+      const eventStartMinutes = h * 60 + m;
+      return currentMinutes >= eventStartMinutes && currentMinutes < eventStartMinutes + 105;
+    });
+  }, [events]);
+
   const toggle = (setter: React.Dispatch<React.SetStateAction<Set<string>>>) => (key: string) =>
     setter((prev) => {
       const next = new Set(prev);
@@ -106,6 +121,7 @@ export function useEvents() {
     filtered,
     groups,
     activeFilterCount,
+    isOngoing: isOngoingNow,
     toggleLeague,
     toggleCast,
     setQuery,

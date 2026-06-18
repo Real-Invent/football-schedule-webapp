@@ -1,49 +1,49 @@
-name: Update Schedule
+name: Update Sports Schedule
 
-# 毎朝6時(JST)に自動実行。手動実行(workflow_dispatch)も可能。
 on:
   schedule:
-    - cron: "0 21 * * *"   # UTC 21:00 = JST 06:00
-  workflow_dispatch:
-
-permissions:
-  id-token: write   # OIDCで身分証明（アクセスキー不要）
-  contents: read
+    # 毎日 UTC 21:00 実行（JST 06:00 = 日本時間の朝6時）
+    - cron: "0 21 * * *"
+  workflow_dispatch:  # 手動実行も可能
 
 jobs:
   update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Node.js をセットアップ
+        uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: "20"
 
-      - name: 日程を取得して events.json を生成
+      - name: 依存関係をインストール
+        run: npm ci
+
+      - name: 日程データを API から取得
         env:
-          # APIキーはGitHubのSecretsに登録（コードに直書きしない）
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+        run: npx tsx scripts/fetch-schedule.ts
+
+      - name: TypeScript コンパイル＆ Vite ビルド
+        run: npm run build
+
+      - name: S3 にアップロード
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ap-southeast-2
         run: |
-          mkdir -p public/data
-          node fetch-schedule.mjs
-
-      - name: サイトをビルド
-        run: |
-          npm ci
-          npm run build
-
-      - name: AWSにログイン（キー不要・OIDC）
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          role-to-assume: arn:aws:iam::123456789012:role/blog-deploy-role
-          aws-region: ap-northeast-1
-
-      - name: S3へデプロイ
-        run: aws s3 sync ./dist s3://my-sports-calendar --delete
-
-      - name: CloudFrontのキャッシュを更新
+          aws s3 sync ./dist s3://jleague-events-data --delete
+      - name: CloudFront キャッシュを無効化
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ap-southeast-2
         run: |
           aws cloudfront create-invalidation \
-            --distribution-id XXXXXXXXXXXX \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
             --paths "/*"
