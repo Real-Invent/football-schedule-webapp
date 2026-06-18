@@ -31,9 +31,10 @@ export function useEvents() {
 
   // favorites が変更されたら localStorage に保存
   useEffect(() => {
-    if (favorites && favorites.size > 0) {
+    if (favorites.size > 0) {
       localStorage.setItem("favorites", JSON.stringify([...favorites]));
-      console.log('これは変更されたら保存される関数です', favorites);
+    } else {
+      localStorage.removeItem("favorites");
     }
   }, [favorites]);
 
