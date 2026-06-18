@@ -19,7 +19,7 @@ const BROADCASTER_RULES = {
       PD: ["wowow", "abema"],
       SA: ["dazn"],
       CL: ["wowow", "unext"],
-    },
+    } as Record<string, string[]>,
   },
   f1: { default: ["dazn", "sky"] },
 };
@@ -41,6 +41,7 @@ async function fetchFootball(
   dateTo: string
 ): Promise<Event[]> {
   const token = process.env.FOOTBALL_DATA_TOKEN;
+  if (!token) throw new Error("FOOTBALL_DATA_TOKEN is not set");
   const url = `https://api.football-data.org/v4/competitions/${competitionCode}/matches?dateFrom=${dateFrom}&dateTo=${dateTo}`;
   const res = await fetch(url, { headers: { "X-Auth-Token": token } });
   if (!res.ok) throw new Error(`football-data ${competitionCode}: ${res.status}`);
@@ -109,12 +110,17 @@ function mkF1(
 function resolveCasts(ev: any): string[] {
   const rule = BROADCASTER_RULES[ev.lg as keyof typeof BROADCASTER_RULES];
   if (!rule) return [];
-  if (rule.byCompetition?.[ev._competition]) {
-    return rule.byCompetition[ev._competition];
+
+  if ("byCompetition" in rule && rule.byCompetition[ev._competition as string]) {
+    return rule.byCompetition[ev._competition as string];
   }
-  for (const o of rule.overrides ?? []) {
-    if (o.test(ev.title)) return o.casts;
+
+  if ("overrides" in rule) {
+    for (const o of rule.overrides) {
+      if (o.test(ev.title)) return o.casts;
+    }
   }
+
   return rule.default ?? [];
 }
 

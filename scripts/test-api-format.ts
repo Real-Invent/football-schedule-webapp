@@ -3,8 +3,14 @@ import type { Event } from "../src/types";
 
 dotenv.config();
 
+// ====== 放送局ルール型定義 ======
+type BroadcasterRule =
+  | { default: string[]; overrides: { test: (t: string) => boolean; casts: string[] }[] }
+  | { default: string[]; byCompetition: Record<string, string[]> }
+  | { default: string[] };
+
 // ====== 放送局ルール（fetch-schedule.ts から引用）======
-const BROADCASTER_RULES = {
+const BROADCASTER_RULES: Record<string, BroadcasterRule> = {
   wc2026: {
     default: ["dazn"],
     overrides: [
@@ -78,12 +84,17 @@ function convertToEventWithCasts(m: any): Event {
 function resolveCasts(ev: any): string[] {
   const rule = BROADCASTER_RULES[ev.lg as keyof typeof BROADCASTER_RULES];
   if (!rule) return [];
-  if (rule.byCompetition?.[ev._competition]) {
+
+  if ("byCompetition" in rule && rule.byCompetition[ev._competition]) {
     return rule.byCompetition[ev._competition];
   }
-  for (const o of rule.overrides ?? []) {
-    if (o.test(ev.title)) return o.casts;
+
+  if ("overrides" in rule) {
+    for (const o of rule.overrides) {
+      if (o.test(ev.title)) return o.casts;
+    }
   }
+
   return rule.default ?? [];
 }
 
