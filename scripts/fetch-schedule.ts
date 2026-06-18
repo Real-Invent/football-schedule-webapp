@@ -121,11 +121,31 @@ function toJst(utcString: string): { date: string; day: string; time: string } {
   const d = new Date(utcString);
   const jst = new Date(d.getTime() + 9 * 60 * 60 * 1000);
   const pad = (n: number) => String(n).padStart(2, "0");
-  return {
+  const result = {
     date: `${jst.getUTCFullYear()}-${pad(jst.getUTCMonth() + 1)}-${pad(jst.getUTCDate())}`,
     day: "日月火水木金土"[jst.getUTCDay()],
     time: `${pad(jst.getUTCHours())}:${pad(jst.getUTCMinutes())}`,
   };
+  return adjustMidnightTime(result.date, result.day, result.time);
+}
+
+// ====== 早朝4時を基軸とした28時間表記に調整 ======
+// 00:00～03:59 は前日の 24:00～27:59 に変換
+function adjustMidnightTime(date: string, day: string, time: string): { date: string; day: string; time: string } {
+  const [h, m] = time.split(":").map(Number);
+
+  if (h < 4) {
+    const prev = new Date(`${date}T00:00:00Z`);
+    prev.setUTCDate(prev.getUTCDate() - 1);
+    const pad = (n: number) => String(n).padStart(2, "0");
+    const newDate = `${prev.getUTCFullYear()}-${pad(prev.getUTCMonth() + 1)}-${pad(prev.getUTCDate())}`;
+    const newTime = `${pad(h + 24)}:${pad(m)}`;
+    const dayIndex = prev.getUTCDay();
+    const newDay = "日月火水木金土"[dayIndex];
+    return { date: newDate, day: newDay, time: newTime };
+  }
+
+  return { date, day, time };
 }
 
 // ====== ⑦ 実行 ======
