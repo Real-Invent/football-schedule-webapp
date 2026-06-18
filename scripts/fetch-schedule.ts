@@ -48,7 +48,9 @@ async function fetchFootball(
 
   return (data.matches ?? []).map((m: any) => {
     const { date, day, time } = toJst(m.utcDate);
-    const title = `${ja(m.homeTeam.name)} vs ${ja(m.awayTeam.name)}`;
+    const homeName = m.homeTeam?.name ?? "TBD";
+    const awayName = m.awayTeam?.name ?? "TBD";
+    const title = `${ja(homeName)} vs ${ja(awayName)}`;
     const base = {
       id: `fb-${m.id}`,
       lg,
