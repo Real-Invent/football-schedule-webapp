@@ -26,12 +26,99 @@ const BROADCASTER_RULES = {
 
 // ====== ② チーム名の日本語化（任意）======
 const TEAM_JA: Record<string, string> = {
+  // 2026年ワールドカップ参加国
   Japan: "日本",
+  Argentina: "アルゼンチン",
+  Australia: "オーストラリア",
+  Austria: "オーストリア",
+  Belgium: "ベルギー",
+  "Bosnia-Herzegovina": "ボスニア・ヘルツェゴビナ",
   Brazil: "ブラジル",
+  Canada: "カナダ",
+  "Cape Verde Islands": "カーボベルデ",
+  Czechia: "チェコ",
+  Colombia: "コロンビア",
+  "Congo DR": "コンゴ民主共和国",
+  Croatia: "クロアチア",
+  Curaçao: "キュラソー",
+  Ecuador: "エクアドル",
+  Egypt: "エジプト",
+  England: "イングランド",
+  France: "フランス",
+  Germany: "ドイツ",
+  Ghana: "ガーナ",
+  Haiti: "ハイチ",
+  Iran: "イラン",
+  Iraq: "イラク",
+  "Ivory Coast": "コートジボワール",
+  Jordan: "ヨルダン",
+  Mexico: "メキシコ",
+  Morocco: "モロッコ",
+  Netherlands: "オランダ",
+  "New Zealand": "ニュージーランド",
+  Norway: "ノルウェー",
+  Panama: "パナマ",
+  Paraguay: "パラグアイ",
+  Portugal: "ポルトガル",
+  Qatar: "カタール",
+  "Saudi Arabia": "サウジアラビア",
+  Scotland: "スコットランド",
+  Senegal: "セネガル",
+  "South Africa": "南アフリカ",
+  "South Korea": "韓国",
+  Spain: "スペイン",
+  Sweden: "スウェーデン",
+  Switzerland: "スイス",
+  Tunisia: "チュニジア",
+  Turkey: "トルコ",
+  "United States": "アメリカ合衆国",
+  Uruguay: "ウルグアイ",
+  Uzbekistan: "ウズベキスタン",
+  // クラブチーム
   "Real Madrid CF": "レアル・マドリード",
   "FC Barcelona": "バルセロナ",
 };
 const ja = (name: string) => TEAM_JA[name] ?? name;
+
+// ====== F1グランプリの日本語化 ======
+const F1_GP_JA: Record<string, string> = {
+  "Abu Dhabi Grand Prix": "アブダビGP",
+  "Australian Grand Prix": "オーストラリアンGP",
+  "Austrian Grand Prix": "オーストリアンGP",
+  "Azerbaijan Grand Prix": "アゼルバイジャンGP",
+  "Azerbaijani Grand Prix": "アゼルバイジャンGP",
+  "Belgian Grand Prix": "ベルギーGP",
+  "Brazilian Grand Prix": "ブラジルGP",
+  "British Grand Prix": "イギリスGP",
+  "Canadian Grand Prix": "カナダGP",
+  "Dutch Grand Prix": "オランダGP",
+  "Emilia Romagna Grand Prix": "エミリア・ロマーニャGP",
+  "Hungarian Grand Prix": "ハンガリーGP",
+  "Italian Grand Prix": "イタリアンGP",
+  "Japanese Grand Prix": "日本GP",
+  "Las Vegas Grand Prix": "ラスベガスGP",
+  "Mexico City Grand Prix": "メキシコシティGP",
+  "Mexican Grand Prix": "メキシコGP",
+  "Monaco Grand Prix": "モナコGP",
+  "Qatar Grand Prix": "カタールGP",
+  "Saudi Arabian Grand Prix": "サウジアラビアGP",
+  "Singapore Grand Prix": "シンガポールGP",
+  "Spanish Grand Prix": "スペインGP",
+  "United States Grand Prix": "アメリカGP",
+};
+const f1ja = (gp: string) => F1_GP_JA[gp] ?? gp;
+
+// ====== カテゴリーの日本語化 ======
+const CAT_JA: Record<string, string> = {
+  "GROUP_STAGE": "グループステージ",
+  "LAST_32": "決勝トーナメント1回戦",
+  "LAST_16": "決勝トーナメント2回戦",
+  "QUARTER_FINALS": "準々決勝",
+  "SEMI_FINALS": "準決勝",
+  "THIRD_PLACE": "3位決定戦",
+  "FINAL": "決勝",
+};
+const catja = (cat: string) => CAT_JA[cat] ?? cat;
 
 // ====== ③ サッカー日程の取得（football-data.org）======
 async function fetchFootball(
@@ -59,7 +146,7 @@ async function fetchFootball(
       day,
       time,
       title,
-      cat: m.stage ?? "",
+      cat: catja(m.stage ?? ""),
       _competition: competitionCode,
     };
     return { ...base, casts: resolveCasts(base) };
@@ -99,7 +186,7 @@ function mkF1(
     date,
     day,
     time,
-    title: `${gp} ${cat}`,
+    title: `${f1ja(gp)} ${cat}`,
     cat,
     _competition: "",
   };

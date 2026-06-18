@@ -5,8 +5,8 @@
     "date": "2026-06-18",
     "day": "木",
     "time": "11:00",
-    "title": "Uzbekistan vs Colombia",
-    "cat": "GROUP_STAGE",
+    "title": "ウズベキスタン vs コロンビア",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -17,8 +17,8 @@
     "date": "2026-06-18",
     "day": "木",
     "time": "25:00",
-    "title": "Czechia vs South Africa",
-    "cat": "GROUP_STAGE",
+    "title": "チェコ vs 南アフリカ",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -29,8 +29,8 @@
     "date": "2026-06-19",
     "day": "金",
     "time": "04:00",
-    "title": "Switzerland vs Bosnia-Herzegovina",
-    "cat": "GROUP_STAGE",
+    "title": "スイス vs ボスニア・ヘルツェゴビナ",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -41,8 +41,8 @@
     "date": "2026-06-19",
     "day": "金",
     "time": "07:00",
-    "title": "Canada vs Qatar",
-    "cat": "GROUP_STAGE",
+    "title": "カナダ vs カタール",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -53,8 +53,8 @@
     "date": "2026-06-19",
     "day": "金",
     "time": "10:00",
-    "title": "Mexico vs South Korea",
-    "cat": "GROUP_STAGE",
+    "title": "メキシコ vs 韓国",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -65,8 +65,8 @@
     "date": "2026-06-20",
     "day": "土",
     "time": "04:00",
-    "title": "United States vs Australia",
-    "cat": "GROUP_STAGE",
+    "title": "アメリカ合衆国 vs オーストラリア",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -77,8 +77,8 @@
     "date": "2026-06-20",
     "day": "土",
     "time": "07:00",
-    "title": "Scotland vs Morocco",
-    "cat": "GROUP_STAGE",
+    "title": "スコットランド vs モロッコ",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -89,8 +89,8 @@
     "date": "2026-06-20",
     "day": "土",
     "time": "09:30",
-    "title": "ブラジル vs Haiti",
-    "cat": "GROUP_STAGE",
+    "title": "ブラジル vs ハイチ",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -101,8 +101,8 @@
     "date": "2026-06-20",
     "day": "土",
     "time": "12:00",
-    "title": "Turkey vs Paraguay",
-    "cat": "GROUP_STAGE",
+    "title": "トルコ vs パラグアイ",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -113,8 +113,8 @@
     "date": "2026-06-20",
     "day": "土",
     "time": "26:00",
-    "title": "Netherlands vs Sweden",
-    "cat": "GROUP_STAGE",
+    "title": "オランダ vs スウェーデン",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -125,8 +125,8 @@
     "date": "2026-06-21",
     "day": "日",
     "time": "05:00",
-    "title": "Germany vs Ivory Coast",
-    "cat": "GROUP_STAGE",
+    "title": "ドイツ vs コートジボワール",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -137,8 +137,8 @@
     "date": "2026-06-21",
     "day": "日",
     "time": "09:00",
-    "title": "Ecuador vs Curaçao",
-    "cat": "GROUP_STAGE",
+    "title": "エクアドル vs キュラソー",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -149,8 +149,8 @@
     "date": "2026-06-21",
     "day": "日",
     "time": "13:00",
-    "title": "Tunisia vs 日本",
-    "cat": "GROUP_STAGE",
+    "title": "チュニジア vs 日本",
+    "cat": "グループステージ",
     "casts": [
       "dazn",
       "nhk",
@@ -164,8 +164,8 @@
     "date": "2026-06-21",
     "day": "日",
     "time": "25:00",
-    "title": "Spain vs Saudi Arabia",
-    "cat": "GROUP_STAGE",
+    "title": "スペイン vs サウジアラビア",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -176,8 +176,8 @@
     "date": "2026-06-22",
     "day": "月",
     "time": "04:00",
-    "title": "Belgium vs Iran",
-    "cat": "GROUP_STAGE",
+    "title": "ベルギー vs イラン",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -188,8 +188,8 @@
     "date": "2026-06-22",
     "day": "月",
     "time": "07:00",
-    "title": "Uruguay vs Cape Verde Islands",
-    "cat": "GROUP_STAGE",
+    "title": "ウルグアイ vs カーボベルデ",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -200,8 +200,8 @@
     "date": "2026-06-22",
     "day": "月",
     "time": "10:00",
-    "title": "New Zealand vs Egypt",
-    "cat": "GROUP_STAGE",
+    "title": "ニュージーランド vs エジプト",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -212,8 +212,8 @@
     "date": "2026-06-22",
     "day": "月",
     "time": "26:00",
-    "title": "Argentina vs Austria",
-    "cat": "GROUP_STAGE",
+    "title": "アルゼンチン vs オーストリア",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -224,8 +224,8 @@
     "date": "2026-06-23",
     "day": "火",
     "time": "06:00",
-    "title": "France vs Iraq",
-    "cat": "GROUP_STAGE",
+    "title": "フランス vs イラク",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -236,8 +236,8 @@
     "date": "2026-06-23",
     "day": "火",
     "time": "09:00",
-    "title": "Norway vs Senegal",
-    "cat": "GROUP_STAGE",
+    "title": "ノルウェー vs セネガル",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -248,8 +248,8 @@
     "date": "2026-06-23",
     "day": "火",
     "time": "12:00",
-    "title": "Jordan vs Algeria",
-    "cat": "GROUP_STAGE",
+    "title": "ヨルダン vs Algeria",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -260,8 +260,8 @@
     "date": "2026-06-23",
     "day": "火",
     "time": "26:00",
-    "title": "Portugal vs Uzbekistan",
-    "cat": "GROUP_STAGE",
+    "title": "ポルトガル vs ウズベキスタン",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -272,8 +272,8 @@
     "date": "2026-06-24",
     "day": "水",
     "time": "05:00",
-    "title": "England vs Ghana",
-    "cat": "GROUP_STAGE",
+    "title": "イングランド vs ガーナ",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -284,8 +284,8 @@
     "date": "2026-06-24",
     "day": "水",
     "time": "08:00",
-    "title": "Panama vs Croatia",
-    "cat": "GROUP_STAGE",
+    "title": "パナマ vs クロアチア",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -296,8 +296,8 @@
     "date": "2026-06-24",
     "day": "水",
     "time": "11:00",
-    "title": "Colombia vs Congo DR",
-    "cat": "GROUP_STAGE",
+    "title": "コロンビア vs コンゴ民主共和国",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -308,8 +308,8 @@
     "date": "2026-06-25",
     "day": "木",
     "time": "04:00",
-    "title": "Switzerland vs Canada",
-    "cat": "GROUP_STAGE",
+    "title": "スイス vs カナダ",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -320,8 +320,8 @@
     "date": "2026-06-25",
     "day": "木",
     "time": "04:00",
-    "title": "Bosnia-Herzegovina vs Qatar",
-    "cat": "GROUP_STAGE",
+    "title": "ボスニア・ヘルツェゴビナ vs カタール",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -332,8 +332,8 @@
     "date": "2026-06-25",
     "day": "木",
     "time": "07:00",
-    "title": "Morocco vs Haiti",
-    "cat": "GROUP_STAGE",
+    "title": "モロッコ vs ハイチ",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -344,8 +344,8 @@
     "date": "2026-06-25",
     "day": "木",
     "time": "07:00",
-    "title": "Scotland vs ブラジル",
-    "cat": "GROUP_STAGE",
+    "title": "スコットランド vs ブラジル",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -356,8 +356,8 @@
     "date": "2026-06-25",
     "day": "木",
     "time": "10:00",
-    "title": "Czechia vs Mexico",
-    "cat": "GROUP_STAGE",
+    "title": "チェコ vs メキシコ",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -368,8 +368,8 @@
     "date": "2026-06-25",
     "day": "木",
     "time": "10:00",
-    "title": "South Africa vs South Korea",
-    "cat": "GROUP_STAGE",
+    "title": "南アフリカ vs 韓国",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -380,8 +380,8 @@
     "date": "2026-06-26",
     "day": "金",
     "time": "05:00",
-    "title": "Ecuador vs Germany",
-    "cat": "GROUP_STAGE",
+    "title": "エクアドル vs ドイツ",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -392,8 +392,8 @@
     "date": "2026-06-26",
     "day": "金",
     "time": "05:00",
-    "title": "Curaçao vs Ivory Coast",
-    "cat": "GROUP_STAGE",
+    "title": "キュラソー vs コートジボワール",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -404,8 +404,8 @@
     "date": "2026-06-26",
     "day": "金",
     "time": "08:00",
-    "title": "Tunisia vs Netherlands",
-    "cat": "GROUP_STAGE",
+    "title": "チュニジア vs オランダ",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -416,8 +416,8 @@
     "date": "2026-06-26",
     "day": "金",
     "time": "08:00",
-    "title": "日本 vs Sweden",
-    "cat": "GROUP_STAGE",
+    "title": "日本 vs スウェーデン",
+    "cat": "グループステージ",
     "casts": [
       "dazn",
       "nhk",
@@ -431,8 +431,8 @@
     "date": "2026-06-26",
     "day": "金",
     "time": "11:00",
-    "title": "Turkey vs United States",
-    "cat": "GROUP_STAGE",
+    "title": "トルコ vs アメリカ合衆国",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -443,8 +443,8 @@
     "date": "2026-06-26",
     "day": "金",
     "time": "11:00",
-    "title": "Paraguay vs Australia",
-    "cat": "GROUP_STAGE",
+    "title": "パラグアイ vs オーストラリア",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -455,8 +455,8 @@
     "date": "2026-06-27",
     "day": "土",
     "time": "04:00",
-    "title": "Norway vs France",
-    "cat": "GROUP_STAGE",
+    "title": "ノルウェー vs フランス",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -467,8 +467,8 @@
     "date": "2026-06-27",
     "day": "土",
     "time": "04:00",
-    "title": "Senegal vs Iraq",
-    "cat": "GROUP_STAGE",
+    "title": "セネガル vs イラク",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -479,8 +479,8 @@
     "date": "2026-06-27",
     "day": "土",
     "time": "09:00",
-    "title": "Uruguay vs Spain",
-    "cat": "GROUP_STAGE",
+    "title": "ウルグアイ vs スペイン",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -491,8 +491,8 @@
     "date": "2026-06-27",
     "day": "土",
     "time": "09:00",
-    "title": "Cape Verde Islands vs Saudi Arabia",
-    "cat": "GROUP_STAGE",
+    "title": "カーボベルデ vs サウジアラビア",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -503,8 +503,8 @@
     "date": "2026-06-27",
     "day": "土",
     "time": "12:00",
-    "title": "New Zealand vs Belgium",
-    "cat": "GROUP_STAGE",
+    "title": "ニュージーランド vs ベルギー",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -515,8 +515,8 @@
     "date": "2026-06-27",
     "day": "土",
     "time": "12:00",
-    "title": "Egypt vs Iran",
-    "cat": "GROUP_STAGE",
+    "title": "エジプト vs イラン",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -527,7 +527,7 @@
     "date": "2026-06-27",
     "day": "土",
     "time": "23:00",
-    "title": "Austrian Grand Prix 予選",
+    "title": "オーストリアンGP 予選",
     "cat": "予選",
     "casts": [
       "dazn",
@@ -540,8 +540,8 @@
     "date": "2026-06-28",
     "day": "日",
     "time": "06:00",
-    "title": "Panama vs England",
-    "cat": "GROUP_STAGE",
+    "title": "パナマ vs イングランド",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -552,8 +552,8 @@
     "date": "2026-06-28",
     "day": "日",
     "time": "06:00",
-    "title": "Croatia vs Ghana",
-    "cat": "GROUP_STAGE",
+    "title": "クロアチア vs ガーナ",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -564,8 +564,8 @@
     "date": "2026-06-28",
     "day": "日",
     "time": "08:30",
-    "title": "Colombia vs Portugal",
-    "cat": "GROUP_STAGE",
+    "title": "コロンビア vs ポルトガル",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -576,8 +576,8 @@
     "date": "2026-06-28",
     "day": "日",
     "time": "08:30",
-    "title": "Congo DR vs Uzbekistan",
-    "cat": "GROUP_STAGE",
+    "title": "コンゴ民主共和国 vs ウズベキスタン",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -588,8 +588,8 @@
     "date": "2026-06-28",
     "day": "日",
     "time": "11:00",
-    "title": "Jordan vs Argentina",
-    "cat": "GROUP_STAGE",
+    "title": "ヨルダン vs アルゼンチン",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -600,8 +600,8 @@
     "date": "2026-06-28",
     "day": "日",
     "time": "11:00",
-    "title": "Algeria vs Austria",
-    "cat": "GROUP_STAGE",
+    "title": "Algeria vs オーストリア",
+    "cat": "グループステージ",
     "casts": [
       "dazn"
     ]
@@ -612,7 +612,7 @@
     "date": "2026-06-28",
     "day": "日",
     "time": "22:00",
-    "title": "Austrian Grand Prix 決勝",
+    "title": "オーストリアンGP 決勝",
     "cat": "決勝",
     "casts": [
       "dazn",
@@ -626,7 +626,7 @@
     "day": "月",
     "time": "04:00",
     "title": "TBD vs TBD",
-    "cat": "LAST_32",
+    "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
     ]
@@ -638,7 +638,7 @@
     "day": "月",
     "time": "26:00",
     "title": "TBD vs TBD",
-    "cat": "LAST_32",
+    "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
     ]
@@ -650,7 +650,7 @@
     "day": "火",
     "time": "05:30",
     "title": "TBD vs TBD",
-    "cat": "LAST_32",
+    "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
     ]
@@ -662,7 +662,7 @@
     "day": "火",
     "time": "10:00",
     "title": "TBD vs TBD",
-    "cat": "LAST_32",
+    "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
     ]
@@ -674,7 +674,7 @@
     "day": "火",
     "time": "26:00",
     "title": "TBD vs TBD",
-    "cat": "LAST_32",
+    "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
     ]
@@ -686,7 +686,7 @@
     "day": "水",
     "time": "06:00",
     "title": "TBD vs TBD",
-    "cat": "LAST_32",
+    "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
     ]
@@ -698,7 +698,7 @@
     "day": "水",
     "time": "10:00",
     "title": "TBD vs TBD",
-    "cat": "LAST_32",
+    "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
     ]
@@ -710,7 +710,7 @@
     "day": "水",
     "time": "25:00",
     "title": "TBD vs TBD",
-    "cat": "LAST_32",
+    "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
     ]
@@ -722,7 +722,7 @@
     "day": "木",
     "time": "05:00",
     "title": "TBD vs TBD",
-    "cat": "LAST_32",
+    "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
     ]
@@ -734,7 +734,7 @@
     "day": "木",
     "time": "09:00",
     "title": "TBD vs TBD",
-    "cat": "LAST_32",
+    "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
     ]
@@ -746,7 +746,7 @@
     "day": "金",
     "time": "04:00",
     "title": "TBD vs TBD",
-    "cat": "LAST_32",
+    "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
     ]
@@ -758,7 +758,7 @@
     "day": "金",
     "time": "08:00",
     "title": "TBD vs TBD",
-    "cat": "LAST_32",
+    "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
     ]
@@ -770,7 +770,7 @@
     "day": "金",
     "time": "12:00",
     "title": "TBD vs TBD",
-    "cat": "LAST_32",
+    "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
     ]
@@ -782,7 +782,7 @@
     "day": "金",
     "time": "27:00",
     "title": "TBD vs TBD",
-    "cat": "LAST_32",
+    "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
     ]
@@ -794,7 +794,7 @@
     "day": "土",
     "time": "07:00",
     "title": "TBD vs TBD",
-    "cat": "LAST_32",
+    "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
     ]
@@ -806,7 +806,7 @@
     "day": "土",
     "time": "10:30",
     "title": "TBD vs TBD",
-    "cat": "LAST_32",
+    "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
     ]
@@ -817,7 +817,7 @@
     "date": "2026-07-04",
     "day": "土",
     "time": "24:00",
-    "title": "British Grand Prix 予選",
+    "title": "イギリスGP 予選",
     "cat": "予選",
     "casts": [
       "dazn",
@@ -831,7 +831,7 @@
     "day": "土",
     "time": "26:00",
     "title": "TBD vs TBD",
-    "cat": "LAST_16",
+    "cat": "決勝トーナメント2回戦",
     "casts": [
       "dazn"
     ]
@@ -843,7 +843,7 @@
     "day": "日",
     "time": "06:00",
     "title": "TBD vs TBD",
-    "cat": "LAST_16",
+    "cat": "決勝トーナメント2回戦",
     "casts": [
       "dazn"
     ]
@@ -854,7 +854,7 @@
     "date": "2026-07-05",
     "day": "日",
     "time": "23:00",
-    "title": "British Grand Prix 決勝",
+    "title": "イギリスGP 決勝",
     "cat": "決勝",
     "casts": [
       "dazn",
@@ -868,7 +868,7 @@
     "day": "月",
     "time": "05:00",
     "title": "TBD vs TBD",
-    "cat": "LAST_16",
+    "cat": "決勝トーナメント2回戦",
     "casts": [
       "dazn"
     ]
@@ -880,7 +880,7 @@
     "day": "月",
     "time": "09:00",
     "title": "TBD vs TBD",
-    "cat": "LAST_16",
+    "cat": "決勝トーナメント2回戦",
     "casts": [
       "dazn"
     ]
@@ -892,7 +892,7 @@
     "day": "火",
     "time": "04:00",
     "title": "TBD vs TBD",
-    "cat": "LAST_16",
+    "cat": "決勝トーナメント2回戦",
     "casts": [
       "dazn"
     ]
@@ -904,7 +904,7 @@
     "day": "火",
     "time": "09:00",
     "title": "TBD vs TBD",
-    "cat": "LAST_16",
+    "cat": "決勝トーナメント2回戦",
     "casts": [
       "dazn"
     ]
@@ -916,7 +916,7 @@
     "day": "火",
     "time": "25:00",
     "title": "TBD vs TBD",
-    "cat": "LAST_16",
+    "cat": "決勝トーナメント2回戦",
     "casts": [
       "dazn"
     ]
@@ -928,7 +928,7 @@
     "day": "水",
     "time": "05:00",
     "title": "TBD vs TBD",
-    "cat": "LAST_16",
+    "cat": "決勝トーナメント2回戦",
     "casts": [
       "dazn"
     ]
@@ -940,7 +940,7 @@
     "day": "金",
     "time": "05:00",
     "title": "TBD vs TBD",
-    "cat": "QUARTER_FINALS",
+    "cat": "準々決勝",
     "casts": [
       "dazn"
     ]
@@ -952,7 +952,7 @@
     "day": "土",
     "time": "04:00",
     "title": "TBD vs TBD",
-    "cat": "QUARTER_FINALS",
+    "cat": "準々決勝",
     "casts": [
       "dazn"
     ]
@@ -964,7 +964,7 @@
     "day": "日",
     "time": "06:00",
     "title": "TBD vs TBD",
-    "cat": "QUARTER_FINALS",
+    "cat": "準々決勝",
     "casts": [
       "dazn"
     ]
@@ -976,7 +976,7 @@
     "day": "日",
     "time": "10:00",
     "title": "TBD vs TBD",
-    "cat": "QUARTER_FINALS",
+    "cat": "準々決勝",
     "casts": [
       "dazn"
     ]
@@ -988,7 +988,7 @@
     "day": "水",
     "time": "04:00",
     "title": "TBD vs TBD",
-    "cat": "SEMI_FINALS",
+    "cat": "準決勝",
     "casts": [
       "dazn"
     ]
@@ -1000,7 +1000,7 @@
     "day": "木",
     "time": "04:00",
     "title": "TBD vs TBD",
-    "cat": "SEMI_FINALS",
+    "cat": "準決勝",
     "casts": [
       "dazn"
     ]
@@ -1011,7 +1011,7 @@
     "date": "2026-07-18",
     "day": "土",
     "time": "23:00",
-    "title": "Belgian Grand Prix 予選",
+    "title": "ベルギーGP 予選",
     "cat": "予選",
     "casts": [
       "dazn",
@@ -1025,7 +1025,7 @@
     "day": "日",
     "time": "06:00",
     "title": "TBD vs TBD",
-    "cat": "THIRD_PLACE",
+    "cat": "3位決定戦",
     "casts": [
       "dazn"
     ]
@@ -1036,7 +1036,7 @@
     "date": "2026-07-19",
     "day": "日",
     "time": "22:00",
-    "title": "Belgian Grand Prix 決勝",
+    "title": "ベルギーGP 決勝",
     "cat": "決勝",
     "casts": [
       "dazn",
@@ -1050,7 +1050,7 @@
     "day": "月",
     "time": "04:00",
     "title": "TBD vs TBD",
-    "cat": "FINAL",
+    "cat": "決勝",
     "casts": [
       "dazn"
     ]
@@ -1061,7 +1061,7 @@
     "date": "2026-07-25",
     "day": "土",
     "time": "23:00",
-    "title": "Hungarian Grand Prix 予選",
+    "title": "ハンガリーGP 予選",
     "cat": "予選",
     "casts": [
       "dazn",
@@ -1074,7 +1074,7 @@
     "date": "2026-07-26",
     "day": "日",
     "time": "22:00",
-    "title": "Hungarian Grand Prix 決勝",
+    "title": "ハンガリーGP 決勝",
     "cat": "決勝",
     "casts": [
       "dazn",
@@ -1087,7 +1087,7 @@
     "date": "2026-08-22",
     "day": "土",
     "time": "23:00",
-    "title": "Dutch Grand Prix 予選",
+    "title": "オランダGP 予選",
     "cat": "予選",
     "casts": [
       "dazn",
@@ -1100,7 +1100,7 @@
     "date": "2026-08-23",
     "day": "日",
     "time": "22:00",
-    "title": "Dutch Grand Prix 決勝",
+    "title": "オランダGP 決勝",
     "cat": "決勝",
     "casts": [
       "dazn",
@@ -1113,7 +1113,7 @@
     "date": "2026-09-05",
     "day": "土",
     "time": "23:00",
-    "title": "Italian Grand Prix 予選",
+    "title": "イタリアンGP 予選",
     "cat": "予選",
     "casts": [
       "dazn",
@@ -1126,7 +1126,7 @@
     "date": "2026-09-06",
     "day": "日",
     "time": "22:00",
-    "title": "Italian Grand Prix 決勝",
+    "title": "イタリアンGP 決勝",
     "cat": "決勝",
     "casts": [
       "dazn",
@@ -1139,7 +1139,7 @@
     "date": "2026-09-12",
     "day": "土",
     "time": "23:00",
-    "title": "Spanish Grand Prix 予選",
+    "title": "スペインGP 予選",
     "cat": "予選",
     "casts": [
       "dazn",
@@ -1152,7 +1152,7 @@
     "date": "2026-09-13",
     "day": "日",
     "time": "22:00",
-    "title": "Spanish Grand Prix 決勝",
+    "title": "スペインGP 決勝",
     "cat": "決勝",
     "casts": [
       "dazn",
@@ -1165,7 +1165,7 @@
     "date": "2026-09-25",
     "day": "金",
     "time": "21:00",
-    "title": "Azerbaijan Grand Prix 予選",
+    "title": "アゼルバイジャンGP 予選",
     "cat": "予選",
     "casts": [
       "dazn",
@@ -1178,7 +1178,7 @@
     "date": "2026-09-26",
     "day": "土",
     "time": "20:00",
-    "title": "Azerbaijan Grand Prix 決勝",
+    "title": "アゼルバイジャンGP 決勝",
     "cat": "決勝",
     "casts": [
       "dazn",
@@ -1191,7 +1191,7 @@
     "date": "2026-10-10",
     "day": "土",
     "time": "22:00",
-    "title": "Singapore Grand Prix 予選",
+    "title": "シンガポールGP 予選",
     "cat": "予選",
     "casts": [
       "dazn",
@@ -1204,7 +1204,7 @@
     "date": "2026-10-11",
     "day": "日",
     "time": "21:00",
-    "title": "Singapore Grand Prix 決勝",
+    "title": "シンガポールGP 決勝",
     "cat": "決勝",
     "casts": [
       "dazn",
@@ -1217,7 +1217,7 @@
     "date": "2026-10-25",
     "day": "日",
     "time": "06:00",
-    "title": "United States Grand Prix 予選",
+    "title": "アメリカGP 予選",
     "cat": "予選",
     "casts": [
       "dazn",
@@ -1230,7 +1230,7 @@
     "date": "2026-10-26",
     "day": "月",
     "time": "05:00",
-    "title": "United States Grand Prix 決勝",
+    "title": "アメリカGP 決勝",
     "cat": "決勝",
     "casts": [
       "dazn",
@@ -1243,7 +1243,7 @@
     "date": "2026-11-01",
     "day": "日",
     "time": "06:00",
-    "title": "Mexico City Grand Prix 予選",
+    "title": "メキシコシティGP 予選",
     "cat": "予選",
     "casts": [
       "dazn",
@@ -1256,7 +1256,7 @@
     "date": "2026-11-02",
     "day": "月",
     "time": "05:00",
-    "title": "Mexico City Grand Prix 決勝",
+    "title": "メキシコシティGP 決勝",
     "cat": "決勝",
     "casts": [
       "dazn",
@@ -1269,7 +1269,7 @@
     "date": "2026-11-07",
     "day": "土",
     "time": "27:00",
-    "title": "Brazilian Grand Prix 予選",
+    "title": "ブラジルGP 予選",
     "cat": "予選",
     "casts": [
       "dazn",
@@ -1282,7 +1282,7 @@
     "date": "2026-11-08",
     "day": "日",
     "time": "26:00",
-    "title": "Brazilian Grand Prix 決勝",
+    "title": "ブラジルGP 決勝",
     "cat": "決勝",
     "casts": [
       "dazn",
@@ -1295,7 +1295,7 @@
     "date": "2026-11-21",
     "day": "土",
     "time": "13:00",
-    "title": "Las Vegas Grand Prix 予選",
+    "title": "ラスベガスGP 予選",
     "cat": "予選",
     "casts": [
       "dazn",
@@ -1308,7 +1308,7 @@
     "date": "2026-11-22",
     "day": "日",
     "time": "13:00",
-    "title": "Las Vegas Grand Prix 決勝",
+    "title": "ラスベガスGP 決勝",
     "cat": "決勝",
     "casts": [
       "dazn",
@@ -1321,7 +1321,7 @@
     "date": "2026-11-28",
     "day": "土",
     "time": "27:00",
-    "title": "Qatar Grand Prix 予選",
+    "title": "カタールGP 予選",
     "cat": "予選",
     "casts": [
       "dazn",
@@ -1334,7 +1334,7 @@
     "date": "2026-11-29",
     "day": "日",
     "time": "25:00",
-    "title": "Qatar Grand Prix 決勝",
+    "title": "カタールGP 決勝",
     "cat": "決勝",
     "casts": [
       "dazn",
@@ -1347,7 +1347,7 @@
     "date": "2026-12-05",
     "day": "土",
     "time": "23:00",
-    "title": "Abu Dhabi Grand Prix 予選",
+    "title": "アブダビGP 予選",
     "cat": "予選",
     "casts": [
       "dazn",
@@ -1360,7 +1360,7 @@
     "date": "2026-12-06",
     "day": "日",
     "time": "22:00",
-    "title": "Abu Dhabi Grand Prix 決勝",
+    "title": "アブダビGP 決勝",
     "cat": "決勝",
     "casts": [
       "dazn",
