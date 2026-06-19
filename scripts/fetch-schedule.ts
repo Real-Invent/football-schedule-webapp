@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 import { writeFileSync } from "node:fs";
-import type { Event } from "../src/types";
+import type { Event, MatchResult, F1Result, ResultsMap, ChampionshipStanding } from "../src/types";
 
 dotenv.config();
 
@@ -28,17 +28,18 @@ const BROADCASTER_RULES = {
 const TEAM_JA: Record<string, string> = {
   // 2026年ワールドカップ参加国
   Japan: "日本",
+  Algeria: "アルジェリア",
   Argentina: "アルゼンチン",
   Australia: "オーストラリア",
   Austria: "オーストリア",
   Belgium: "ベルギー",
-  "Bosnia-Herzegovina": "ボスニア・ヘルツェゴビナ",
+  "Bosnia-Herzegovina": "ボスニア",
   Brazil: "ブラジル",
   Canada: "カナダ",
   "Cape Verde Islands": "カーボベルデ",
   Czechia: "チェコ",
   Colombia: "コロンビア",
-  "Congo DR": "コンゴ民主共和国",
+  "Congo DR": "DRコンゴ",
   Croatia: "クロアチア",
   Curaçao: "キュラソー",
   Ecuador: "エクアドル",
@@ -71,7 +72,7 @@ const TEAM_JA: Record<string, string> = {
   Switzerland: "スイス",
   Tunisia: "チュニジア",
   Turkey: "トルコ",
-  "United States": "アメリカ合衆国",
+  "United States": "アメリカ",
   Uruguay: "ウルグアイ",
   Uzbekistan: "ウズベキスタン",
   // クラブチーム
@@ -87,10 +88,12 @@ const F1_GP_JA: Record<string, string> = {
   "Austrian Grand Prix": "オーストリアンGP",
   "Azerbaijan Grand Prix": "アゼルバイジャンGP",
   "Azerbaijani Grand Prix": "アゼルバイジャンGP",
+  "Barcelona Grand Prix": "バルセロナGP",
   "Belgian Grand Prix": "ベルギーGP",
   "Brazilian Grand Prix": "ブラジルGP",
   "British Grand Prix": "イギリスGP",
   "Canadian Grand Prix": "カナダGP",
+  "Chinese Grand Prix": "中国GP",
   "Dutch Grand Prix": "オランダGP",
   "Emilia Romagna Grand Prix": "エミリア・ロマーニャGP",
   "Hungarian Grand Prix": "ハンガリーGP",
@@ -99,6 +102,7 @@ const F1_GP_JA: Record<string, string> = {
   "Las Vegas Grand Prix": "ラスベガスGP",
   "Mexico City Grand Prix": "メキシコシティGP",
   "Mexican Grand Prix": "メキシコGP",
+  "Miami Grand Prix": "マイアミGP",
   "Monaco Grand Prix": "モナコGP",
   "Qatar Grand Prix": "カタールGP",
   "Saudi Arabian Grand Prix": "サウジアラビアGP",
@@ -174,6 +178,145 @@ async function fetchF1(season: number): Promise<Event[]> {
   return events;
 }
 
+// ====== ④-2 サッカー試合結果の取得（football-data.org）======
+async function fetchFootballResults(
+  competitionCode: string,
+  dateFrom: string,
+  dateTo: string
+): Promise<Record<string, MatchResult>> {
+  const token = process.env.FOOTBALL_DATA_TOKEN;
+  if (!token) throw new Error("FOOTBALL_DATA_TOKEN is not set");
+  const url = `https://api.football-data.org/v4/competitions/${competitionCode}/matches?dateFrom=${dateFrom}&dateTo=${dateTo}`;
+  const res = await fetch(url, { headers: { "X-Auth-Token": token } });
+  if (!res.ok) throw new Error(`football-data ${competitionCode}: ${res.status}`);
+  const data: any = await res.json();
+
+  const results: Record<string, MatchResult> = {};
+  for (const m of data.matches ?? []) {
+    const id = `fb-${m.id}`;
+    const status = m.status === "FINISHED" ? "finished" : m.status === "LIVE" ? "ongoing" : "scheduled";
+
+    const result: MatchResult = {
+      status,
+      teams: {
+        home: {
+          id: m.homeTeam?.id ?? 0,
+          crest: m.homeTeam?.crest,
+        },
+        away: {
+          id: m.awayTeam?.id ?? 0,
+          crest: m.awayTeam?.crest,
+        },
+      },
+    };
+
+    if (status === "finished" && m.score) {
+      const home = m.score.fullTime?.home ?? 0;
+      const away = m.score.fullTime?.away ?? 0;
+      let winner: "home" | "away" | "draw";
+      if (home > away) winner = "home";
+      else if (away > home) winner = "away";
+      else winner = "draw";
+
+      result.score = { home, away, winner };
+
+      if (m.score.penalties) {
+        result.penalties = {
+          home: m.score.penalties.home ?? 0,
+          away: m.score.penalties.away ?? 0,
+        };
+      }
+    }
+
+    results[id] = result;
+  }
+  return results;
+}
+
+// ====== ④-2-5 F1チャンピオンシップ順位表の取得（Ergast API）======
+async function fetchF1Championship(season: number): Promise<ChampionshipStanding[]> {
+  const url = `https://api.jolpi.ca/ergast/f1/${season}/driverstandings.json`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`jolpica championship: ${res.status}`);
+  const data: any = await res.json();
+
+  const standings = data.MRData.StandingsTable.StandingsLists?.[0]?.DriverStandings ?? [];
+  return standings.map((d: any) => ({
+    position: parseInt(d.position),
+    driver: `${d.Driver.givenName} ${d.Driver.familyName}`,
+    constructor: d.Constructors?.[0]?.name ?? "Unknown",
+    points: parseInt(d.points),
+    wins: parseInt(d.wins),
+  }));
+}
+
+// ====== ④-3 F1レース結果の取得（Ergast API）======
+async function fetchF1Results(season: number): Promise<Record<string, F1Result>> {
+  const racesUrl = `https://api.jolpi.ca/ergast/f1/${season}.json`;
+  const racesRes = await fetch(racesUrl);
+  if (!racesRes.ok) throw new Error(`jolpica f1: ${racesRes.status}`);
+  const racesData: any = await racesRes.json();
+  const races = racesData.MRData.RaceTable.Races ?? [];
+
+  const results: Record<string, F1Result> = {};
+
+  for (const race of races) {
+    const round = race.round;
+
+    // 予選結果を取得
+    try {
+      const qualUrl = `https://api.jolpi.ca/ergast/f1/${season}/${round}/qualifying.json`;
+      const qualRes = await fetch(qualUrl);
+      if (qualRes.ok) {
+        const qualData: any = await qualRes.json();
+        const qualResults = qualData.MRData.RaceTable.Races?.[0];
+
+        if (qualResults?.QualifyingResults) {
+          const id = `f1-${round}-q`;
+          results[id] = {
+            status: "finished",
+            standings: qualResults.QualifyingResults.map((res: any) => ({
+              position: parseInt(res.position),
+              points: 0,
+              driver: `${res.Driver.givenName} ${res.Driver.familyName}`,
+              constructor: res.Constructor.name,
+              status: "Qualified",
+            })),
+          };
+        }
+      }
+    } catch {
+      // 予選結果取得失敗時は続行
+    }
+
+    // レース結果を取得
+    try {
+      const raceResultUrl = `https://api.jolpi.ca/ergast/f1/${season}/${round}/results.json`;
+      const raceRes = await fetch(raceResultUrl);
+      if (!raceRes.ok) continue;
+      const raceData: any = await raceRes.json();
+      const raceResults = raceData.MRData.RaceTable.Races?.[0];
+
+      if (raceResults?.Results) {
+        const id = `f1-${round}-r`;
+        results[id] = {
+          status: "finished",
+          standings: raceResults.Results.map((res: any) => ({
+            position: parseInt(res.position),
+            points: parseInt(res.points),
+            driver: `${res.Driver.givenName} ${res.Driver.familyName}`,
+            constructor: res.Constructor.name,
+            status: res.status,
+          })),
+        };
+      }
+    } catch {
+      // レース結果取得失敗時は、このレースをスキップ
+    }
+  }
+  return results;
+}
+
 function mkF1(
   id: string,
   gp: string,
@@ -246,29 +389,44 @@ function adjustMidnightTime(date: string, day: string, time: string): { date: st
 // ====== ⑦ 実行 ======
 async function main() {
   const all: Event[] = [];
+  const resultsMap: ResultsMap = {};
+  let championship: ChampionshipStanding[] = [];
+
   try {
-    const from = new Date().toISOString().slice(0, 10);
+    // 2026年データを取得（過去含める。将来的に複数年対応時はここを拡張）
+    const from = "2026-01-01";
     const to = new Date(Date.now() + 60 * 864e5).toISOString().slice(0, 10);
 
     all.push(...(await fetchFootball("wc2026", "WC", from, to)));
     all.push(...(await fetchFootball("intl", "PL", from, to)));
     all.push(...(await fetchFootball("intl", "CL", from, to)));
     all.push(...(await fetchF1(2026)));
+
+    // 試合結果を取得
+    Object.assign(resultsMap, await fetchFootballResults("WC", from, to));
+    Object.assign(resultsMap, await fetchFootballResults("PL", from, to));
+    Object.assign(resultsMap, await fetchFootballResults("CL", from, to));
+    Object.assign(resultsMap, await fetchF1Results(2026));
+
+    // チャンピオンシップ順位表を取得
+    championship = await fetchF1Championship(2026);
   } catch (e) {
     console.error("取得エラー:", (e as Error).message);
     process.exit(1);
   }
 
-  const today = new Date().toISOString().slice(0, 10);
   const events = all
-    .filter((e: Event) => e.date >= today)
     .map(({ _competition, ...rest }: any) => rest)
     .sort((a: Event, b: Event) =>
       (a.date + a.time).localeCompare(b.date + b.time)
     );
 
   writeFileSync("public/data/events.json", JSON.stringify(events, null, 2));
+  writeFileSync("public/data/results.json", JSON.stringify(resultsMap, null, 2));
+  writeFileSync("public/data/standings.json", JSON.stringify(championship, null, 2));
   console.log(`✅ ${events.length}件を events.json に書き出しました`);
+  console.log(`✅ ${Object.keys(resultsMap).length}件の結果を results.json に書き出しました`);
+  console.log(`✅ ${championship.length}件のドライバーをstandings.json に書き出しました`);
 }
 
 main();

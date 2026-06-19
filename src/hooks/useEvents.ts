@@ -1,6 +1,7 @@
 import { useState, useMemo, useEffect } from "react";
-import type { Event } from "../types";
+import type { Event, ResultsMap } from "../types";
 import { SAMPLE_EVENTS } from "../constants/sampleEvents";
+import { MATCH_DURATION_MINUTES } from "../constants/match";
 
 // カスタムフック: イベント管理・フィルタリング・検索を一元管理
 export function useEvents() {
@@ -22,7 +23,6 @@ export function useEvents() {
     if (stored) {
       try {
         setFavorites(new Set(JSON.parse(stored)));
-        console.log('これは復元する関数です', stored);
       } catch {
         // 破損していたら無視
       }
@@ -49,7 +49,7 @@ export function useEvents() {
       if (e.date !== jstDateStr) return false;
       const [h, m] = e.time.split(":").map(Number);
       const eventStartMinutes = h * 60 + m;
-      return currentMinutes >= eventStartMinutes && currentMinutes < eventStartMinutes + 105;
+      return currentMinutes >= eventStartMinutes && currentMinutes < eventStartMinutes + MATCH_DURATION_MINUTES;
     });
   }, [events]);
 
@@ -103,14 +103,12 @@ export function useEvents() {
       );
   }, [events, query, activeLeagues, activeCasts, favOnly, favorites]);
 
-  const groups = useMemo(() => {
-    const map = new Map<string, Event[]>();
-    for (const e of filtered) {
-      if (!map.has(e.date)) map.set(e.date, []);
-      map.get(e.date)!.push(e);
-    }
-    return [...map.entries()];
-  }, [filtered]);
+  const map = new Map();
+  for (const e of filtered) {
+    if (!map.has(e.date)) map.set(e.date, []);
+    map.get(e.date).push(e);   // 同じ日付の試合を同じ箱に入れていく
+  }
+  const groups = [...map.entries()];  // [日付, 試合の配列] のリストになる
 
   return {
     events,
@@ -141,10 +139,25 @@ function toMinutes(time: string): number {
 // 自動生成された日程(events.json)を読み込む。失敗時はサンプルを返す。
 async function loadEvents(): Promise<Event[]> {
   try {
-    const res = await fetch("/data/events.json", { cache: "no-store" });
-    if (!res.ok) throw new Error("not found");
-    const data = await res.json();
-    return Array.isArray(data) && data.length ? data : SAMPLE_EVENTS;
+    const [eventsRes, resultsRes] = await Promise.all([
+      fetch("/data/events.json", { cache: "no-store" }),
+      fetch("/data/results.json", { cache: "no-store" }),
+    ]);
+
+    if (!eventsRes.ok) throw new Error("events.json not found");
+    const events: Event[] = await eventsRes.json();
+    if (!Array.isArray(events) || !events.length) return SAMPLE_EVENTS;
+
+    // 結果データを結合
+    if (resultsRes.ok) {
+      const resultsMap: ResultsMap = await resultsRes.json();
+      return events.map((e) => ({
+        ...e,
+        result: resultsMap[e.id as string],
+      }));
+    }
+
+    return events;
   } catch {
     return SAMPLE_EVENTS;
   }

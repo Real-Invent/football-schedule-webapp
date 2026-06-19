@@ -13,6 +13,14 @@ export const SAMPLE_EVENTS: Event[] = [
     title: "日本 vs ブラジル",
     cat: "グループステージ",
     casts: ["dazn", "ntv"],
+    result: {
+      status: "finished",
+      score: { home: 2, away: 1, winner: "home" },
+      teams: {
+        home: { id: 841, crest: "https://crests.football-data.org/841.svg" },
+        away: { id: 764, crest: "https://crests.football-data.org/764.svg" },
+      },
+    },
   },
   {
     id: 2,
@@ -23,6 +31,15 @@ export const SAMPLE_EVENTS: Event[] = [
     title: "フランス vs スペイン",
     cat: "グループステージ",
     casts: ["dazn", "nhkbs"],
+    result: {
+      status: "finished",
+      score: { home: 1, away: 1, winner: "draw" },
+      penalties: { home: 5, away: 4 },
+      teams: {
+        home: { id: 760, crest: "https://crests.football-data.org/760.svg" },
+        away: { id: 759, crest: "https://crests.football-data.org/759.svg" },
+      },
+    },
   },
   {
     id: 3,
@@ -30,9 +47,36 @@ export const SAMPLE_EVENTS: Event[] = [
     date: "2026-06-18",
     day: "水",
     time: "05:00",
-    title: "日本 vs メキシコ",
+    title: "ボスニア vs アラブ",
     cat: "グループステージ",
-    casts: ["dazn", "nhk"],
+    casts: ["dazn"],
+    result: {
+      status: "finished",
+      score: { home: 2, away: 0, winner: "home" },
+      teams: {
+        home: { id: 1060, crest: "https://crests.football-data.org/bosnia.svg" },
+        away: { id: 1146, crest: "https://crests.football-data.org/1146.svg" },
+      },
+    },
+  },
+  {
+    id: 30,
+    lg: "wc2026",
+    date: "2026-06-15",
+    day: "日",
+    time: "20:00",
+    title: "サウジアラビア vs ニュージーランド",
+    cat: "グループステージ",
+    casts: ["dazn"],
+    result: {
+      status: "finished",
+      score: { home: 1, away: 1, winner: "draw" },
+      penalties: { home: 4, away: 2 },
+      teams: {
+        home: { id: 793, crest: "https://crests.football-data.org/793.svg" },
+        away: { id: 1081, crest: "https://crests.football-data.org/1081.svg" },
+      },
+    },
   },
   {
     id: 4,
@@ -149,6 +193,14 @@ export const SAMPLE_EVENTS: Event[] = [
     title: "カナダGP 決勝",
     cat: "決勝",
     casts: ["dazn", "fuji", "sky"],
+    result: {
+      status: "finished",
+      standings: [
+        { position: 1, points: 25, driver: "Max Verstappen", constructor: "Red Bull", status: "Finished" },
+        { position: 2, points: 18, driver: "Lando Norris", constructor: "McLaren", status: "Finished" },
+        { position: 3, points: 15, driver: "Oscar Piastri", constructor: "McLaren", status: "Finished" },
+      ],
+    },
   },
 
   // --- オリンピック（サンプル）---

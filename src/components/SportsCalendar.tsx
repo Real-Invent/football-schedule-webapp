@@ -1,7 +1,11 @@
+import { useEffect, useRef } from "react";
 import { Search, X, CalendarDays, Filter, Star } from "lucide-react";
+import type { Event } from "../types";
 import { useEvents } from "../hooks/useEvents";
 import { LEAGUES } from "../constants/leagues";
 import { BROADCASTERS } from "../constants/broadcasters";
+import { COLORS } from "../constants/colors";
+import { UI_TEXTS, UI_SIZES } from "../constants/ui";
 import { FilterRow } from "./FilterRow";
 import { FilterChip } from "./FilterChip";
 import { EventCard } from "./EventCard";
@@ -25,8 +29,25 @@ export function SportsCalendar() {
     clearAll,
   } = useEvents();
 
+  const todayRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (todayRef.current) {
+      setTimeout(() => {
+        const filterBar = document.querySelector("div.sticky") as HTMLElement | null;
+        const filterHeight = filterBar?.offsetHeight ?? 0;
+        const todayElement = todayRef.current;
+        const scrollTop = (todayElement?.offsetTop ?? 0) - filterHeight - 10;
+        window.scrollTo({
+          top: Math.max(0, scrollTop),
+          behavior: "auto",
+        });
+      }, 0);
+    }
+  }, [groups]);
+
   const weekColor = (day: string) =>
-    day === "土" ? "#1D6FB8" : day === "日" ? "#E5004F" : "#334155";
+    day === "土" ? COLORS.weekday.sat : day === "日" ? COLORS.weekday.sun : COLORS.weekday.default;
 
   const fmtDate = (iso: string) => {
     const [, mm, dd] = iso.split("-");
@@ -34,39 +55,39 @@ export function SportsCalendar() {
   };
 
   return (
-    <div style={{ background: "#EDEFF4", minHeight: "100vh" }} className="font-sans">
-      <div className="mx-auto" style={{ maxWidth: 430 }}>
+    <div style={{ background: COLORS.bg.primary, minHeight: "100vh" }} className="font-sans">
+      <div className="mx-auto" style={{ maxWidth: UI_SIZES.container.maxWidth }}>
         {/* ===== ヘッダー ===== */}
         <header
           className="px-5 pt-6 pb-5 text-white"
-          style={{ background: "#0B1020" }}
+          style={{ background: COLORS.bg.dark }}
         >
           <div className="flex items-center gap-2 mb-3">
             {isOngoing && (
               <span
                 className="inline-flex items-center gap-1.5 text-[11px] font-bold px-2 py-0.5 rounded-full"
-                style={{ background: "#1FE0A0", color: "#0B1020" }}
+                style={{ background: COLORS.status.ongoingBg, color: COLORS.status.ongoingText }}
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse" />
-                開催中
+                {UI_TEXTS.header.badge}
               </span>
             )}
             <span className="text-[11px] tracking-widest text-slate-400 font-semibold">
-              観戦カレンダー
+              {UI_TEXTS.header.subtitle}
             </span>
           </div>
           <h1 className="text-[26px] leading-none font-black tracking-tight">
-            いつ・どこで観る？
+            {UI_TEXTS.header.title}
           </h1>
           <p className="text-slate-400 text-[13px] mt-2">
-            検索してから、リーグ・放送局でさらに絞り込めます。
+            {UI_TEXTS.header.description}
           </p>
         </header>
 
         {/* ===== 検索・フィルター（上部に貼り付く）===== */}
         <div
           className="sticky top-0 z-10 px-4 pt-3 pb-3 border-b border-slate-200"
-          style={{ background: "#EDEFF4" }}
+          style={{ background: COLORS.bg.primary }}
         >
           {/* 検索ボックス */}
           <div className="relative mb-3">
@@ -77,7 +98,7 @@ export function SportsCalendar() {
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="チーム名・種目で検索（全リーグ横断）"
+              placeholder={UI_TEXTS.search.placeholder}
               className="w-full pl-9 pr-9 py-2.5 rounded-xl text-[14px] bg-white border border-slate-200 outline-none focus:border-slate-400"
             />
             {query && (
@@ -92,7 +113,7 @@ export function SportsCalendar() {
           </div>
 
           {/* リーグ・競技フィルター */}
-          <FilterRow label="リーグ・競技">
+          <FilterRow label={UI_TEXTS.filter.league}>
             {Object.entries(LEAGUES).map(([key, l]) => (
               <FilterChip
                 key={key}
@@ -105,13 +126,13 @@ export function SportsCalendar() {
           </FilterRow>
 
           {/* 放送局フィルター */}
-          <FilterRow label="放送局・配信">
+          <FilterRow label={UI_TEXTS.filter.broadcast}>
             <FilterChip
               active={favOnly}
               onClick={() => setFavOnly((v: boolean) => !v)}
-              color="#F59E0B"
+              color={COLORS.filter.favorite}
               icon={Star}
-              label="お気に入り"
+              label={UI_TEXTS.filter.favorite}
             />
             {Object.entries(BROADCASTERS).map(([key, b]) => (
               <FilterChip
@@ -148,45 +169,49 @@ export function SportsCalendar() {
             <div className="text-center text-slate-500 py-16">
               <CalendarDays size={32} className="mx-auto mb-3 text-slate-300" />
               <p className="text-[14px] font-semibold">
-                条件に合う試合がありません
+                {UI_TEXTS.empty.title}
               </p>
               <p className="text-[12px] mt-1">
-                フィルターを減らすと見つかるかもしれません。
+                {UI_TEXTS.empty.description}
               </p>
             </div>
           )}
 
-          {groups.map(([date, items]) => (
-            <section key={date} className="mb-5">
-              <div className="flex items-baseline gap-2 mb-2 px-1">
-                <span className="text-[18px] font-black text-slate-800 tabular-nums">
-                  {fmtDate(date)}
-                </span>
-                <span
-                  className="text-[12px] font-bold"
-                  style={{ color: weekColor(items[0].day) }}
-                >
-                  ({items[0].day})
-                </span>
-              </div>
+          {groups.map(([date, items]) => {
+            const today = new Date().toISOString().slice(0, 10);
+            const isToday = date === today;
+            return (
+              <section key={date} ref={isToday ? todayRef : null} className="mb-5">
+                <div className="flex items-baseline gap-2 mb-2 px-1">
+                  <span className="text-[18px] font-black text-slate-800 tabular-nums">
+                    {fmtDate(date)}
+                  </span>
+                  <span
+                    className="text-[12px] font-bold"
+                    style={{ color: weekColor(items[0].day) }}
+                  >
+                    ({items[0].day})
+                  </span>
+                </div>
 
-              <div className="space-y-2">
-                {items.map((e) => (
-                  <EventCard
-                    key={e.id}
-                    e={e}
-                    isFavorite={favorites.has(e.id)}
-                    onToggleFavorite={() => toggleFavorite(e.id)}
-                  />
-                ))}
-              </div>
-            </section>
-          ))}
+                <div className="space-y-2">
+                  {items.map((e: Event) => (
+                    <EventCard
+                      key={e.id}
+                      e={e}
+                      isFavorite={favorites.has(e.id)}
+                      onToggleFavorite={() => toggleFavorite(e.id)}
+                    />
+                  ))}
+                </div>
+              </section>
+            );
+          })}
 
           <p className="text-[11px] text-slate-400 text-center mt-6 leading-relaxed">
-            ※ 試合日程・放送局は説明用のサンプルです。
+            {UI_TEXTS.disclaimer.line1}
             <br />
-            実際の最新情報は各公式サイトでご確認ください。
+            {UI_TEXTS.disclaimer.line2}
           </p>
         </main>
       </div>

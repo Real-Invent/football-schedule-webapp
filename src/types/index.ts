@@ -9,7 +9,52 @@ export type Event = {
   title: string;
   cat: string;
   casts: string[];
+  result?: MatchResult | F1Result;
 };
+
+// 試合結果データ（別ファイル results.json で管理）
+export type MatchResult = {
+  status: "finished" | "ongoing" | "scheduled";
+  score?: {
+    home: number;
+    away: number;
+    winner?: "home" | "away" | "draw";
+  };
+  penalties?: {
+    home: number;
+    away: number;
+  };
+  teams?: {
+    home: { id: number; crest?: string };
+    away: { id: number; crest?: string };
+  };
+};
+
+export type F1Standing = {
+  position: number;
+  points: number;
+  driver: string;
+  constructor: string;
+  status: string;
+};
+
+export type ChampionshipStanding = {
+  position: number;
+  driver: string;
+  constructor: string;
+  points: number;
+  wins: number;
+};
+
+export type F1Result = {
+  status: "finished" | "ongoing" | "scheduled";
+  standings?: F1Standing[];
+};
+
+export type Result = MatchResult | F1Result;
+
+// results.json の全体構造
+export type ResultsMap = Record<string, Result>;
 
 export type League = {
   label: string;
