@@ -5,7 +5,7 @@ import { MATCH_DURATION_MINUTES } from "../constants/match";
 
 // カスタムフック: イベント管理・フィルタリング・検索を一元管理
 export function useEvents() {
-  const [events, setEvents] = useState<Event[]>(SAMPLE_EVENTS);
+  const [events, setEvents] = useState<Event[]>([]);
   const [activeLeagues, setActiveLeagues] = useState<Set<string>>(new Set());
   const [activeCasts, setActiveCasts] = useState<Set<string>>(new Set());
   const [query, setQuery] = useState("");

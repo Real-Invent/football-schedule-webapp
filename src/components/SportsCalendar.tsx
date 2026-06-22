@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
 import { Search, X, CalendarDays, Filter, Star } from "lucide-react";
+import { useEffect, useRef } from "react";
 import type { Event } from "../types";
 import { useEvents } from "../hooks/useEvents";
 import { LEAGUES } from "../constants/leagues";
@@ -29,20 +29,22 @@ export function SportsCalendar() {
     clearAll,
   } = useEvents();
 
-  const todayRef = useRef<HTMLElement | null>(null);
+  const sectionRefs = useRef<{ [date: string]: HTMLElement | null }>({});
+  const hasScrolledRef = useRef(false);
 
   useEffect(() => {
-    if (todayRef.current) {
-      setTimeout(() => {
-        const filterBar = document.querySelector("div.sticky") as HTMLElement | null;
-        const filterHeight = filterBar?.offsetHeight ?? 0;
-        const todayElement = todayRef.current;
-        const scrollTop = (todayElement?.offsetTop ?? 0) - filterHeight - 10;
-        window.scrollTo({
-          top: Math.max(0, scrollTop),
-          behavior: "auto",
-        });
-      }, 0);
+    if (hasScrolledRef.current || groups.length === 0) return;
+
+    const today = new Date().toISOString().split('T')[0];
+    for (const [date] of groups) {
+      if (date >= today) {
+        const element = sectionRefs.current[date];
+        if (element) {
+          element.scrollIntoView({ behavior: 'instant', block: 'nearest' });
+          hasScrolledRef.current = true;
+        }
+        break;
+      }
     }
   }, [groups]);
 
@@ -178,10 +180,15 @@ export function SportsCalendar() {
           )}
 
           {groups.map(([date, items]) => {
-            const today = new Date().toISOString().slice(0, 10);
-            const isToday = date === today;
             return (
-              <section key={date} ref={isToday ? todayRef : null} className="mb-5">
+              <section
+                key={date}
+                ref={(el) => {
+                  if (el) sectionRefs.current[date] = el;
+                }}
+                className="mb-5"
+                style={{ scrollMarginTop: "200px" }}
+              >
                 <div className="flex items-baseline gap-2 mb-2 px-1">
                   <span className="text-[18px] font-black text-slate-800 tabular-nums">
                     {fmtDate(date)}
