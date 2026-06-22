@@ -7,17 +7,24 @@ type EventCardProps = {
   e: Event;
   isFavorite: boolean;
   onToggleFavorite: () => void;
+  onDetailClick?: () => void;
 };
 
 // 試合カード表示コンポーネント
 // 時刻、リーグタグ、タイトル、放送局を表示、右上にお気に入りボタン
-export function EventCard({ e, isFavorite, onToggleFavorite }: EventCardProps) {
+export function EventCard({ e, isFavorite, onToggleFavorite, onDetailClick }: EventCardProps) {
   const league = LEAGUES[e.lg];
 
   return (
-    <div className="relative bg-white rounded-2xl border border-slate-200 px-4 py-3 flex gap-3 items-center shadow-sm">
+    <div
+      onClick={onDetailClick}
+      className="relative bg-white rounded-2xl border border-slate-200 px-4 py-3 flex gap-3 items-center shadow-sm cursor-pointer hover:shadow-md hover:border-slate-300 transition-shadow"
+    >
       <button
-        onClick={onToggleFavorite}
+        onClick={(e) => {
+          e.stopPropagation();
+          onToggleFavorite();
+        }}
         className="absolute top-2 right-2 p-1 text-2xl transition-transform hover:scale-110"
         aria-label="お気に入り"
       >

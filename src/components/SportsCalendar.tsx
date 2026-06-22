@@ -1,5 +1,5 @@
 import { Search, X, CalendarDays, Filter, Star } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Event } from "../types";
 import { useEvents } from "../hooks/useEvents";
 import { LEAGUES } from "../constants/leagues";
@@ -9,8 +9,11 @@ import { UI_TEXTS, UI_SIZES } from "../constants/ui";
 import { FilterRow } from "./FilterRow";
 import { FilterChip } from "./FilterChip";
 import { EventCard } from "./EventCard";
+import { EventDetailModal } from "./EventDetailModal";
 
 export function SportsCalendar() {
+  const [selectedEvent, setSelectedEvent] = useState<Event | null>(null);
+
   const {
     activeLeagues,
     activeCasts,
@@ -31,19 +34,43 @@ export function SportsCalendar() {
 
   const sectionRefs = useRef<{ [date: string]: HTMLElement | null }>({});
   const hasScrolledRef = useRef(false);
+  const pendingScrollRef = useRef<number | null>(null);
 
+  // フィルター変更前のスクロール位置を保存
   useEffect(() => {
-    if (hasScrolledRef.current || groups.length === 0) return;
+    if (!hasScrolledRef.current) return;
+    const mainElement = document.querySelector('main');
+    if (mainElement) {
+      pendingScrollRef.current = mainElement.scrollTop;
+    }
+  }, [activeLeagues, activeCasts, query, favOnly, favorites]);
 
-    const today = new Date().toISOString().split('T')[0];
-    for (const [date] of groups) {
-      if (date >= today) {
-        const element = sectionRefs.current[date];
-        if (element) {
-          element.scrollIntoView({ behavior: 'instant', block: 'nearest' });
-          hasScrolledRef.current = true;
+  // 初期ロード時のみ自動スクロール、フィルター変更後はスクロール位置を復元
+  useEffect(() => {
+    if (groups.length === 0) return;
+
+    // 初回ロード時のみ自動スクロール
+    if (!hasScrolledRef.current) {
+      const today = new Date().toISOString().split('T')[0];
+      for (const [date] of groups) {
+        if (date >= today) {
+          const element = sectionRefs.current[date];
+          if (element) {
+            element.scrollIntoView({ behavior: 'instant', block: 'nearest' });
+            hasScrolledRef.current = true;
+          }
+          break;
         }
-        break;
+      }
+    } else if (pendingScrollRef.current !== null) {
+      // フィルター変更後はスクロール位置を復元
+      const mainElement = document.querySelector('main');
+      if (mainElement) {
+        const savedPosition = pendingScrollRef.current;
+        pendingScrollRef.current = null;
+        requestAnimationFrame(() => {
+          mainElement.scrollTop = savedPosition;
+        });
       }
     }
   }, [groups]);
@@ -208,6 +235,7 @@ export function SportsCalendar() {
                       e={e}
                       isFavorite={favorites.has(e.id)}
                       onToggleFavorite={() => toggleFavorite(e.id)}
+                      onDetailClick={() => setSelectedEvent(e)}
                     />
                   ))}
                 </div>
@@ -222,6 +250,13 @@ export function SportsCalendar() {
           </p>
         </main>
       </div>
+
+      {selectedEvent && (
+        <EventDetailModal
+          event={selectedEvent}
+          onClose={() => setSelectedEvent(null)}
+        />
+      )}
     </div>
   );
 }

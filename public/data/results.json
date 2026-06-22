@@ -15,6 +15,10 @@
       "home": 2,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-537328": {
@@ -33,6 +37,10 @@
       "home": 2,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537333": {
@@ -51,6 +59,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-537345": {
@@ -69,6 +81,10 @@
       "home": 4,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 3,
+      "away": 0
     }
   },
   "fb-537334": {
@@ -87,6 +103,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-537339": {
@@ -105,6 +125,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-537340": {
@@ -123,6 +147,10 @@
       "home": 0,
       "away": 1,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-537346": {
@@ -141,6 +169,10 @@
       "home": 2,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-537351": {
@@ -159,6 +191,10 @@
       "home": 7,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 3,
+      "away": 1
     }
   },
   "fb-537357": {
@@ -177,6 +213,10 @@
       "home": 2,
       "away": 2,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537352": {
@@ -195,6 +235,10 @@
       "home": 1,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537358": {
@@ -213,6 +257,10 @@
       "home": 5,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 1
     }
   },
   "fb-537369": {
@@ -231,6 +279,10 @@
       "home": 0,
       "away": 0,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537363": {
@@ -249,6 +301,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-537370": {
@@ -267,6 +323,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-537364": {
@@ -285,6 +345,10 @@
       "home": 2,
       "away": 2,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-537391": {
@@ -303,6 +367,10 @@
       "home": 3,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537392": {
@@ -321,6 +389,10 @@
       "home": 1,
       "away": 4,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 2
     }
   },
   "fb-537397": {
@@ -339,6 +411,10 @@
       "home": 3,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-537398": {
@@ -357,6 +433,10 @@
       "home": 3,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-537403": {
@@ -375,6 +455,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-537409": {
@@ -393,6 +477,10 @@
       "home": 4,
       "away": 2,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 2
     }
   },
   "fb-537410": {
@@ -411,6 +499,10 @@
       "home": 1,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537404": {
@@ -429,6 +521,10 @@
       "home": 1,
       "away": 3,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-537329": {
@@ -447,6 +543,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-537335": {
@@ -465,6 +565,10 @@
       "home": 4,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537336": {
@@ -483,6 +587,10 @@
       "home": 6,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 3,
+      "away": 0
     }
   },
   "fb-537330": {
@@ -501,10 +609,14 @@
       "home": 1,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537348": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 771,
@@ -514,10 +626,19 @@
         "id": 779,
         "crest": "https://crests.football-data.org/779.svg"
       }
+    },
+    "score": {
+      "home": 2,
+      "away": 0,
+      "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-537342": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 8873,
@@ -527,10 +648,19 @@
         "id": 815,
         "crest": "https://crests.football-data.org/morocco.svg"
       }
+    },
+    "score": {
+      "home": 0,
+      "away": 1,
+      "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-537341": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 764,
@@ -540,10 +670,19 @@
         "id": 836,
         "crest": "https://crests.football-data.org/haiti.svg"
       }
+    },
+    "score": {
+      "home": 3,
+      "away": 0,
+      "winner": "home"
+    },
+    "halfTime": {
+      "home": 3,
+      "away": 0
     }
   },
   "fb-537347": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 803,
@@ -553,10 +692,19 @@
         "id": 761,
         "crest": "https://crests.football-data.org/761.svg"
       }
+    },
+    "score": {
+      "home": 0,
+      "away": 1,
+      "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-537359": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 8601,
@@ -566,10 +714,19 @@
         "id": 792,
         "crest": "https://crests.football-data.org/792.svg"
       }
+    },
+    "score": {
+      "home": 5,
+      "away": 1,
+      "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-537353": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 759,
@@ -579,10 +736,19 @@
         "id": 1935,
         "crest": "https://crests.football-data.org/787.svg"
       }
+    },
+    "score": {
+      "home": 2,
+      "away": 1,
+      "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-537354": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 791,
@@ -592,10 +758,19 @@
         "id": 9460,
         "crest": "https://crests.football-data.org/curacao.svg"
       }
+    },
+    "score": {
+      "home": 0,
+      "away": 0,
+      "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537360": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 802,
@@ -605,10 +780,19 @@
         "id": 766,
         "crest": "https://crests.football-data.org/766.svg"
       }
+    },
+    "score": {
+      "home": 0,
+      "away": 4,
+      "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 2
     }
   },
   "fb-537371": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 760,
@@ -618,10 +802,19 @@
         "id": 801,
         "crest": "https://crests.football-data.org/saudi_arabia.svg"
       }
+    },
+    "score": {
+      "home": 4,
+      "away": 0,
+      "winner": "home"
+    },
+    "halfTime": {
+      "home": 3,
+      "away": 0
     }
   },
   "fb-537365": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 805,
@@ -631,10 +824,19 @@
         "id": 840,
         "crest": "https://crests.football-data.org/iran.svg"
       }
+    },
+    "score": {
+      "home": 0,
+      "away": 0,
+      "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537372": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 758,
@@ -644,10 +846,19 @@
         "id": 1930,
         "crest": "https://crests.football-data.org/cape_verde.svg"
       }
+    },
+    "score": {
+      "home": 2,
+      "away": 2,
+      "winner": "draw"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 1
     }
   },
   "fb-537366": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 783,
@@ -657,6 +868,15 @@
         "id": 825,
         "crest": "https://crests.football-data.org/825.svg"
       }
+    },
+    "score": {
+      "home": 1,
+      "away": 3,
+      "winner": "away"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-537399": {
@@ -1507,6 +1727,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-537971": {
@@ -1525,6 +1749,10 @@
       "home": 0,
       "away": 0,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537965": {
@@ -1543,6 +1771,10 @@
       "home": 0,
       "away": 0,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537968": {
@@ -1561,6 +1793,10 @@
       "home": 0,
       "away": 0,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537976": {
@@ -1579,6 +1815,10 @@
       "home": 3,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-537977": {
@@ -1597,6 +1837,10 @@
       "home": 2,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-537984": {
@@ -1615,6 +1859,10 @@
       "home": 3,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 3,
+      "away": 0
     }
   },
   "fb-537975": {
@@ -1633,6 +1881,10 @@
       "home": 2,
       "away": 3,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-537980": {
@@ -1651,6 +1903,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537978": {
@@ -1669,6 +1925,10 @@
       "home": 2,
       "away": 4,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-537982": {
@@ -1687,6 +1947,10 @@
       "home": 2,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537983": {
@@ -1705,6 +1969,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-537979": {
@@ -1723,6 +1991,10 @@
       "home": 2,
       "away": 2,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-537981": {
@@ -1741,6 +2013,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-537994": {
@@ -1759,6 +2035,10 @@
       "home": 1,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-537985": {
@@ -1777,6 +2057,10 @@
       "home": 3,
       "away": 2,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 1
     }
   },
   "fb-537986": {
@@ -1795,6 +2079,10 @@
       "home": 0,
       "away": 0,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537988": {
@@ -1813,6 +2101,10 @@
       "home": 3,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-537990": {
@@ -1831,6 +2123,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-537991": {
@@ -1849,6 +2145,10 @@
       "home": 2,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537992": {
@@ -1867,6 +2167,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-537989": {
@@ -1885,6 +2189,10 @@
       "home": 2,
       "away": 2,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-537993": {
@@ -1903,6 +2211,10 @@
       "home": 4,
       "away": 3,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 2
     }
   },
   "fb-537987": {
@@ -1921,6 +2233,10 @@
       "home": 0,
       "away": 0,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538001": {
@@ -1939,6 +2255,10 @@
       "home": 2,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537995": {
@@ -1957,6 +2277,10 @@
       "home": 2,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-537998": {
@@ -1975,6 +2299,10 @@
       "home": 2,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-537999": {
@@ -1993,6 +2321,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538000": {
@@ -2011,6 +2343,10 @@
       "home": 1,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538003": {
@@ -2029,6 +2365,10 @@
       "home": 1,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538002": {
@@ -2047,6 +2387,10 @@
       "home": 0,
       "away": 0,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538004": {
@@ -2065,6 +2409,10 @@
       "home": 0,
       "away": 0,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537996": {
@@ -2083,6 +2431,10 @@
       "home": 0,
       "away": 1,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537997": {
@@ -2101,6 +2453,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538014": {
@@ -2119,6 +2475,10 @@
       "home": 3,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 3,
+      "away": 0
     }
   },
   "fb-538009": {
@@ -2137,6 +2497,10 @@
       "home": 2,
       "away": 2,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-538011": {
@@ -2155,6 +2519,10 @@
       "home": 2,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538012": {
@@ -2173,6 +2541,10 @@
       "home": 2,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-538005": {
@@ -2191,6 +2563,10 @@
       "home": 3,
       "away": 2,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 1
     }
   },
   "fb-538006": {
@@ -2209,6 +2585,10 @@
       "home": 1,
       "away": 3,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538008": {
@@ -2227,6 +2607,10 @@
       "home": 0,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538013": {
@@ -2245,6 +2629,10 @@
       "home": 0,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538007": {
@@ -2263,6 +2651,10 @@
       "home": 2,
       "away": 3,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-538010": {
@@ -2281,6 +2673,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538017": {
@@ -2299,6 +2695,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538020": {
@@ -2317,6 +2717,10 @@
       "home": 0,
       "away": 4,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 2
     }
   },
   "fb-538024": {
@@ -2335,6 +2739,10 @@
       "home": 0,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538018": {
@@ -2353,6 +2761,10 @@
       "home": 3,
       "away": 2,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 2
     }
   },
   "fb-538019": {
@@ -2371,6 +2783,10 @@
       "home": 4,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 1
     }
   },
   "fb-538016": {
@@ -2389,6 +2805,10 @@
       "home": 0,
       "away": 1,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538021": {
@@ -2407,6 +2827,10 @@
       "home": 3,
       "away": 2,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538022": {
@@ -2425,6 +2849,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-538023": {
@@ -2443,6 +2871,10 @@
       "home": 2,
       "away": 2,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 2
     }
   },
   "fb-538015": {
@@ -2461,6 +2893,10 @@
       "home": 3,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-538031": {
@@ -2479,6 +2915,10 @@
       "home": 3,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-538032": {
@@ -2497,6 +2937,10 @@
       "home": 2,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538025": {
@@ -2515,6 +2959,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538027": {
@@ -2533,6 +2981,10 @@
       "home": 3,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538028": {
@@ -2551,6 +3003,10 @@
       "home": 0,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 2
     }
   },
   "fb-538029": {
@@ -2569,6 +3025,10 @@
       "home": 1,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538034": {
@@ -2587,6 +3047,10 @@
       "home": 1,
       "away": 3,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 3
     }
   },
   "fb-538033": {
@@ -2605,6 +3069,10 @@
       "home": 2,
       "away": 3,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 2
     }
   },
   "fb-538026": {
@@ -2623,6 +3091,10 @@
       "home": 0,
       "away": 1,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538030": {
@@ -2641,6 +3113,10 @@
       "home": 1,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538039": {
@@ -2659,6 +3135,10 @@
       "home": 2,
       "away": 2,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538040": {
@@ -2677,6 +3157,10 @@
       "home": 1,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538043": {
@@ -2695,6 +3179,10 @@
       "home": 1,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538044": {
@@ -2713,6 +3201,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538036": {
@@ -2731,6 +3223,10 @@
       "home": 1,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538041": {
@@ -2749,6 +3245,10 @@
       "home": 3,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 3,
+      "away": 0
     }
   },
   "fb-538042": {
@@ -2767,6 +3267,10 @@
       "home": 0,
       "away": 0,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538037": {
@@ -2785,6 +3289,10 @@
       "home": 2,
       "away": 3,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 3
     }
   },
   "fb-538035": {
@@ -2803,6 +3311,10 @@
       "home": 0,
       "away": 1,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538038": {
@@ -2821,6 +3333,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538094": {
@@ -2839,6 +3355,10 @@
       "home": 2,
       "away": 2,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538046": {
@@ -2857,6 +3377,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538048": {
@@ -2875,6 +3399,10 @@
       "home": 0,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 2
     }
   },
   "fb-538049": {
@@ -2893,6 +3421,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538054": {
@@ -2911,6 +3443,10 @@
       "home": 0,
       "away": 0,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538051": {
@@ -2929,6 +3465,10 @@
       "home": 2,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 1
     }
   },
   "fb-538045": {
@@ -2947,6 +3487,10 @@
       "home": 1,
       "away": 3,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538047": {
@@ -2965,6 +3509,10 @@
       "home": 1,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538052": {
@@ -2983,6 +3531,10 @@
       "home": 0,
       "away": 1,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538053": {
@@ -3001,6 +3553,10 @@
       "home": 1,
       "away": 4,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-538050": {
@@ -3019,6 +3575,10 @@
       "home": 0,
       "away": 1,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538064": {
@@ -3037,6 +3597,10 @@
       "home": 2,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538055": {
@@ -3055,6 +3619,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538058": {
@@ -3073,6 +3641,10 @@
       "home": 3,
       "away": 4,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 3
     }
   },
   "fb-538060": {
@@ -3091,6 +3663,10 @@
       "home": 5,
       "away": 2,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 3,
+      "away": 0
     }
   },
   "fb-538063": {
@@ -3109,6 +3685,10 @@
       "home": 2,
       "away": 3,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 2
     }
   },
   "fb-538061": {
@@ -3127,6 +3707,10 @@
       "home": 0,
       "away": 1,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538056": {
@@ -3145,6 +3729,10 @@
       "home": 2,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 1
     }
   },
   "fb-538059": {
@@ -3163,6 +3751,10 @@
       "home": 2,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-538062": {
@@ -3181,6 +3773,10 @@
       "home": 2,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538057": {
@@ -3199,6 +3795,10 @@
       "home": 2,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-538065": {
@@ -3217,6 +3817,10 @@
       "home": 0,
       "away": 0,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538068": {
@@ -3235,6 +3839,10 @@
       "home": 2,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538070": {
@@ -3253,6 +3861,10 @@
       "home": 0,
       "away": 1,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538074": {
@@ -3271,6 +3883,10 @@
       "home": 2,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538066": {
@@ -3289,6 +3905,10 @@
       "home": 1,
       "away": 4,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 2
     }
   },
   "fb-538067": {
@@ -3307,6 +3927,10 @@
       "home": 0,
       "away": 1,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538069": {
@@ -3325,6 +3949,10 @@
       "home": 0,
       "away": 1,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538071": {
@@ -3343,6 +3971,10 @@
       "home": 2,
       "away": 2,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538072": {
@@ -3361,6 +3993,10 @@
       "home": 2,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-538073": {
@@ -3379,6 +4015,10 @@
       "home": 1,
       "away": 3,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 3
     }
   },
   "fb-538075": {
@@ -3397,6 +4037,10 @@
       "home": 0,
       "away": 1,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538079": {
@@ -3415,6 +4059,10 @@
       "home": 0,
       "away": 0,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538077": {
@@ -3433,6 +4081,10 @@
       "home": 2,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538080": {
@@ -3451,6 +4103,10 @@
       "home": 0,
       "away": 1,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538084": {
@@ -3469,6 +4125,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-538076": {
@@ -3487,6 +4147,10 @@
       "home": 0,
       "away": 0,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538082": {
@@ -3505,6 +4169,10 @@
       "home": 3,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538083": {
@@ -3523,6 +4191,10 @@
       "home": 0,
       "away": 0,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538081": {
@@ -3541,6 +4213,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538078": {
@@ -3559,6 +4235,10 @@
       "home": 2,
       "away": 2,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 1
     }
   },
   "fb-538085": {
@@ -3577,6 +4257,10 @@
       "home": 2,
       "away": 2,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538087": {
@@ -3595,6 +4279,10 @@
       "home": 2,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-538089": {
@@ -3613,6 +4301,10 @@
       "home": 3,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538088": {
@@ -3631,6 +4323,10 @@
       "home": 3,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538090": {
@@ -3649,6 +4345,10 @@
       "home": 0,
       "away": 0,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538092": {
@@ -3667,6 +4367,10 @@
       "home": 1,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538086": {
@@ -3685,6 +4389,10 @@
       "home": 2,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538093": {
@@ -3703,6 +4411,10 @@
       "home": 0,
       "away": 3,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538104": {
@@ -3721,6 +4433,10 @@
       "home": 4,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538097": {
@@ -3739,6 +4455,10 @@
       "home": 1,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-538098": {
@@ -3757,6 +4477,10 @@
       "home": 2,
       "away": 2,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-538099": {
@@ -3775,6 +4499,10 @@
       "home": 0,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538101": {
@@ -3793,6 +4521,10 @@
       "home": 2,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-538095": {
@@ -3811,6 +4543,10 @@
       "home": 1,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538096": {
@@ -3829,6 +4565,10 @@
       "home": 2,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538103": {
@@ -3847,6 +4587,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-538100": {
@@ -3865,6 +4609,10 @@
       "home": 0,
       "away": 3,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538102": {
@@ -3883,6 +4631,10 @@
       "home": 1,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 2
     }
   },
   "fb-538107": {
@@ -3901,6 +4653,10 @@
       "home": 0,
       "away": 0,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538112": {
@@ -3919,6 +4675,10 @@
       "home": 1,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538110": {
@@ -3937,6 +4697,10 @@
       "home": 3,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-538114": {
@@ -3955,6 +4719,10 @@
       "home": 2,
       "away": 2,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-538108": {
@@ -3973,6 +4741,10 @@
       "home": 0,
       "away": 1,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538113": {
@@ -3991,6 +4763,10 @@
       "home": 4,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538105": {
@@ -4009,6 +4785,10 @@
       "home": 4,
       "away": 3,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 1
     }
   },
   "fb-538109": {
@@ -4027,6 +4807,10 @@
       "home": 1,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538111": {
@@ -4045,6 +4829,10 @@
       "home": 2,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-538106": {
@@ -4063,6 +4851,10 @@
       "home": 0,
       "away": 0,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538117": {
@@ -4081,6 +4873,10 @@
       "home": 3,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538115": {
@@ -4099,6 +4895,10 @@
       "home": 2,
       "away": 2,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538119": {
@@ -4117,6 +4917,10 @@
       "home": 0,
       "away": 1,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538116": {
@@ -4135,6 +4939,10 @@
       "home": 0,
       "away": 5,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 4
     }
   },
   "fb-538120": {
@@ -4153,6 +4961,10 @@
       "home": 1,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538121": {
@@ -4171,6 +4983,10 @@
       "home": 3,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-538123": {
@@ -4189,6 +5005,10 @@
       "home": 2,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538124": {
@@ -4207,6 +5027,10 @@
       "home": 0,
       "away": 1,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538118": {
@@ -4225,6 +5049,10 @@
       "home": 1,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538122": {
@@ -4243,6 +5071,10 @@
       "home": 2,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-538131": {
@@ -4261,6 +5093,10 @@
       "home": 3,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538128": {
@@ -4279,6 +5115,10 @@
       "home": 3,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538133": {
@@ -4297,6 +5137,10 @@
       "home": 3,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-538134": {
@@ -4315,6 +5159,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538127": {
@@ -4333,6 +5181,10 @@
       "home": 3,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 3,
+      "away": 0
     }
   },
   "fb-538125": {
@@ -4351,6 +5203,10 @@
       "home": 3,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-538132": {
@@ -4369,6 +5225,10 @@
       "home": 3,
       "away": 2,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-538126": {
@@ -4387,6 +5247,10 @@
       "home": 1,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 2
     }
   },
   "fb-538129": {
@@ -4405,6 +5269,10 @@
       "home": 1,
       "away": 3,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 2
     }
   },
   "fb-538130": {
@@ -4423,6 +5291,10 @@
       "home": 3,
       "away": 3,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538140": {
@@ -4441,6 +5313,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-538135": {
@@ -4459,6 +5335,10 @@
       "home": 0,
       "away": 0,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538136": {
@@ -4477,6 +5357,10 @@
       "home": 3,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-538139": {
@@ -4495,6 +5379,10 @@
       "home": 0,
       "away": 1,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538141": {
@@ -4513,6 +5401,10 @@
       "home": 3,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538137": {
@@ -4531,6 +5423,10 @@
       "home": 2,
       "away": 2,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-538138": {
@@ -4549,6 +5445,10 @@
       "home": 2,
       "away": 2,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-538142": {
@@ -4567,6 +5467,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538144": {
@@ -4585,6 +5489,10 @@
       "home": 0,
       "away": 1,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538143": {
@@ -4603,6 +5511,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538091": {
@@ -4621,6 +5533,10 @@
       "home": 3,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-538146": {
@@ -4639,6 +5555,10 @@
       "home": 4,
       "away": 2,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538152": {
@@ -4657,6 +5577,10 @@
       "home": 3,
       "away": 2,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538148": {
@@ -4675,6 +5599,10 @@
       "home": 2,
       "away": 2,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-538150": {
@@ -4693,6 +5621,10 @@
       "home": 1,
       "away": 3,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538151": {
@@ -4711,6 +5643,10 @@
       "home": 1,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538154": {
@@ -4729,6 +5665,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-538153": {
@@ -4747,6 +5687,10 @@
       "home": 3,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-538147": {
@@ -4765,6 +5709,10 @@
       "home": 1,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538145": {
@@ -4783,6 +5731,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538149": {
@@ -4801,6 +5753,10 @@
       "home": 2,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538155": {
@@ -4819,6 +5775,10 @@
       "home": 2,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538156": {
@@ -4837,6 +5797,10 @@
       "home": 0,
       "away": 3,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 2
     }
   },
   "fb-538157": {
@@ -4855,6 +5819,10 @@
       "home": 1,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538158": {
@@ -4873,6 +5841,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-538159": {
@@ -4891,6 +5863,10 @@
       "home": 2,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538160": {
@@ -4909,6 +5885,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-538161": {
@@ -4927,6 +5907,10 @@
       "home": 1,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538162": {
@@ -4945,6 +5929,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538163": {
@@ -4963,6 +5951,10 @@
       "home": 1,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-538164": {
@@ -4981,6 +5973,10 @@
       "home": 3,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-551996": {
@@ -4999,6 +5995,10 @@
       "home": 1,
       "away": 4,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 2
     }
   },
   "fb-551966": {
@@ -5017,6 +6017,10 @@
       "home": 3,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-551943": {
@@ -5035,6 +6039,10 @@
       "home": 2,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-551962": {
@@ -5053,6 +6061,10 @@
       "home": 2,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-551973": {
@@ -5071,6 +6083,10 @@
       "home": 2,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-552011": {
@@ -5089,6 +6105,10 @@
       "home": 1,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-552038": {
@@ -5107,6 +6127,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-551929": {
@@ -5125,6 +6149,10 @@
       "home": 6,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-551933": {
@@ -5143,6 +6171,10 @@
       "home": 1,
       "away": 3,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 2
     }
   },
   "fb-552001": {
@@ -5161,6 +6193,10 @@
       "home": 3,
       "away": 2,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-552010": {
@@ -5179,6 +6215,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-551949": {
@@ -5197,6 +6237,10 @@
       "home": 0,
       "away": 3,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-551956": {
@@ -5215,6 +6259,10 @@
       "home": 2,
       "away": 4,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 2
     }
   },
   "fb-551986": {
@@ -5233,6 +6281,10 @@
       "home": 2,
       "away": 3,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-551988": {
@@ -5251,6 +6303,10 @@
       "home": 2,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-552036": {
@@ -5269,6 +6325,10 @@
       "home": 3,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-551914": {
@@ -5287,6 +6347,10 @@
       "home": 2,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-551921": {
@@ -5305,6 +6369,10 @@
       "home": 1,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-551950": {
@@ -5323,6 +6391,10 @@
       "home": 6,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-551957": {
@@ -5341,6 +6413,10 @@
       "home": 4,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-551967": {
@@ -5359,6 +6435,10 @@
       "home": 2,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-551970": {
@@ -5377,6 +6457,10 @@
       "home": 3,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-551980": {
@@ -5395,6 +6479,10 @@
       "home": 3,
       "away": 2,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 3,
+      "away": 1
     }
   },
   "fb-551987": {
@@ -5413,6 +6501,10 @@
       "home": 1,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-551993": {
@@ -5431,6 +6523,10 @@
       "home": 3,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-551998": {
@@ -5449,6 +6545,10 @@
       "home": 0,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-552006": {
@@ -5467,6 +6567,10 @@
       "home": 0,
       "away": 0,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-552007": {
@@ -5485,6 +6589,10 @@
       "home": 1,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-552028": {
@@ -5503,6 +6611,10 @@
       "home": 2,
       "away": 3,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 1
     }
   },
   "fb-552030": {
@@ -5521,6 +6633,10 @@
       "home": 1,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-552050": {
@@ -5539,6 +6655,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-552051": {
@@ -5557,6 +6677,10 @@
       "home": 4,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-551913": {
@@ -5575,6 +6699,10 @@
       "home": 1,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-551920": {
@@ -5593,6 +6721,10 @@
       "home": 2,
       "away": 3,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 1
     }
   },
   "fb-551926": {
@@ -5611,6 +6743,10 @@
       "home": 4,
       "away": 2,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 1
     }
   },
   "fb-551932": {
@@ -5629,6 +6765,10 @@
       "home": 0,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-552055": {
@@ -5647,6 +6787,10 @@
       "home": 5,
       "away": 2,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 2
     }
   },
   "fb-552052": {
@@ -5665,6 +6809,10 @@
       "home": 0,
       "away": 1,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-552053": {
@@ -5683,6 +6831,10 @@
       "home": 2,
       "away": 3,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 2
     }
   },
   "fb-552057": {
@@ -5701,6 +6853,10 @@
       "home": 2,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-552054": {
@@ -5719,6 +6875,10 @@
       "home": 1,
       "away": 6,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 5
     }
   },
   "fb-552056": {
@@ -5737,6 +6897,10 @@
       "home": 3,
       "away": 3,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 2
     }
   },
   "fb-552058": {
@@ -5755,6 +6919,10 @@
       "home": 0,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-552059": {
@@ -5773,6 +6941,10 @@
       "home": 3,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-552064": {
@@ -5791,6 +6963,10 @@
       "home": 4,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-552062": {
@@ -5809,6 +6985,10 @@
       "home": 3,
       "away": 2,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-552066": {
@@ -5827,6 +7007,10 @@
       "home": 0,
       "away": 0,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-552067": {
@@ -5845,6 +7029,10 @@
       "home": 1,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-552065": {
@@ -5863,6 +7051,10 @@
       "home": 4,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-552060": {
@@ -5881,6 +7073,10 @@
       "home": 2,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-552061": {
@@ -5899,6 +7095,10 @@
       "home": 2,
       "away": 2,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-552063": {
@@ -5917,6 +7117,10 @@
       "home": 3,
       "away": 2,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-552069": {
@@ -5935,6 +7139,10 @@
       "home": 1,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-552071": {
@@ -5953,6 +7161,10 @@
       "home": 1,
       "away": 6,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 3
     }
   },
   "fb-552072": {
@@ -5971,6 +7183,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-552073": {
@@ -5989,6 +7205,10 @@
       "home": 5,
       "away": 2,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 4,
+      "away": 1
     }
   },
   "fb-552075": {
@@ -6007,6 +7227,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-552068": {
@@ -6025,6 +7249,10 @@
       "home": 5,
       "away": 2,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 1
     }
   },
   "fb-552070": {
@@ -6043,6 +7271,10 @@
       "home": 3,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 3,
+      "away": 0
     }
   },
   "fb-552074": {
@@ -6061,6 +7293,10 @@
       "home": 3,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 0
     }
   },
   "fb-552082": {
@@ -6079,6 +7315,10 @@
       "home": 5,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-552076": {
@@ -6097,6 +7337,10 @@
       "home": 0,
       "away": 3,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 2
     }
   },
   "fb-552078": {
@@ -6115,6 +7359,10 @@
       "home": 1,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-552083": {
@@ -6133,6 +7381,10 @@
       "home": 2,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-552080": {
@@ -6151,6 +7403,10 @@
       "home": 7,
       "away": 2,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 3,
+      "away": 2
     }
   },
   "fb-552077": {
@@ -6169,6 +7425,10 @@
       "home": 4,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-552079": {
@@ -6187,6 +7447,10 @@
       "home": 4,
       "away": 1,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-552081": {
@@ -6205,6 +7469,10 @@
       "home": 3,
       "away": 2,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-556719": {
@@ -6223,6 +7491,10 @@
       "home": 1,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-556721": {
@@ -6241,6 +7513,10 @@
       "home": 0,
       "away": 1,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-556718": {
@@ -6259,6 +7535,10 @@
       "home": 2,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-556720": {
@@ -6277,6 +7557,10 @@
       "home": 0,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-556722": {
@@ -6295,6 +7579,10 @@
       "home": 0,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-556724": {
@@ -6313,6 +7601,10 @@
       "home": 1,
       "away": 2,
       "winner": "away"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 2
     }
   },
   "fb-556723": {
@@ -6331,6 +7623,10 @@
       "home": 4,
       "away": 3,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 3
     }
   },
   "fb-556725": {
@@ -6349,6 +7645,10 @@
       "home": 0,
       "away": 0,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-552092": {
@@ -6367,6 +7667,10 @@
       "home": 5,
       "away": 4,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 3,
+      "away": 2
     }
   },
   "fb-552093": {
@@ -6385,6 +7689,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-552095": {
@@ -6403,6 +7711,10 @@
       "home": 1,
       "away": 0,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-552094": {
@@ -6421,6 +7733,10 @@
       "home": 1,
       "away": 1,
       "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-552096": {
@@ -6439,6 +7755,10 @@
       "home": 5,
       "away": 4,
       "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     },
     "penalties": {
       "home": 4,

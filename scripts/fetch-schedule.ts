@@ -220,6 +220,13 @@ async function fetchFootballResults(
 
       result.score = { home, away, winner };
 
+      if (m.score.halfTime) {
+        result.halfTime = {
+          home: m.score.halfTime.home ?? 0,
+          away: m.score.halfTime.away ?? 0,
+        };
+      }
+
       if (m.score.penalties) {
         result.penalties = {
           home: m.score.penalties.home ?? 0,
