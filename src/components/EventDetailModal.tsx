@@ -12,8 +12,8 @@ export function EventDetailModal({ event: e, onClose }: EventDetailModalProps) {
   const league = LEAGUES[e.lg];
 
   return (
-    <div className="fixed inset-0 bg-black/50 z-50 flex items-end sm:items-center justify-center p-4">
-      <div className="bg-white rounded-t-3xl sm:rounded-2xl max-h-[90vh] w-full sm:max-w-md overflow-y-auto">
+    <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+      <div className="bg-white rounded-t-3xl sm:rounded-2xl max-h-[70vh] sm:max-h-[90vh] w-full sm:max-w-md overflow-y-auto">
         {/* ヘッダー */}
         <div className="sticky top-0 bg-white border-b border-slate-200 px-4 py-3 flex items-center justify-between">
           <span
@@ -52,7 +52,7 @@ export function EventDetailModal({ event: e, onClose }: EventDetailModalProps) {
             {e.result && "teams" in e.result && e.result.teams && (
               <div>
                 {e.result.status === "finished" && "score" in e.result && e.result.score ? (
-                  <div className="flex items-center justify-between gap-3 mb-2">
+                  <div className="flex items-center justify-between sm:gap-3 gap-2 mb-2">
                     {(() => {
                       const parts = e.title.split(" vs ");
                       const home = parts[0] || "";
@@ -62,16 +62,16 @@ export function EventDetailModal({ event: e, onClose }: EventDetailModalProps) {
                       return (
                         <>
                           <div className="flex-1">
-                            <div className="flex items-center gap-2 justify-end mb-2">
+                            <div className="flex sm:flex-row flex-col items-center sm:gap-2 gap-1 justify-end mb-2">
                               {homeCrest && (
                                 <img
                                   src={homeCrest}
                                   alt={home}
-                                  className="h-10 w-auto"
+                                  className="sm:h-10 h-6 w-auto"
                                   onError={(e) => (e.currentTarget.style.display = "none")}
                                 />
                               )}
-                              <span className="font-bold text-slate-900 text-right">{home}</span>
+                              <span className="font-bold text-slate-900 text-right text-sm sm:text-base">{home}</span>
                             </div>
                           </div>
                           <div className="flex flex-col items-center gap-1">
@@ -92,16 +92,16 @@ export function EventDetailModal({ event: e, onClose }: EventDetailModalProps) {
                             )}
                           </div>
                           <div className="flex-1">
-                            <div className="flex items-center gap-2 justify-start mb-2">
-                              <span className="font-bold text-slate-900">{away}</span>
+                            <div className="flex sm:flex-row flex-col items-center sm:gap-2 gap-1 justify-start mb-2">
                               {awayCrest && (
                                 <img
                                   src={awayCrest}
                                   alt={away}
-                                  className="h-10 w-auto"
+                                  className="sm:h-10 h-6 w-auto"
                                   onError={(e) => (e.currentTarget.style.display = "none")}
                                 />
                               )}
+                              <span className="font-bold text-slate-900 text-sm sm:text-base">{away}</span>
                             </div>
                           </div>
                         </>
@@ -109,7 +109,7 @@ export function EventDetailModal({ event: e, onClose }: EventDetailModalProps) {
                     })()}
                   </div>
                 ) : (
-                  <div className="flex items-center justify-between gap-2 mb-2">
+                  <div className="flex items-center justify-between sm:gap-2 gap-1 mb-2">
                     {(() => {
                       const parts = e.title.split(" vs ");
                       const home = parts[0] || "";
@@ -119,30 +119,30 @@ export function EventDetailModal({ event: e, onClose }: EventDetailModalProps) {
                       return (
                         <>
                           <div className="flex-1">
-                            <div className="flex items-center gap-2 justify-end mb-2">
+                            <div className="flex sm:flex-row flex-col items-center sm:gap-2 gap-1 justify-end mb-2">
                               {homeCrest && (
                                 <img
                                   src={homeCrest}
                                   alt={home}
-                                  className="h-10 w-auto"
+                                  className="sm:h-10 h-6 w-auto"
                                   onError={(e) => (e.currentTarget.style.display = "none")}
                                 />
                               )}
-                              <span className="font-bold text-slate-900 text-right">{home}</span>
+                              <span className="font-bold text-slate-900 text-right text-sm sm:text-base">{home}</span>
                             </div>
                           </div>
                           <span className="flex-shrink-0 text-slate-400 font-semibold">vs</span>
                           <div className="flex-1">
-                            <div className="flex items-center gap-2 justify-start mb-2">
-                              <span className="font-bold text-slate-900">{away}</span>
+                            <div className="flex sm:flex-row flex-col items-center sm:gap-2 gap-1 justify-start mb-2">
                               {awayCrest && (
                                 <img
                                   src={awayCrest}
                                   alt={away}
-                                  className="h-10 w-auto"
+                                  className="sm:h-10 h-6 w-auto"
                                   onError={(e) => (e.currentTarget.style.display = "none")}
                                 />
                               )}
+                              <span className="font-bold text-slate-900 text-sm sm:text-base">{away}</span>
                             </div>
                           </div>
                         </>
@@ -166,8 +166,11 @@ export function EventDetailModal({ event: e, onClose }: EventDetailModalProps) {
               <div className="space-y-1">
                 <p className="text-[12px] font-semibold text-slate-900 mb-2">レース結果</p>
                 {e.result.standings.map((s) => (
-                  <div key={s.position} className="text-[13px] text-slate-700">
-                    <span className="font-bold text-slate-900">{s.position}位</span> {s.driver} ({s.constructor}) <span className="text-slate-500">{s.points}pt</span>
+                  <div key={s.position} className="flex text-[13px] text-slate-700">
+                    <span className="w-8 text-right font-bold text-slate-900">{s.position}位</span>
+                    <span className="w-8"></span>
+                    <span className="flex-1">{s.driver} ({s.constructor})</span>
+                    {!e.id.toString().endsWith('-q') && <span className="w-14 text-right text-slate-500">{s.points}pt</span>}
                   </div>
                 ))}
               </div>
