@@ -29,6 +29,8 @@ jobs:
         run: npx tsx scripts/fetch-schedule.ts
 
       - name: TypeScript コンパイル＆ Vite ビルド
+        env:
+          VITE_GEMINI_API_KEY: ${{ secrets.VITE_GEMINI_API_KEY }}
         run: npm run build
 
       - name: S3 にアップロード
