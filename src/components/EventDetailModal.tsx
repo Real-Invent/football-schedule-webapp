@@ -1,4 +1,5 @@
-import { X } from "lucide-react";
+import { X, Loader } from "lucide-react";
+import { useState } from "react";
 import type { Event } from "../types";
 import { LEAGUES } from "../constants/leagues";
 import { BROADCASTERS } from "../constants/broadcasters";
@@ -8,8 +9,127 @@ type EventDetailModalProps = {
   onClose: () => void;
 };
 
+const GEMINI_MODELS = [
+  { model: "gemini-2.5-flash", label: "Flash" },
+  { model: "gemini-2.5-flash-lite", label: "Flash Lite" },
+  { model: "gemini-3.1-flash-lite", label: "3.1 Flash Lite" },
+  { model: "gemini-3-flash", label: "3 Flash" },
+];
+
+const parsePrediction = (text: string): { result: string; explanation: string } => {
+  const match = text.match(/予想：(.+?)(?:\n\n|$)/);
+  const resultText = match ? match[1].trim() : "";
+  const explanationMatch = text.match(/解説：([\s\S]+?)$/);
+  const explanationText = explanationMatch ? explanationMatch[1].trim() : text;
+  return {
+    result: resultText || "予想を取得できませんでした",
+    explanation: explanationText || text
+  };
+};
+
+
 export function EventDetailModal({ event: e, onClose }: EventDetailModalProps) {
   const league = LEAGUES[e.lg];
+  const [isLoading, setIsLoading] = useState(false);
+  const [prediction, setPrediction] = useState<{ result: string; explanation: string } | null>(null);
+  const [usedModel, setUsedModel] = useState<string | null>(null);
+
+  const handleAIPrediction = async () => {
+    const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+    if (!apiKey) {
+      alert("APIキーが設定されていません");
+      return;
+    }
+
+    // サッカー試合の対戦相手が決まっているか確認
+    if (["wc2026", "jleague", "intl"].includes(e.lg)) {
+      const parts = e.title.split(" vs ");
+      if (parts.length !== 2 || !parts[0]?.trim() || !parts[1]?.trim() ||
+        parts[0].includes("TBD") || parts[1].includes("TBD")) {
+        setPrediction({ result: "予想不可", explanation: "対戦カードがまだ決まっていないため、予想できません。" });
+        return;
+      }
+    }
+
+    setIsLoading(true);
+    setPrediction(null);
+
+    const prompt = e.lg === "f1"
+      ? `以下のF1レースについて、簡潔な予想や解説をしてください。以下の形式で返してください：
+
+予想：<予想されるチーム名（例：Ferrari, Mercedes, Red Bull, McLaren等）>
+
+解説：<3〜5文の解説>
+
+レース: ${e.title}
+開催日: ${e.date}
+時間: ${e.time}`
+      : `以下のスポーツ試合について、簡潔な予想や解説をしてください。以下の形式で返してください：
+
+予想：<どちらが勝つか、または引き分けか>
+
+解説：<3〜5文の解説>
+
+大会: ${LEAGUES[e.lg].label}
+試合: ${e.title}
+開催日: ${e.date}
+カテゴリー: ${e.cat}
+時間: ${e.time}`;
+
+    try {
+      for (const modelConfig of GEMINI_MODELS) {
+        const model = modelConfig.model;
+
+        try {
+          const response = await fetch(
+            `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`,
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                contents: [{ parts: [{ text: prompt }] }],
+              }),
+            }
+          );
+
+          if (!response.ok) {
+            if (response.status === 429) {
+              console.warn(`${model}: 429 rate limited, trying next model...`);
+              continue;
+            } else if (response.status === 401 || response.status === 403) {
+              throw new Error("APIキーが無効です。設定を確認してください。");
+            } else if (response.status === 503) {
+              throw new Error("AIがすこし忙しそうです。もう一回ためしてね！");
+            } else {
+              throw new Error(`エラーが発生しました。しばらく待ってからお試しください。`);
+            }
+          }
+
+          const data = await response.json();
+          const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
+          if (!text) {
+            continue;
+          }
+          setPrediction(parsePrediction(text));
+          setUsedModel(model);
+          return;
+        } catch (error) {
+          if (error instanceof Error && error.message.includes("APIキーが無効")) {
+            throw error;
+          }
+          continue;
+        }
+      }
+
+      setPrediction({ result: "エラー", explanation: "APIの使用上限に達しました。しばらく待ってからお試しください。" });
+    } catch (error) {
+      console.error("AI Prediction Error:", error);
+      const errorMessage = error instanceof Error ? error.message : "エラーが発生しました。もう一度お試しください。";
+      setPrediction({ result: "エラー", explanation: errorMessage });
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
@@ -188,22 +308,48 @@ export function EventDetailModal({ event: e, onClose }: EventDetailModalProps) {
           {/* 放送局 */}
           <div>
             <p className="text-[11px] text-slate-500 font-semibold mb-2">放送局</p>
-            <div className="flex flex-wrap gap-2">
-              {e.casts.map((c) => {
-                const b = BROADCASTERS[c];
-                return (
-                  <div
-                    key={c}
-                    className="inline-flex items-center gap-1.5 text-[12px] font-bold px-3 py-1.5 rounded-md text-white"
-                    style={{ background: b.chip }}
+            <div className="flex items-center justify-between gap-3">
+              <div className="flex flex-wrap gap-2 flex-1">
+                {e.casts.map((c) => {
+                  const b = BROADCASTERS[c];
+                  return (
+                    <div
+                      key={c}
+                      className="inline-flex items-center gap-1.5 text-[12px] font-bold px-3 py-1.5 rounded-md text-white"
+                      style={{ background: b.chip }}
+                    >
+                      {b.icon && <b.icon size={14} />}
+                      {b.label}
+                    </div>
+                  );
+                })}
+              </div>
+              {!(e.result && e.result.status === "finished") && (
+                <div className="flex-shrink-0">
+                  <button
+                    onClick={handleAIPrediction}
+                    disabled={isLoading}
+                    className="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white text-[12px] font-bold rounded-md transition-colors whitespace-nowrap flex items-center gap-1.5"
                   >
-                    {b.icon && <b.icon size={14} />}
-                    {b.label}
-                  </div>
-                );
-              })}
+                    {isLoading && <Loader size={14} className="animate-spin" />}
+                    {isLoading ? "読込中..." : "AI予想"}
+                  </button>
+                </div>
+              )}
             </div>
           </div>
+
+          {/* AI予想結果 */}
+          {prediction && (
+            <div className="bg-blue-50 border border-blue-200 rounded-md p-3">
+              <p className="text-[11px] text-blue-700 font-semibold mb-2">AI予想</p>
+              <h4 className="text-[18px] font-bold text-slate-900 mb-3">{prediction.result}</h4>
+              <p className="text-[13px] text-slate-800 leading-relaxed">{prediction.explanation}</p>
+              {usedModel && (
+                <p className="text-[9px] text-slate-400 mt-2 text-right">{usedModel}</p>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>
