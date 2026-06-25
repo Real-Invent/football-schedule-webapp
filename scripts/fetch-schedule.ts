@@ -79,7 +79,7 @@ const TEAM_JA: Record<string, string> = {
   "Real Madrid CF": "レアル・マドリード",
   "FC Barcelona": "バルセロナ",
 };
-const ja = (name: string) => TEAM_JA[name] ?? name;
+export const ja = (name: string) => TEAM_JA[name] ?? name;
 
 // ====== F1グランプリの日本語化 ======
 const F1_GP_JA: Record<string, string> = {
@@ -110,7 +110,7 @@ const F1_GP_JA: Record<string, string> = {
   "Spanish Grand Prix": "スペインGP",
   "United States Grand Prix": "アメリカGP",
 };
-const f1ja = (gp: string) => F1_GP_JA[gp] ?? gp;
+export const f1ja = (gp: string) => F1_GP_JA[gp] ?? gp;
 
 // ====== カテゴリーの日本語化 ======
 const CAT_JA: Record<string, string> = {
@@ -122,10 +122,10 @@ const CAT_JA: Record<string, string> = {
   "THIRD_PLACE": "3位決定戦",
   "FINAL": "決勝",
 };
-const catja = (cat: string) => CAT_JA[cat] ?? cat;
+export const catja = (cat: string) => CAT_JA[cat] ?? cat;
 
 // ====== ③ サッカー日程の取得（football-data.org）======
-async function fetchFootball(
+export async function fetchFootball(
   lg: "wc2026" | "intl",
   competitionCode: string,
   dateFrom: string,
@@ -158,7 +158,7 @@ async function fetchFootball(
 }
 
 // ====== ④ F1日程の取得（Jolpica / 旧Ergast互換）======
-async function fetchF1(season: number): Promise<Event[]> {
+export async function fetchF1(season: number): Promise<Event[]> {
   const url = `https://api.jolpi.ca/ergast/f1/${season}.json`;
   const res = await fetch(url);
   if (!res.ok) throw new Error(`jolpica f1: ${res.status}`);
@@ -179,7 +179,7 @@ async function fetchF1(season: number): Promise<Event[]> {
 }
 
 // ====== ④-2 サッカー試合結果の取得（football-data.org）======
-async function fetchFootballResults(
+export async function fetchFootballResults(
   competitionCode: string,
   dateFrom: string,
   dateTo: string
@@ -241,7 +241,7 @@ async function fetchFootballResults(
 }
 
 // ====== ④-2-5 F1チャンピオンシップ順位表の取得（Ergast API）======
-async function fetchF1Championship(season: number): Promise<ChampionshipStanding[]> {
+export async function fetchF1Championship(season: number): Promise<ChampionshipStanding[]> {
   const url = `https://api.jolpi.ca/ergast/f1/${season}/driverstandings.json`;
   const res = await fetch(url);
   if (!res.ok) throw new Error(`jolpica championship: ${res.status}`);
@@ -258,7 +258,7 @@ async function fetchF1Championship(season: number): Promise<ChampionshipStanding
 }
 
 // ====== ④-3 F1レース結果の取得（Ergast API）======
-async function fetchF1Results(season: number): Promise<Record<string, F1Result>> {
+export async function fetchF1Results(season: number): Promise<Record<string, F1Result>> {
   const racesUrl = `https://api.jolpi.ca/ergast/f1/${season}.json`;
   const racesRes = await fetch(racesUrl);
   if (!racesRes.ok) throw new Error(`jolpica f1: ${racesRes.status}`);
@@ -324,7 +324,7 @@ async function fetchF1Results(season: number): Promise<Record<string, F1Result>>
   return results;
 }
 
-function mkF1(
+export function mkF1(
   id: string,
   gp: string,
   cat: string,
@@ -344,7 +344,7 @@ function mkF1(
 }
 
 // ====== ⑤ 放送局を対応表から解決する ======
-function resolveCasts(ev: any): string[] {
+export function resolveCasts(ev: any): string[] {
   const rule = BROADCASTER_RULES[ev.lg as keyof typeof BROADCASTER_RULES];
   if (!rule) return [];
 
@@ -362,7 +362,7 @@ function resolveCasts(ev: any): string[] {
 }
 
 // ====== ⑥ UTC → 日本時間(JST, +9h)へ変換 ======
-function toJst(utcString: string): { date: string; day: string; time: string } {
+export function toJst(utcString: string): { date: string; day: string; time: string } {
   const d = new Date(utcString);
   const jst = new Date(d.getTime() + 9 * 60 * 60 * 1000);
   const pad = (n: number) => String(n).padStart(2, "0");
@@ -376,7 +376,7 @@ function toJst(utcString: string): { date: string; day: string; time: string } {
 
 // ====== 早朝4時を基軸とした28時間表記に調整 ======
 // 00:00～03:59 は前日の 24:00～27:59 に変換
-function adjustMidnightTime(date: string, day: string, time: string): { date: string; day: string; time: string } {
+export function adjustMidnightTime(date: string, day: string, time: string): { date: string; day: string; time: string } {
   const [h, m] = time.split(":").map(Number);
 
   if (h < 4) {
@@ -436,4 +436,4 @@ async function main() {
   console.log(`✅ ${championship.length}件のドライバーをstandings.json に書き出しました`);
 }
 
-main();
+export { main };

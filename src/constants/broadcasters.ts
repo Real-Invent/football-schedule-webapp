@@ -1,4 +1,4 @@
-import { Search, Tv, Radio, Satellite, Wifi } from "lucide-react";
+import { Tv, Radio, Satellite, Wifi } from "lucide-react";
 import type { Broadcaster } from "../types";
 
 // 放送局・配信サービスのマスタデータ

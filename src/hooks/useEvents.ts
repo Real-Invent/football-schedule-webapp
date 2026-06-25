@@ -3,6 +3,19 @@ import type { Event, ResultsMap } from "../types";
 import { SAMPLE_EVENTS } from "../constants/sampleEvents";
 import { MATCH_DURATION_MINUTES } from "../constants/match";
 
+// localStorage からお気に入りを復元
+function loadFavorites(): Set<string | number> {
+  const stored = localStorage.getItem("favorites");
+  if (stored) {
+    try {
+      return new Set(JSON.parse(stored));
+    } catch {
+      // 破損していたら無視
+    }
+  }
+  return new Set();
+}
+
 // カスタムフック: イベント管理・フィルタリング・検索を一元管理
 export function useEvents() {
   const [events, setEvents] = useState<Event[]>([]);
@@ -10,23 +23,11 @@ export function useEvents() {
   const [activeCasts, setActiveCasts] = useState<Set<string>>(new Set());
   const [query, setQuery] = useState("");
   const [favOnly, setFavOnly] = useState(false);
-  const [favorites, setFavorites] = useState<Set<string | number>>(new Set());
+  const [favorites, setFavorites] = useState<Set<string | number>>(loadFavorites);
 
   // 起動時に自動生成された日程を読み込む（失敗時はサンプルのまま）
   useEffect(() => {
     loadEvents().then(setEvents);
-  }, []);
-
-  // localStorage からお気に入りを復元
-  useEffect(() => {
-    const stored = localStorage.getItem("favorites");
-    if (stored) {
-      try {
-        setFavorites(new Set(JSON.parse(stored)));
-      } catch {
-        // 破損していたら無視
-      }
-    }
   }, []);
 
   // favorites が変更されたら localStorage に保存
@@ -56,7 +57,11 @@ export function useEvents() {
   const toggle = (setter: React.Dispatch<React.SetStateAction<Set<string>>>) => (key: string) =>
     setter((prev) => {
       const next = new Set(prev);
-      next.has(key) ? next.delete(key) : next.add(key);
+      if (next.has(key)) {
+        next.delete(key);
+      } else {
+        next.add(key);
+      }
       return next;
     });
 
@@ -76,7 +81,11 @@ export function useEvents() {
   const toggleFavorite = (eventId: string | number) => {
     setFavorites((prev) => {
       const next = new Set(prev);
-      next.has(eventId) ? next.delete(eventId) : next.add(eventId);
+      if (next.has(eventId)) {
+        next.delete(eventId);
+      } else {
+        next.add(eventId);
+      }
       return next;
     });
   };

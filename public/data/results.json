@@ -880,7 +880,7 @@
     }
   },
   "fb-537399": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 762,
@@ -890,10 +890,19 @@
         "id": 816,
         "crest": "https://crests.football-data.org/816.svg"
       }
+    },
+    "score": {
+      "home": 2,
+      "away": 0,
+      "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-537393": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 773,
@@ -903,10 +912,19 @@
         "id": 8062,
         "crest": "https://crests.football-data.org/iraq.svg"
       }
+    },
+    "score": {
+      "home": 3,
+      "away": 0,
+      "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-537394": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 8872,
@@ -916,10 +934,19 @@
         "id": 804,
         "crest": "https://crests.football-data.org/senegal.svg"
       }
+    },
+    "score": {
+      "home": 3,
+      "away": 2,
+      "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-537400": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 8049,
@@ -929,10 +956,19 @@
         "id": 778,
         "crest": "https://crests.football-data.org/algeria.svg"
       }
+    },
+    "score": {
+      "home": 1,
+      "away": 2,
+      "winner": "away"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 0
     }
   },
   "fb-537405": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 765,
@@ -942,10 +978,19 @@
         "id": 8070,
         "crest": "https://crests.football-data.org/8070.png"
       }
+    },
+    "score": {
+      "home": 5,
+      "away": 0,
+      "winner": "home"
+    },
+    "halfTime": {
+      "home": 3,
+      "away": 0
     }
   },
   "fb-537411": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 770,
@@ -955,10 +1000,19 @@
         "id": 763,
         "crest": "https://crests.football-data.org/ghana.svg"
       }
+    },
+    "score": {
+      "home": 0,
+      "away": 0,
+      "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537412": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 1836,
@@ -968,10 +1022,19 @@
         "id": 799,
         "crest": "https://crests.football-data.org/799.svg"
       }
+    },
+    "score": {
+      "home": 0,
+      "away": 1,
+      "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537406": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 818,
@@ -981,10 +1044,19 @@
         "id": 1934,
         "crest": "https://crests.football-data.org/congo_dr.svg"
       }
+    },
+    "score": {
+      "home": 1,
+      "away": 0,
+      "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537337": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 788,
@@ -994,10 +1066,19 @@
         "id": 828,
         "crest": "https://crests.football-data.org/canada.svg"
       }
+    },
+    "score": {
+      "home": 2,
+      "away": 1,
+      "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537338": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 1060,
@@ -1007,10 +1088,19 @@
         "id": 8030,
         "crest": "https://crests.football-data.org/8030.svg"
       }
+    },
+    "score": {
+      "home": 3,
+      "away": 1,
+      "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 1
     }
   },
   "fb-537344": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 815,
@@ -1020,10 +1110,19 @@
         "id": 836,
         "crest": "https://crests.football-data.org/haiti.svg"
       }
+    },
+    "score": {
+      "home": 4,
+      "away": 2,
+      "winner": "home"
+    },
+    "halfTime": {
+      "home": 2,
+      "away": 2
     }
   },
   "fb-537343": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 8873,
@@ -1033,6 +1132,15 @@
         "id": 764,
         "crest": "https://crests.football-data.org/764.svg"
       }
+    },
+    "score": {
+      "home": 0,
+      "away": 3,
+      "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 2
     }
   },
   "fb-537331": {
@@ -1325,8 +1433,8 @@
     "status": "scheduled",
     "teams": {
       "home": {
-        "id": 0,
-        "crest": null
+        "id": 759,
+        "crest": "https://crests.football-data.org/759.svg"
       },
       "away": {
         "id": 0,
@@ -1377,8 +1485,8 @@
     "status": "scheduled",
     "teams": {
       "home": {
-        "id": 0,
-        "crest": null
+        "id": 769,
+        "crest": "https://crests.football-data.org/769.svg"
       },
       "away": {
         "id": 0,
@@ -1416,8 +1524,8 @@
     "status": "scheduled",
     "teams": {
       "home": {
-        "id": 0,
-        "crest": null
+        "id": 771,
+        "crest": "https://crests.football-data.org/usa.svg"
       },
       "away": {
         "id": 0,
@@ -1481,8 +1589,8 @@
     "status": "scheduled",
     "teams": {
       "home": {
-        "id": 0,
-        "crest": null
+        "id": 762,
+        "crest": "https://crests.football-data.org/762.png"
       },
       "away": {
         "id": 0,

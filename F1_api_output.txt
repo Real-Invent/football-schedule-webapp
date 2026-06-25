@@ -1,0 +1,216 @@
+﻿================================================================================
+F1 2026 レース結果（ポイント順）
+================================================================================
+
+【Round 1】 Australian Grand Prix (開催日: 2026-03-08)
+--------------------------------------------------------------------------------
+[] 25 pt - George Russell (Mercedes) [Finished]
+[] 18 pt - Andrea Kimi Antonelli (Mercedes) [Finished]
+[] 15 pt - Charles Leclerc (Ferrari) [Finished]
+[] 12 pt - Lewis Hamilton (Ferrari) [Finished]
+[] 10 pt - Lando Norris (McLaren) [Finished]
+[] 8 pt - Max Verstappen (Red Bull) [Finished]
+[] 6 pt - Oliver Bearman (Haas F1 Team) [Lapped]
+[] 4 pt - Arvid Lindblad (RB F1 Team) [Lapped]
+[] 2 pt - Gabriel Bortoleto (Audi) [Lapped]
+[] 1 pt - Pierre Gasly (Alpine F1 Team) [Lapped]
+--- 0ポイント ---
+[] Valtteri Bottas (Cadillac F1 Team) [Retired]
+[] Fernando Alonso (Aston Martin) [Retired]
+[] Lance Stroll (Aston Martin) [Lapped]
+[] Nico HÃ¼lkenberg (Audi) [Did not start]
+[] Oscar Piastri (McLaren) [Did not start]
+[] Isack Hadjar (Red Bull) [Retired]
+[] Liam Lawson (RB F1 Team) [Lapped]
+[] Alexander Albon (Williams) [Lapped]
+[] Esteban Ocon (Haas F1 Team) [Lapped]
+[] Sergio PÃ©rez (Cadillac F1 Team) [Lapped]
+[] Carlos Sainz (Williams) [Lapped]
+[] Franco Colapinto (Alpine F1 Team) [Lapped]
+
+【Round 2】 Chinese Grand Prix (開催日: 2026-03-15)
+--------------------------------------------------------------------------------
+[] 25 pt - Andrea Kimi Antonelli (Mercedes) [Finished]
+[] 18 pt - George Russell (Mercedes) [Finished]
+[] 15 pt - Lewis Hamilton (Ferrari) [Finished]
+[] 12 pt - Charles Leclerc (Ferrari) [Finished]
+[] 10 pt - Oliver Bearman (Haas F1 Team) [Finished]
+[] 8 pt - Pierre Gasly (Alpine F1 Team) [Finished]
+[] 6 pt - Liam Lawson (RB F1 Team) [Finished]
+[] 4 pt - Isack Hadjar (Red Bull) [Finished]
+[] 2 pt - Carlos Sainz (Williams) [Lapped]
+[] 1 pt - Franco Colapinto (Alpine F1 Team) [Lapped]
+--- 0ポイント ---
+[] Oscar Piastri (McLaren) [Did not start]
+[] Lance Stroll (Aston Martin) [Retired]
+[] Fernando Alonso (Aston Martin) [Retired]
+[] Alexander Albon (Williams) [Did not start]
+[] Gabriel Bortoleto (Audi) [Did not start]
+[] Lando Norris (McLaren) [Did not start]
+[] Valtteri Bottas (Cadillac F1 Team) [Lapped]
+[] Arvid Lindblad (RB F1 Team) [Lapped]
+[] Nico HÃ¼lkenberg (Audi) [Lapped]
+[] Max Verstappen (Red Bull) [Retired]
+[] Sergio PÃ©rez (Cadillac F1 Team) [Lapped]
+[] Esteban Ocon (Haas F1 Team) [Lapped]
+
+【Round 3】 Japanese Grand Prix (開催日: 2026-03-29)
+--------------------------------------------------------------------------------
+[] 25 pt - Andrea Kimi Antonelli (Mercedes) [Finished]
+[] 18 pt - Oscar Piastri (McLaren) [Finished]
+[] 15 pt - Charles Leclerc (Ferrari) [Finished]
+[] 12 pt - George Russell (Mercedes) [Finished]
+[] 10 pt - Lando Norris (McLaren) [Finished]
+[] 8 pt - Lewis Hamilton (Ferrari) [Finished]
+[] 6 pt - Pierre Gasly (Alpine F1 Team) [Finished]
+[] 4 pt - Max Verstappen (Red Bull) [Finished]
+[] 2 pt - Liam Lawson (RB F1 Team) [Finished]
+[] 1 pt - Esteban Ocon (Haas F1 Team) [Finished]
+--- 0ポイント ---
+[] Valtteri Bottas (Cadillac F1 Team) [Lapped]
+[] Fernando Alonso (Aston Martin) [Lapped]
+[] Sergio PÃ©rez (Cadillac F1 Team) [Finished]
+[] Oliver Bearman (Haas F1 Team) [Retired]
+[] Lance Stroll (Aston Martin) [Retired]
+[] Alexander Albon (Williams) [Lapped]
+[] Gabriel Bortoleto (Audi) [Finished]
+[] Isack Hadjar (Red Bull) [Finished]
+[] Nico HÃ¼lkenberg (Audi) [Finished]
+[] Franco Colapinto (Alpine F1 Team) [Finished]
+[] Carlos Sainz (Williams) [Finished]
+[] Arvid Lindblad (RB F1 Team) [Finished]
+
+【Round 4】 Miami Grand Prix (開催日: 2026-05-03)
+--------------------------------------------------------------------------------
+[] 25 pt - Andrea Kimi Antonelli (Mercedes) [Finished]
+[] 18 pt - Lando Norris (McLaren) [Finished]
+[] 15 pt - Oscar Piastri (McLaren) [Finished]
+[] 12 pt - George Russell (Mercedes) [Finished]
+[] 10 pt - Max Verstappen (Red Bull) [Finished]
+[] 8 pt - Lewis Hamilton (Ferrari) [Finished]
+[] 6 pt - Franco Colapinto (Alpine F1 Team) [Finished]
+[] 4 pt - Charles Leclerc (Ferrari) [Finished]
+[] 2 pt - Carlos Sainz (Williams) [Finished]
+[] 1 pt - Alexander Albon (Williams) [Finished]
+--- 0ポイント ---
+[] Nico HÃ¼lkenberg (Audi) [Retired]
+[] Valtteri Bottas (Cadillac F1 Team) [Lapped]
+[] Lance Stroll (Aston Martin) [Lapped]
+[] Isack Hadjar (Red Bull) [Retired]
+[] Pierre Gasly (Alpine F1 Team) [Retired]
+[] Liam Lawson (RB F1 Team) [Retired]
+[] Esteban Ocon (Haas F1 Team) [Lapped]
+[] Gabriel Bortoleto (Audi) [Lapped]
+[] Oliver Bearman (Haas F1 Team) [Lapped]
+[] Sergio PÃ©rez (Cadillac F1 Team) [Lapped]
+[] Fernando Alonso (Aston Martin) [Lapped]
+[] Arvid Lindblad (RB F1 Team) [Lapped]
+
+【Round 5】 Canadian Grand Prix (開催日: 2026-05-24)
+--------------------------------------------------------------------------------
+[] 25 pt - Andrea Kimi Antonelli (Mercedes) [Finished]
+[] 18 pt - Lewis Hamilton (Ferrari) [Finished]
+[] 15 pt - Max Verstappen (Red Bull) [Finished]
+[] 12 pt - Charles Leclerc (Ferrari) [Finished]
+[] 10 pt - Isack Hadjar (Red Bull) [Lapped]
+[] 8 pt - Franco Colapinto (Alpine F1 Team) [Lapped]
+[] 6 pt - Liam Lawson (RB F1 Team) [Lapped]
+[] 4 pt - Pierre Gasly (Alpine F1 Team) [Lapped]
+[] 2 pt - Carlos Sainz (Williams) [Lapped]
+[] 1 pt - Oliver Bearman (Haas F1 Team) [Lapped]
+--- 0ポイント ---
+[] George Russell (Mercedes) [Retired]
+[] Lando Norris (McLaren) [Retired]
+[] Sergio PÃ©rez (Cadillac F1 Team) [Retired]
+[] Arvid Lindblad (RB F1 Team) [Did not start]
+[] Alexander Albon (Williams) [Retired]
+[] Fernando Alonso (Aston Martin) [Retired]
+[] Gabriel Bortoleto (Audi) [Lapped]
+[] Nico HÃ¼lkenberg (Audi) [Lapped]
+[] Oscar Piastri (McLaren) [Lapped]
+[] Valtteri Bottas (Cadillac F1 Team) [Lapped]
+[] Lance Stroll (Aston Martin) [Lapped]
+[] Esteban Ocon (Haas F1 Team) [Lapped]
+
+【Round 6】 Monaco Grand Prix (開催日: 2026-06-07)
+--------------------------------------------------------------------------------
+[] 25 pt - Andrea Kimi Antonelli (Mercedes) [Finished]
+[] 18 pt - Lewis Hamilton (Ferrari) [Finished]
+[] 15 pt - Pierre Gasly (Alpine F1 Team) [Finished]
+[] 12 pt - Isack Hadjar (Red Bull) [Finished]
+[] 10 pt - Oscar Piastri (McLaren) [Finished]
+[] 8 pt - Liam Lawson (RB F1 Team) [Finished]
+[] 6 pt - Arvid Lindblad (RB F1 Team) [Finished]
+[] 4 pt - Alexander Albon (Williams) [Finished]
+[] 2 pt - Esteban Ocon (Haas F1 Team) [Finished]
+[] 1 pt - Fernando Alonso (Aston Martin) [Finished]
+--- 0ポイント ---
+[] Lando Norris (McLaren) [Retired]
+[] Lance Stroll (Aston Martin) [Retired]
+[] Charles Leclerc (Ferrari) [Retired]
+[] Max Verstappen (Red Bull) [Retired]
+[] Valtteri Bottas (Cadillac F1 Team) [Retired]
+[] Oliver Bearman (Haas F1 Team) [Retired]
+[] Nico HÃ¼lkenberg (Audi) [Finished]
+[] George Russell (Mercedes) [Finished]
+[] Gabriel Bortoleto (Audi) [Finished]
+[] Carlos Sainz (Williams) [Retired]
+[] Sergio PÃ©rez (Cadillac F1 Team) [Finished]
+[] Franco Colapinto (Alpine F1 Team) [Finished]
+
+【Round 7】 Barcelona Grand Prix (開催日: 2026-06-14)
+--------------------------------------------------------------------------------
+[] 25 pt - Lewis Hamilton (Ferrari) [Finished]
+[] 18 pt - George Russell (Mercedes) [Finished]
+[] 15 pt - Lando Norris (McLaren) [Finished]
+[] 12 pt - Max Verstappen (Red Bull) [Finished]
+[] 10 pt - Oscar Piastri (McLaren) [Finished]
+[] 8 pt - Isack Hadjar (Red Bull) [Lapped]
+[] 6 pt - Pierre Gasly (Alpine F1 Team) [Lapped]
+[] 4 pt - Liam Lawson (RB F1 Team) [Lapped]
+[] 2 pt - Arvid Lindblad (RB F1 Team) [Lapped]
+[] 1 pt - Franco Colapinto (Alpine F1 Team) [Lapped]
+--- 0ポイント ---
+[] Fernando Alonso (Aston Martin) [Retired]
+[] Alexander Albon (Williams) [Lapped]
+[] Oliver Bearman (Haas F1 Team) [Retired]
+[] Lance Stroll (Aston Martin) [Retired]
+[] Valtteri Bottas (Cadillac F1 Team) [Retired]
+[] Nico HÃ¼lkenberg (Audi) [Retired]
+[] Esteban Ocon (Haas F1 Team) [Lapped]
+[] Carlos Sainz (Williams) [Lapped]
+[] Gabriel Bortoleto (Audi) [Lapped]
+[] Andrea Kimi Antonelli (Mercedes) [Retired]
+[] Charles Leclerc (Ferrari) [Retired]
+[] Sergio PÃ©rez (Cadillac F1 Team) [Lapped]
+
+【Round 8】 Austrian Grand Prix (開催日: 2026-06-28) - 未実施
+
+【Round 9】 British Grand Prix (開催日: 2026-07-05) - 未実施
+
+【Round 10】 Belgian Grand Prix (開催日: 2026-07-19) - 未実施
+
+【Round 11】 Hungarian Grand Prix (開催日: 2026-07-26) - 未実施
+
+【Round 12】 Dutch Grand Prix (開催日: 2026-08-23) - 未実施
+
+【Round 13】 Italian Grand Prix (開催日: 2026-09-06) - 未実施
+
+【Round 14】 Spanish Grand Prix (開催日: 2026-09-13) - 未実施
+
+【Round 15】 Azerbaijan Grand Prix (開催日: 2026-09-26) - 未実施
+
+【Round 16】 Singapore Grand Prix (開催日: 2026-10-11) - 未実施
+
+【Round 17】 United States Grand Prix (開催日: 2026-10-25) - 未実施
+
+【Round 18】 Mexico City Grand Prix (開催日: 2026-11-01) - 未実施
+
+【Round 19】 Brazilian Grand Prix (開催日: 2026-11-08) - 未実施
+
+【Round 20】 Las Vegas Grand Prix (開催日: 2026-11-22) - 未実施
+
+【Round 21】 Qatar Grand Prix (開催日: 2026-11-29) - 未実施
+
+【Round 22】 Abu Dhabi Grand Prix (開催日: 2026-12-06) - 未実施
+

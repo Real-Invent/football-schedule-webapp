@@ -122,7 +122,7 @@ export function EventCard({ e, isFavorite, onToggleFavorite, onDetailClick }: Ev
             )}
             {e.result.penalties && (
               <div className="text-center text-[12px] text-blue-600 font-semibold mt-0.5">
-                PK　<span className="font-bold">
+                PK <span className="font-bold">
                   <span className="text-green-600">{e.result.penalties.home}</span> - <span className="text-green-600">{e.result.penalties.away}</span>
                 </span>
               </div>
