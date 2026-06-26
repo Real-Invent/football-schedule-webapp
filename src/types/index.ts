@@ -29,8 +29,8 @@ export type MatchResult = {
     away: number;
   };
   teams?: {
-    home: { id: number; crest?: string };
-    away: { id: number; crest?: string };
+    home: { id: number; name?: string; crest?: string };
+    away: { id: number; name?: string; crest?: string };
   };
 };
 

@@ -1144,7 +1144,7 @@
     }
   },
   "fb-537331": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 798,
@@ -1154,10 +1154,19 @@
         "id": 769,
         "crest": "https://crests.football-data.org/769.svg"
       }
+    },
+    "score": {
+      "home": 0,
+      "away": 3,
+      "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537332": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 774,
@@ -1167,10 +1176,19 @@
         "id": 772,
         "crest": "https://crests.football-data.org/772.png"
       }
+    },
+    "score": {
+      "home": 1,
+      "away": 0,
+      "winner": "home"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537355": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 791,
@@ -1180,10 +1198,19 @@
         "id": 759,
         "crest": "https://crests.football-data.org/759.svg"
       }
+    },
+    "score": {
+      "home": 2,
+      "away": 1,
+      "winner": "home"
+    },
+    "halfTime": {
+      "home": 1,
+      "away": 1
     }
   },
   "fb-537356": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 9460,
@@ -1193,10 +1220,19 @@
         "id": 1935,
         "crest": "https://crests.football-data.org/787.svg"
       }
+    },
+    "score": {
+      "home": 0,
+      "away": 2,
+      "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 1
     }
   },
   "fb-537361": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 802,
@@ -1206,10 +1242,19 @@
         "id": 8601,
         "crest": "https://crests.football-data.org/8601.svg"
       }
+    },
+    "score": {
+      "home": 1,
+      "away": 3,
+      "winner": "away"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 2
     }
   },
   "fb-537362": {
-    "status": "scheduled",
+    "status": "finished",
     "teams": {
       "home": {
         "id": 766,
@@ -1219,6 +1264,15 @@
         "id": 792,
         "crest": "https://crests.football-data.org/792.svg"
       }
+    },
+    "score": {
+      "home": 1,
+      "away": 1,
+      "winner": "draw"
+    },
+    "halfTime": {
+      "home": 0,
+      "away": 0
     }
   },
   "fb-537349": {
@@ -6085,6 +6139,136 @@
     "halfTime": {
       "home": 0,
       "away": 0
+    }
+  },
+  "fb-560542": {
+    "status": "scheduled",
+    "teams": {
+      "home": {
+        "id": 57,
+        "crest": "https://crests.football-data.org/57.png"
+      },
+      "away": {
+        "id": 1076,
+        "crest": "https://crests.football-data.org/1076.png"
+      }
+    }
+  },
+  "fb-560543": {
+    "status": "scheduled",
+    "teams": {
+      "home": {
+        "id": 322,
+        "crest": "https://crests.football-data.org/322.png"
+      },
+      "away": {
+        "id": 66,
+        "crest": "https://crests.football-data.org/66.png"
+      }
+    }
+  },
+  "fb-560544": {
+    "status": "scheduled",
+    "teams": {
+      "home": {
+        "id": 349,
+        "crest": "https://crests.football-data.org/349.png"
+      },
+      "away": {
+        "id": 71,
+        "crest": "https://crests.football-data.org/71.png"
+      }
+    }
+  },
+  "fb-560545": {
+    "status": "scheduled",
+    "teams": {
+      "home": {
+        "id": 351,
+        "crest": "https://crests.football-data.org/351.png"
+      },
+      "away": {
+        "id": 341,
+        "crest": "https://crests.football-data.org/341.png"
+      }
+    }
+  },
+  "fb-560546": {
+    "status": "scheduled",
+    "teams": {
+      "home": {
+        "id": 62,
+        "crest": "https://crests.football-data.org/62.png"
+      },
+      "away": {
+        "id": 354,
+        "crest": "https://crests.football-data.org/354.png"
+      }
+    }
+  },
+  "fb-560547": {
+    "status": "scheduled",
+    "teams": {
+      "home": {
+        "id": 402,
+        "crest": "https://crests.football-data.org/402.png"
+      },
+      "away": {
+        "id": 73,
+        "crest": "https://crests.football-data.org/73.png"
+      }
+    }
+  },
+  "fb-560548": {
+    "status": "scheduled",
+    "teams": {
+      "home": {
+        "id": 65,
+        "crest": "https://crests.football-data.org/65.png"
+      },
+      "away": {
+        "id": 1044,
+        "crest": "https://crests.football-data.org/bournemouth.png"
+      }
+    }
+  },
+  "fb-560549": {
+    "status": "scheduled",
+    "teams": {
+      "home": {
+        "id": 397,
+        "crest": "https://crests.football-data.org/397.png"
+      },
+      "away": {
+        "id": 58,
+        "crest": "https://crests.football-data.org/58.png"
+      }
+    }
+  },
+  "fb-560550": {
+    "status": "scheduled",
+    "teams": {
+      "home": {
+        "id": 67,
+        "crest": "https://crests.football-data.org/67.png"
+      },
+      "away": {
+        "id": 64,
+        "crest": "https://crests.football-data.org/64.png"
+      }
+    }
+  },
+  "fb-560551": {
+    "status": "scheduled",
+    "teams": {
+      "home": {
+        "id": 63,
+        "crest": "https://crests.football-data.org/63.png"
+      },
+      "away": {
+        "id": 61,
+        "crest": "https://crests.football-data.org/61.png"
+      }
     }
   },
   "fb-551996": {

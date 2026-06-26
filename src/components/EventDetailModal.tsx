@@ -183,6 +183,7 @@ export function EventDetailModal({ event: e, onClose }: EventDetailModalProps) {
                         <>
                           <div className="flex-1">
                             <div className="flex sm:flex-row flex-col items-center sm:gap-2 gap-1 justify-end mb-2">
+                              <span className="font-bold text-slate-900 text-right text-sm sm:text-base">{home}</span>
                               {homeCrest && (
                                 <img
                                   src={homeCrest}
@@ -191,7 +192,6 @@ export function EventDetailModal({ event: e, onClose }: EventDetailModalProps) {
                                   onError={(e) => (e.currentTarget.style.display = "none")}
                                 />
                               )}
-                              <span className="font-bold text-slate-900 text-right text-sm sm:text-base">{home}</span>
                             </div>
                           </div>
                           <div className="flex flex-col items-center gap-1">
@@ -240,6 +240,7 @@ export function EventDetailModal({ event: e, onClose }: EventDetailModalProps) {
                         <>
                           <div className="flex-1">
                             <div className="flex sm:flex-row flex-col items-center sm:gap-2 gap-1 justify-end mb-2">
+                              <span className="font-bold text-slate-900 text-right text-sm sm:text-base">{home}</span>
                               {homeCrest && (
                                 <img
                                   src={homeCrest}
@@ -248,7 +249,6 @@ export function EventDetailModal({ event: e, onClose }: EventDetailModalProps) {
                                   onError={(e) => (e.currentTarget.style.display = "none")}
                                 />
                               )}
-                              <span className="font-bold text-slate-900 text-right text-sm sm:text-base">{home}</span>
                             </div>
                           </div>
                           <span className="flex-shrink-0 text-slate-400 font-semibold">vs</span>
