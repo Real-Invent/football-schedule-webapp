@@ -448,6 +448,8 @@ async function main() {
   console.log("=========================================\n");
 }
 
+export { main };
+
 console.log("[DEBUG] About to call main()");
 main().catch(err => {
   console.error("[DEBUG] Caught error:", err);
