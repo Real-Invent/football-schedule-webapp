@@ -396,6 +396,7 @@ export function adjustMidnightTime(date: string, day: string, time: string): { d
 
 // ====== ⑦ 実行 ======
 async function main() {
+  console.log("[DEBUG] main() started");
   const all: Event[] = [];
   const resultsMap: ResultsMap = {};
   let championship: ChampionshipStanding[] = [];
@@ -406,21 +407,23 @@ async function main() {
     const to = new Date(Date.now() + 60 * 864e5).toISOString().slice(0, 10);
     console.log(`[DEBUG] Fetching data from ${from} to ${to}`);
 
+    console.log("\n📡 API から日程を取得中...");
     all.push(...(await fetchFootball("wc2026", "WC", from, to)));
     all.push(...(await fetchFootball("intl", "PL", from, to)));
     all.push(...(await fetchFootball("intl", "CL", from, to)));
     all.push(...(await fetchF1(2026)));
 
-    // 試合結果を取得
+    console.log("\n📊 API から試合結果を取得中...");
     Object.assign(resultsMap, await fetchFootballResults("WC", from, to));
     Object.assign(resultsMap, await fetchFootballResults("PL", from, to));
     Object.assign(resultsMap, await fetchFootballResults("CL", from, to));
     Object.assign(resultsMap, await fetchF1Results(2026));
 
-    // チャンピオンシップ順位表を取得
+    console.log("\n🏆 API からドライバーランキングを取得中...");
     championship = await fetchF1Championship(2026);
   } catch (e) {
-    console.error("取得エラー:", (e as Error).message);
+    console.error("❌ 取得エラー:", (e as Error).message);
+    console.error((e as Error).stack);
     process.exit(1);
   }
 
@@ -433,9 +436,21 @@ async function main() {
   writeFileSync("public/data/events.json", JSON.stringify(events, null, 2));
   writeFileSync("public/data/results.json", JSON.stringify(resultsMap, null, 2));
   writeFileSync("public/data/standings.json", JSON.stringify(championship, null, 2));
-  console.log(`✅ ${events.length}件を events.json に書き出しました`);
-  console.log(`✅ ${Object.keys(resultsMap).length}件の結果を results.json に書き出しました`);
-  console.log(`✅ ${championship.length}件のドライバーをstandings.json に書き出しました`);
+
+  console.log("\n========== ✅ スケジュール更新完了 ==========");
+  console.log(`📅 取得日付範囲: 2026-01-01 ～ 2026-08-28`);
+  console.log(`⚽ イベント数: ${events.length}件`);
+  console.log(`   - ワールドカップ: ${events.filter(e => e.lg === "wc2026").length}件`);
+  console.log(`   - 国際リーグ: ${events.filter(e => e.lg === "intl").length}件`);
+  console.log(`   - F1: ${events.filter(e => e.lg === "f1").length}件`);
+  console.log(`📊 試合結果: ${Object.keys(resultsMap).length}件`);
+  console.log(`🏆 ドライバーランキング: ${championship.length}名`);
+  console.log("=========================================\n");
 }
 
-export { main };
+console.log("[DEBUG] About to call main()");
+main().catch(err => {
+  console.error("[DEBUG] Caught error:", err);
+  process.exit(1);
+});
+console.log("[DEBUG] main() called");
