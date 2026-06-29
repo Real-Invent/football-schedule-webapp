@@ -4661,7 +4661,7 @@
     "date": "2026-06-29",
     "day": "月",
     "time": "04:00",
-    "title": "TBD vs TBD",
+    "title": "南アフリカ vs カナダ",
     "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
@@ -4673,10 +4673,13 @@
     "date": "2026-06-29",
     "day": "月",
     "time": "26:00",
-    "title": "TBD vs TBD",
+    "title": "ブラジル vs 日本",
     "cat": "決勝トーナメント1回戦",
     "casts": [
-      "dazn"
+      "dazn",
+      "nhk",
+      "ntv",
+      "fuji"
     ]
   },
   {
@@ -4685,7 +4688,7 @@
     "date": "2026-06-30",
     "day": "火",
     "time": "05:30",
-    "title": "ドイツ vs TBD",
+    "title": "ドイツ vs パラグアイ",
     "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
@@ -4697,7 +4700,7 @@
     "date": "2026-06-30",
     "day": "火",
     "time": "10:00",
-    "title": "TBD vs TBD",
+    "title": "オランダ vs モロッコ",
     "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
@@ -4709,7 +4712,7 @@
     "date": "2026-06-30",
     "day": "火",
     "time": "26:00",
-    "title": "TBD vs TBD",
+    "title": "コートジボワール vs ノルウェー",
     "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
@@ -4721,7 +4724,7 @@
     "date": "2026-07-01",
     "day": "水",
     "time": "06:00",
-    "title": "TBD vs TBD",
+    "title": "フランス vs スウェーデン",
     "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
@@ -4733,7 +4736,7 @@
     "date": "2026-07-01",
     "day": "水",
     "time": "10:00",
-    "title": "メキシコ vs TBD",
+    "title": "メキシコ vs エクアドル",
     "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
@@ -4745,7 +4748,7 @@
     "date": "2026-07-01",
     "day": "水",
     "time": "25:00",
-    "title": "TBD vs TBD",
+    "title": "イングランド vs DRコンゴ",
     "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
@@ -4757,7 +4760,7 @@
     "date": "2026-07-02",
     "day": "木",
     "time": "05:00",
-    "title": "TBD vs TBD",
+    "title": "ベルギー vs セネガル",
     "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
@@ -4769,7 +4772,7 @@
     "date": "2026-07-02",
     "day": "木",
     "time": "09:00",
-    "title": "アメリカ vs TBD",
+    "title": "アメリカ vs ボスニア",
     "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
@@ -4781,7 +4784,7 @@
     "date": "2026-07-03",
     "day": "金",
     "time": "04:00",
-    "title": "TBD vs TBD",
+    "title": "スペイン vs オーストリア",
     "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
@@ -4793,7 +4796,7 @@
     "date": "2026-07-03",
     "day": "金",
     "time": "08:00",
-    "title": "TBD vs TBD",
+    "title": "ポルトガル vs クロアチア",
     "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
@@ -4805,7 +4808,7 @@
     "date": "2026-07-03",
     "day": "金",
     "time": "12:00",
-    "title": "TBD vs TBD",
+    "title": "スイス vs アルジェリア",
     "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
@@ -4817,7 +4820,7 @@
     "date": "2026-07-03",
     "day": "金",
     "time": "27:00",
-    "title": "TBD vs TBD",
+    "title": "オーストラリア vs エジプト",
     "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
@@ -4829,7 +4832,7 @@
     "date": "2026-07-04",
     "day": "土",
     "time": "07:00",
-    "title": "アルゼンチン vs TBD",
+    "title": "アルゼンチン vs カーボベルデ",
     "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
@@ -4841,7 +4844,7 @@
     "date": "2026-07-04",
     "day": "土",
     "time": "10:30",
-    "title": "TBD vs TBD",
+    "title": "コロンビア vs ガーナ",
     "cat": "決勝トーナメント1回戦",
     "casts": [
       "dazn"
@@ -5118,6 +5121,71 @@
     ]
   },
   {
+    "id": "fb-560542",
+    "lg": "intl",
+    "date": "2026-08-22",
+    "day": "土",
+    "time": "04:00",
+    "title": "Arsenal FC vs Coventry City FC",
+    "cat": "REGULAR_SEASON",
+    "casts": [
+      "unext",
+      "abema"
+    ]
+  },
+  {
+    "id": "fb-560543",
+    "lg": "intl",
+    "date": "2026-08-22",
+    "day": "土",
+    "time": "20:30",
+    "title": "Hull City AFC vs Manchester United FC",
+    "cat": "REGULAR_SEASON",
+    "casts": [
+      "unext",
+      "abema"
+    ]
+  },
+  {
+    "id": "fb-560544",
+    "lg": "intl",
+    "date": "2026-08-22",
+    "day": "土",
+    "time": "23:00",
+    "title": "Ipswich Town FC vs Sunderland AFC",
+    "cat": "REGULAR_SEASON",
+    "casts": [
+      "unext",
+      "abema"
+    ]
+  },
+  {
+    "id": "fb-560545",
+    "lg": "intl",
+    "date": "2026-08-22",
+    "day": "土",
+    "time": "23:00",
+    "title": "Nottingham Forest FC vs Leeds United FC",
+    "cat": "REGULAR_SEASON",
+    "casts": [
+      "unext",
+      "abema"
+    ]
+  },
+  {
+    "id": "fb-560546",
+    "lg": "intl",
+    "date": "2026-08-22",
+    "day": "土",
+    "time": "23:00",
+    "title": "Everton FC vs Crystal Palace FC",
+    "cat": "REGULAR_SEASON",
+    "casts": [
+      "unext",
+      "abema"
+    ]
+  },
+  {
     "id": "f1-12-q",
     "lg": "f1",
     "date": "2026-08-22",
@@ -5131,6 +5199,45 @@
     ]
   },
   {
+    "id": "fb-560547",
+    "lg": "intl",
+    "date": "2026-08-22",
+    "day": "土",
+    "time": "25:30",
+    "title": "Brentford FC vs Tottenham Hotspur FC",
+    "cat": "REGULAR_SEASON",
+    "casts": [
+      "unext",
+      "abema"
+    ]
+  },
+  {
+    "id": "fb-560548",
+    "lg": "intl",
+    "date": "2026-08-23",
+    "day": "日",
+    "time": "22:00",
+    "title": "Manchester City FC vs AFC Bournemouth",
+    "cat": "REGULAR_SEASON",
+    "casts": [
+      "unext",
+      "abema"
+    ]
+  },
+  {
+    "id": "fb-560549",
+    "lg": "intl",
+    "date": "2026-08-23",
+    "day": "日",
+    "time": "22:00",
+    "title": "Brighton & Hove Albion FC vs Aston Villa FC",
+    "cat": "REGULAR_SEASON",
+    "casts": [
+      "unext",
+      "abema"
+    ]
+  },
+  {
     "id": "f1-12-r",
     "lg": "f1",
     "date": "2026-08-23",
@@ -5141,6 +5248,32 @@
     "casts": [
       "dazn",
       "sky"
+    ]
+  },
+  {
+    "id": "fb-560550",
+    "lg": "intl",
+    "date": "2026-08-23",
+    "day": "日",
+    "time": "24:30",
+    "title": "Newcastle United FC vs Liverpool FC",
+    "cat": "REGULAR_SEASON",
+    "casts": [
+      "unext",
+      "abema"
+    ]
+  },
+  {
+    "id": "fb-560551",
+    "lg": "intl",
+    "date": "2026-08-25",
+    "day": "火",
+    "time": "04:00",
+    "title": "Fulham FC vs Chelsea FC",
+    "cat": "REGULAR_SEASON",
+    "casts": [
+      "unext",
+      "abema"
     ]
   },
   {

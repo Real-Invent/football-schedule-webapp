@@ -113,6 +113,7 @@ describe('SportsCalendar', () => {
   });
 
   describe('Rendering', () => {
+    // UIレイアウト：ヘッダーに説明文を表示
     test('renders header with title and description', () => {
       mockUseEvents.mockReturnValue(createMockUseEventsReturn());
       render(<SportsCalendar />);
@@ -120,6 +121,7 @@ describe('SportsCalendar', () => {
       expect(screen.getByText(/いつ・どこで観る/)).toBeInTheDocument();
     });
 
+    // UIコンポーネント：検索ボックスが配置される
     test('renders search input', () => {
       mockUseEvents.mockReturnValue(createMockUseEventsReturn());
       render(<SportsCalendar />);
@@ -128,6 +130,7 @@ describe('SportsCalendar', () => {
       expect(searchInput).toBeInTheDocument();
     });
 
+    // UIコンポーネント：リーグ・放送局フィルター行が複数個表示
     test('renders filter rows for leagues and broadcasters', () => {
       mockUseEvents.mockReturnValue(createMockUseEventsReturn());
       render(<SportsCalendar />);
@@ -136,6 +139,7 @@ describe('SportsCalendar', () => {
       expect(filterRows.length).toBeGreaterThan(0);
     });
 
+    // データ表示：フィルタリング済みイベントをすべて表示
     test('displays event groups by date', () => {
       mockUseEvents.mockReturnValue(createMockUseEventsReturn());
       render(<SportsCalendar />);
@@ -145,6 +149,7 @@ describe('SportsCalendar', () => {
       expect(screen.getByTestId('event-3')).toBeInTheDocument();
     });
 
+    // エッジケース：フィルター結果が0件の場合は「条件に合う試合がありません」メッセージ表示
     test('shows empty state when no events match filters', () => {
       mockUseEvents.mockReturnValue(
         createMockUseEventsReturn({
@@ -159,6 +164,7 @@ describe('SportsCalendar', () => {
   });
 
   describe('Search functionality', () => {
+    // インタラクション：検索入力値の変更をhookに通知
     test('updates search query when input changes', () => {
       const setQuery = jest.fn();
       mockUseEvents.mockReturnValue(
@@ -172,6 +178,7 @@ describe('SportsCalendar', () => {
       expect(setQuery).toHaveBeenCalledWith('日本');
     });
 
+    // インタラクション：クリアボタンで検索を初期化（空文字列を setQuery に通知）
     test('clears search query when X button is clicked', () => {
       const setQuery = jest.fn();
       mockUseEvents.mockReturnValue(
@@ -188,6 +195,7 @@ describe('SportsCalendar', () => {
       expect(setQuery).toHaveBeenCalledWith('');
     });
 
+    // UI制御：クリアボタンは検索クエリ入力時のみ表示（query が空でない）
     test('shows search clear button only when query is not empty', () => {
       const { rerender } = render(<SportsCalendar />);
       mockUseEvents.mockReturnValue(createMockUseEventsReturn());
@@ -205,6 +213,7 @@ describe('SportsCalendar', () => {
   });
 
   describe('Filter functionality', () => {
+    // インタラクション：リーグフィルターチップクリック時に toggleLeague を呼び出す
     test('calls toggleLeague when league chip is clicked', () => {
       const toggleLeague = jest.fn();
       mockUseEvents.mockReturnValue(
@@ -219,6 +228,7 @@ describe('SportsCalendar', () => {
       }
     });
 
+    // フィルター状態の可視化：「N件を表示中」で現在のフィルター結果数を表示
     test('displays active filter count with filtered items', () => {
       const filteredEvents = [mockEvents[0]];
       mockUseEvents.mockReturnValue(
@@ -234,6 +244,7 @@ describe('SportsCalendar', () => {
       expect(screen.getByText(/1件を表示中/)).toBeInTheDocument();
     });
 
+    // UI制御：アクティブなフィルター（activeFilterCount > 0）がある場合のみ「すべて解除」ボタン表示
     test('shows clear all button when filters are active', () => {
       mockUseEvents.mockReturnValue(
         createMockUseEventsReturn({
@@ -247,6 +258,7 @@ describe('SportsCalendar', () => {
       expect(clearButton).toBeInTheDocument();
     });
 
+    // インタラクション：「すべて解除」ボタンで全フィルター初期化
     test('calls clearAll when clear button is clicked', () => {
       const clearAll = jest.fn();
       mockUseEvents.mockReturnValue(
@@ -262,6 +274,7 @@ describe('SportsCalendar', () => {
       expect(clearAll).toHaveBeenCalled();
     });
 
+    // インタラクション：お気に入りチップクリック時に setFavOnly トグルを呼び出す
     test('toggles favorite filter when star chip is clicked', () => {
       const setFavOnly = jest.fn();
       mockUseEvents.mockReturnValue(
@@ -277,6 +290,7 @@ describe('SportsCalendar', () => {
   });
 
   describe('Event card interactions', () => {
+    // インタラクション：イベントカードクリックでモーダルを表示
     test('displays modal when event is clicked', () => {
       mockUseEvents.mockReturnValue(createMockUseEventsReturn());
       render(<SportsCalendar />);
@@ -287,6 +301,7 @@ describe('SportsCalendar', () => {
       expect(screen.getByTestId('modal')).toBeInTheDocument();
     });
 
+    // インタラクション：モーダルクローズボタンでモーダル閉じる（selectedEvent = null）
     test('closes modal when close button is clicked', () => {
       mockUseEvents.mockReturnValue(createMockUseEventsReturn());
       const { rerender } = render(<SportsCalendar />);
@@ -305,6 +320,7 @@ describe('SportsCalendar', () => {
   });
 
   describe('Ongoing event badge', () => {
+    // 開催中イベント表示：isOngoing フラグが真の場合「開催中」バッジを表示
     test('shows ongoing badge when isOngoing is true', () => {
       mockUseEvents.mockReturnValue(
         createMockUseEventsReturn({ isOngoing: true })
@@ -315,6 +331,7 @@ describe('SportsCalendar', () => {
       expect(badge).toBeInTheDocument();
     });
 
+    // 開催中イベント非表示：isOngoing が偽の場合「開催中」バッジなし
     test('hides ongoing badge when isOngoing is false', () => {
       mockUseEvents.mockReturnValue(
         createMockUseEventsReturn({ isOngoing: false })
@@ -326,6 +343,7 @@ describe('SportsCalendar', () => {
   });
 
   describe('Favorites persistence', () => {
+    // 状態管理：useEvents フックから返される favorites set が正しく渡される
     test('passes favorites set to useEvents', () => {
       const favorites = new Set(['1', '2']);
       mockUseEvents.mockReturnValue(
@@ -339,6 +357,7 @@ describe('SportsCalendar', () => {
   });
 
   describe('Date formatting and grouping', () => {
+    // グループ化ロジック：同じ日付のイベント群を useEvents.groups から取得し表示
     test('groups events by date correctly', () => {
       mockUseEvents.mockReturnValue(createMockUseEventsReturn());
       render(<SportsCalendar />);

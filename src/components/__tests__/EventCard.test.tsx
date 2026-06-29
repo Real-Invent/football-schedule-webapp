@@ -28,32 +28,38 @@ describe('EventCard', () => {
   });
 
   describe('Basic rendering', () => {
+    // UIの基本的なレンダリング：時刻が表示される
     test('renders event time', () => {
       render(<EventCard {...defaultProps} />);
       expect(screen.getByText('05:00')).toBeInTheDocument();
     });
 
+    // リーグタグのマッピング：wc2026 → 'FIFA W杯' ラベル
     test('renders league tag with correct label', () => {
       render(<EventCard {...defaultProps} />);
       expect(screen.getByText('FIFA W杯')).toBeInTheDocument();
     });
 
+    // イベント名が正しく表示される
     test('renders event title', () => {
       render(<EventCard {...defaultProps} />);
       expect(screen.getByText('日本 vs ブラジル')).toBeInTheDocument();
     });
 
+    // 複数の放送局チップを表示（casts 配列をマッピング）
     test('renders broadcaster chips', () => {
       render(<EventCard {...defaultProps} />);
       expect(screen.getByText('DAZN')).toBeInTheDocument();
       expect(screen.getByText('日本テレビ')).toBeInTheDocument();
     });
 
+    // サッカー・オリンピックなど非F1イベントはカテゴリを表示
     test('renders category for non-F1 events', () => {
       render(<EventCard {...defaultProps} />);
       expect(screen.getByText('グループステージ')).toBeInTheDocument();
     });
 
+    // エッジケース：F1イベントはカテゴリを表示しない（スペース節約）
     test('does not render category for F1 events', () => {
       const f1Event = { ...baseEvent, lg: 'f1' as const };
       render(<EventCard {...defaultProps} e={f1Event} />);
@@ -63,12 +69,14 @@ describe('EventCard', () => {
   });
 
   describe('Time formatting', () => {
+    // 深夜放送の表現：24:00以上の時刻は「翌」バッジで翌日扱いを視覚化
     test('shows "翌" badge for midnight hour (>= 24)', () => {
       const lateEvent = { ...baseEvent, time: '26:00' };
       render(<EventCard {...defaultProps} e={lateEvent} />);
       expect(screen.getByText('翌')).toBeInTheDocument();
     });
 
+    // 通常時刻：06:00など24:00未満の時刻には翌バッジは不要
     test('does not show "翌" badge for daytime hours', () => {
       render(<EventCard {...defaultProps} />);
       expect(screen.queryByText('翌')).not.toBeInTheDocument();
@@ -76,12 +84,14 @@ describe('EventCard', () => {
   });
 
   describe('Favorite button', () => {
+    // アクセシビリティ：スターボタンが適切に存在し、aria-label でラベリング
     test('renders unfavorited star with correct styling', () => {
       const { container } = render(<EventCard {...defaultProps} isFavorite={false} />);
       const starButton = container.querySelector('button[aria-label="お気に入り"]');
       expect(starButton).toBeInTheDocument();
     });
 
+    // インタラクション：いいねボタンクリック時にコールバック発火
     test('calls onToggleFavorite when favorite button is clicked', () => {
       const onToggleFavorite = jest.fn();
       render(
@@ -94,6 +104,7 @@ describe('EventCard', () => {
       expect(onToggleFavorite).toHaveBeenCalledTimes(1);
     });
 
+    // イベント伝播の制御：いいねボタンクリックはカード詳細モーダルを開かない（propagation stop）
     test('does not trigger onDetailClick when favorite button is clicked', () => {
       const onDetailClick = jest.fn();
       const { container } = render(
@@ -108,6 +119,7 @@ describe('EventCard', () => {
   });
 
   describe('Click handlers', () => {
+    // インタラクション：カード全体クリック時にモーダル開く
     test('calls onDetailClick when card is clicked', () => {
       const onDetailClick = jest.fn();
       const { container } = render(
@@ -120,6 +132,7 @@ describe('EventCard', () => {
       expect(onDetailClick).toHaveBeenCalled();
     });
 
+    // インタラクション：タイトルテキストクリック時もモーダル開く（クリック領域の拡張）
     test('calls onDetailClick when event title is clicked', () => {
       const onDetailClick = jest.fn();
       render(
@@ -134,6 +147,7 @@ describe('EventCard', () => {
   });
 
   describe('Multiple broadcasters', () => {
+    // データ処理：複数の放送局すべてが適切にチップとして表示される
     test('renders all broadcaster chips', () => {
       const eventWithMultipleCasts = {
         ...baseEvent,
@@ -150,6 +164,7 @@ describe('EventCard', () => {
   });
 
   describe('League styling', () => {
+    // リーグ別ラベル：jleague → 'Jリーグ' に正しくマッピング
     test('renders Jリーグ event with correct label', () => {
       const jleagueEvent = {
         ...baseEvent,
@@ -161,6 +176,7 @@ describe('EventCard', () => {
       expect(screen.getByText('Jリーグ')).toBeInTheDocument();
     });
 
+    // リーグ別ラベル：olympic → 'オリンピック' に正しくマッピング
     test('renders Olympic event with correct label', () => {
       const olympicEvent = {
         ...baseEvent,
@@ -174,6 +190,7 @@ describe('EventCard', () => {
   });
 
   describe('Soccer match result display', () => {
+    // 試合結果表示：終了試合のスコア（ホーム2-アウェイ1）を表示
     test('renders finished match with score and team names', () => {
       const finishedMatch: Event = {
         ...baseEvent,
@@ -203,6 +220,7 @@ describe('EventCard', () => {
       expect(screen.getByText('1')).toBeInTheDocument();
     });
 
+    // スケジュール状態：未実施の試合は 'vs' インジケータで表示
     test('renders unfinished match with vs indicator', () => {
       const upcomingMatch: Event = {
         ...baseEvent,
@@ -226,6 +244,7 @@ describe('EventCard', () => {
       expect(screen.getByText('vs')).toBeInTheDocument();
     });
 
+    // エッジケース：PK戦の場合、フルタイムスコア + PK結果を表示
     test('renders penalty shootout score when available', () => {
       const penaltyMatch: Event = {
         ...baseEvent,
@@ -260,6 +279,7 @@ describe('EventCard', () => {
   });
 
   describe('F1 result display', () => {
+    // F1結果表示：上位3位のドライバースタンディングを表示
     test('renders F1 race result with top 3 standings', () => {
       const f1Result: Event = {
         id: 'f1-1',
@@ -304,6 +324,7 @@ describe('EventCard', () => {
       expect(screen.getByText(/3位 Charles Leclerc/)).toBeInTheDocument();
     });
 
+    // UI制限：スペース節約のため上位3位のみ表示（4位以下は非表示）
     test('shows max 3 positions for F1 result', () => {
       const f1Result: Event = {
         id: 'f1-1',
@@ -335,6 +356,7 @@ describe('EventCard', () => {
   });
 
   describe('Favorite state styling', () => {
+    // ビジュアルフィードバック：いいね状態は黄金色の塗りつぶし星で表示
     test('shows filled star when isFavorite is true', () => {
       const { container } = render(
         <EventCard {...defaultProps} isFavorite={true} />
@@ -344,6 +366,7 @@ describe('EventCard', () => {
       expect(svg).toHaveClass('fill-amber-400');
     });
 
+    // ビジュアルフィードバック：未いいね状態は薄い灰色の輪郭星で表示
     test('shows outlined star when isFavorite is false', () => {
       const { container } = render(
         <EventCard {...defaultProps} isFavorite={false} />
@@ -355,6 +378,7 @@ describe('EventCard', () => {
   });
 
   describe('Edge cases', () => {
+    // エッジケース：放送局情報なしのイベントでもカード本体は表示される（放送局チップなし）
     test('handles empty casts array', () => {
       const eventNoCasts = { ...baseEvent, casts: [] };
       const { container } = render(
@@ -364,6 +388,7 @@ describe('EventCard', () => {
       expect(container).toBeTruthy();
     });
 
+    // エッジケース：詳細クリックハンドラーなしでもエラーにならない（オプショナルprops）
     test('handles event without optional onDetailClick handler', () => {
       const { container } = render(
         <EventCard
@@ -375,6 +400,7 @@ describe('EventCard', () => {
       expect(container).toBeTruthy();
     });
 
+    // エッジケース：チーム情報の形式が不正でも vs インジケータで対応
     test('handles vs split with missing team (fallback to empty string)', () => {
       const eventBadFormat: Event = {
         ...baseEvent,

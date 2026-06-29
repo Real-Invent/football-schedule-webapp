@@ -10,16 +10,19 @@ describe('FilterRow', () => {
   };
 
   describe('Basic rendering', () => {
+    // UIレイアウト：ラベル部分が常に表示される
     test('renders label', () => {
       render(<FilterRow {...defaultProps} />);
       expect(screen.getByText('リーグ')).toBeInTheDocument();
     });
 
+    // コンテナ機能：children(フィルターチップなど)を正しく配置
     test('renders children', () => {
       render(<FilterRow {...defaultProps} />);
       expect(screen.getByText('Test Child')).toBeInTheDocument();
     });
 
+    // DOM構造：ラッパーdivが正しく生成される
     test('renders container div', () => {
       const { container } = render(<FilterRow {...defaultProps} />);
       const filterRow = container.firstChild;
@@ -28,6 +31,7 @@ describe('FilterRow', () => {
   });
 
   describe('Children handling', () => {
+    // React children API：単一の子要素を受け入れ
     test('renders single child element', () => {
       render(
         <FilterRow label="Single" >
@@ -37,6 +41,7 @@ describe('FilterRow', () => {
       expect(screen.getByText('Single Button')).toBeInTheDocument();
     });
 
+    // React children API：複数の直下の子要素すべてをレンダリング
     test('renders multiple children', () => {
       render(
         <FilterRow label="Multiple">
@@ -50,6 +55,7 @@ describe('FilterRow', () => {
       expect(screen.getByText('Button 3')).toBeInTheDocument();
     });
 
+    // React children API：テキストノードも受け入れ
     test('renders text children', () => {
       render(
         <FilterRow label="Text">
@@ -59,6 +65,7 @@ describe('FilterRow', () => {
       expect(screen.getByText('Text content')).toBeInTheDocument();
     });
 
+    // React children API：ネストされた構造も正しく配置
     test('renders complex children structure', () => {
       render(
         <FilterRow label="Complex">
@@ -72,6 +79,7 @@ describe('FilterRow', () => {
   });
 
   describe('Label styling', () => {
+    // スタイル：ラベルに小さいフォントサイズ（10px）を適用
     test('applies text styling to label', () => {
       const { container } = render(<FilterRow {...defaultProps} />);
       const labelDiv = container.querySelector(
@@ -80,6 +88,7 @@ describe('FilterRow', () => {
       expect(labelDiv).toBeInTheDocument();
     });
 
+    // 動的ラベル：ラベル内容が正しく更新される（rerender時）
     test('renders different labels', () => {
       const { rerender } = render(
         <FilterRow label="リーグ">
@@ -98,6 +107,7 @@ describe('FilterRow', () => {
   });
 
   describe('Layout structure', () => {
+    // スクロール機能：children（フィルターチップなど）が横スクロール可能
     test('renders with correct CSS class for scrolling', () => {
       const { container } = render(<FilterRow {...defaultProps} />);
       const scrollContainer = container.querySelector(
@@ -106,6 +116,7 @@ describe('FilterRow', () => {
       expect(scrollContainer).toBeInTheDocument();
     });
 
+    // スクロールバー領域の調整：pb-1（下パディング）, -mx-1（マイナスマージン）, px-1（横パディング）
     test('scrolling container has padding and margin', () => {
       const { container } = render(<FilterRow {...defaultProps} />);
       const scrollContainer = container.querySelector(
@@ -114,6 +125,7 @@ describe('FilterRow', () => {
       expect(scrollContainer).toHaveClass('pb-1', '-mx-1', 'px-1');
     });
 
+    // 複数行配置：各フィルター行に下マージン（mb-2）、ただし最後の行は0（last:mb-0）
     test('renders margin bottom utility class', () => {
       const { container } = render(<FilterRow {...defaultProps} />);
       const row = container.firstChild;
@@ -122,6 +134,7 @@ describe('FilterRow', () => {
   });
 
   describe('Scrollbar styling', () => {
+    // スクロールコンテナ：overflow-x-auto, padding, margin のクラスが組み合わさる
     test('renders scroll container with proper classes', () => {
       const { container } = render(<FilterRow {...defaultProps} />);
       const scrollContainer = container.querySelector(
@@ -133,6 +146,7 @@ describe('FilterRow', () => {
   });
 
   describe('Multiple FilterRow instances', () => {
+    // 複数フィルター行の配置：各セクション（リーグ・放送局・その他）が独立して表示
     test('renders multiple filter rows correctly', () => {
       render(
         <div>
@@ -155,6 +169,7 @@ describe('FilterRow', () => {
       expect(screen.getByText('Other 1')).toBeInTheDocument();
     });
 
+    // スペース調整：最後の行の下マージンなし（last:mb-0）で余白を詰める
     test('last FilterRow has no bottom margin', () => {
       const { container } = render(
         <div>
@@ -172,6 +187,7 @@ describe('FilterRow', () => {
   });
 
   describe('Empty children', () => {
+    // エッジケース：空Fragment を受け入れ、ラベルとコンテナは表示される
     test('renders with empty fragment children', () => {
       const { container } = render(
         <FilterRow label="Empty">
@@ -183,6 +199,7 @@ describe('FilterRow', () => {
       expect(container.querySelector('.overflow-x-auto')).toBeInTheDocument();
     });
 
+    // エッジケース：null children を受け入れ（React.Children.toArray で安全に処理）
     test('renders with null children', () => {
       render(
         <FilterRow label="Null">
@@ -192,6 +209,7 @@ describe('FilterRow', () => {
       expect(screen.getByText('Null')).toBeInTheDocument();
     });
 
+    // エッジケース：空配列 children を受け入れ
     test('renders with empty array children', () => {
       render(
         <FilterRow label="Empty">
@@ -203,6 +221,7 @@ describe('FilterRow', () => {
   });
 
   describe('Accessibility', () => {
+    // a11y：ラベルテキストがスクリーンリーダーで読める
     test('label is readable by screen readers', () => {
       const { container } = render(
         <FilterRow label="リーグ">
@@ -212,6 +231,7 @@ describe('FilterRow', () => {
       expect(screen.getByText('リーグ')).toBeInTheDocument();
     });
 
+    // a11y：children のボタンなどが role:button として認識可能
     test('children are accessible', () => {
       render(
         <FilterRow label="Buttons">

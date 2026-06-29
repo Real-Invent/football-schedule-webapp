@@ -16,41 +16,46 @@ import {
 
 describe('fetch-schedule utilities', () => {
   describe('toJst', () => {
+    // 基本的なUTC→JST変換：+9時間のオフセットを確認
     it('converts UTC to JST (+9 hours)', () => {
       const result = toJst('2026-06-14T12:00:00Z');
       expect(result.date).toBe('2026-06-14');
       expect(result.time).toBe('21:00');
     });
 
+    // 境界値：真夜中UTC（00:00）が翌日JST 09:00に変換されることを確認
     it('handles midnight UTC correctly', () => {
       const result = toJst('2026-06-14T00:00:00Z');
       expect(result.date).toBe('2026-06-14');
       expect(result.time).toBe('09:00');
     });
 
+    // 深夜帯エッジケース：00:00-03:59の時刻は24:00-27:59に変換（前日扱い）
     it('adjusts early morning times (00:00-03:59) to previous day', () => {
-      // UTC 02:00 → JST 11:00 (same day, no adjustment)
+      // UTC 02:00 → JST 11:00 (同日、調整なし)
       const result1 = toJst('2026-06-14T02:00:00Z');
       expect(result1.date).toBe('2026-06-14');
       expect(result1.time).toBe('11:00');
 
-      // UTC 19:00 → JST 04:00 on next day (04:00 >= 04:00, so no adjustment)
+      // UTC 19:00 → JST 04:00 翌日 (04:00 >= 04:00なので調整なし)
       const result2 = toJst('2026-06-14T19:00:00Z');
       expect(result2.date).toBe('2026-06-15');
       expect(result2.time).toBe('04:00');
 
-      // UTC 18:00 → JST 03:00 on next day → adjusted to previous day 27:00
+      // UTC 18:00 → JST 03:00 翌日 → 前日27:00に調整（深夜放送）
       const result3 = toJst('2026-06-14T18:00:00Z');
       expect(result3.date).toBe('2026-06-14');
       expect(result3.time).toBe('27:00');
     });
 
+    // 曜日計算が正しいか確認：2026-06-14は日曜日
     it('returns correct day of week', () => {
       // 2026-06-14 is Sunday (日)
       const result = toJst('2026-06-14T00:00:00Z');
       expect(result.day).toBe('日');
     });
 
+    // エッジケース重複テスト：深夜帯調整が03:59で動作することを再確認
     it('handles deep night times with adjustment', () => {
       // UTC 18:00 on June 14 → JST 03:00 on June 15 → adjusted to June 14 27:00
       const result = toJst('2026-06-14T18:00:00Z');
@@ -60,6 +65,7 @@ describe('fetch-schedule utilities', () => {
   });
 
   describe('adjustMidnightTime', () => {
+    // 深夜帯調整の主要機能：00:00-03:59を前日の24:00-27:59に変換、曜日も前日にする
     it('adjusts 00:00-03:59 to previous day 24:00-27:59', () => {
       const result1 = adjustMidnightTime('2026-06-15', '月', '00:30');
       expect(result1.date).toBe('2026-06-14');
@@ -71,6 +77,7 @@ describe('fetch-schedule utilities', () => {
       expect(result2.time).toBe('27:59');
     });
 
+    // 境界値テスト：04:00はこの関数の調整範囲外（04:00以上は変換なし）
     it('does not adjust times >= 04:00', () => {
       const result = adjustMidnightTime('2026-06-15', '月', '04:00');
       expect(result.date).toBe('2026-06-15');
@@ -78,18 +85,21 @@ describe('fetch-schedule utilities', () => {
       expect(result.day).toBe('月');
     });
 
+    // 昼間時刻は変換対象外であることを確認
     it('does not adjust times >= 12:00', () => {
       const result = adjustMidnightTime('2026-06-15', '月', '21:30');
       expect(result.date).toBe('2026-06-15');
       expect(result.time).toBe('21:30');
     });
 
+    // 月境界のエッジケース：6月末から5月末に遡る場合の日付計算が正しいか
     it('handles month boundary correctly', () => {
       const result = adjustMidnightTime('2026-07-01', '水', '02:00');
       expect(result.date).toBe('2026-06-30');
       expect(result.time).toBe('26:00');
     });
 
+    // 年境界のエッジケース：1月1日の深夜は前年12月31日に変換される
     it('handles year boundary correctly', () => {
       const result = adjustMidnightTime('2027-01-01', '金', '01:00');
       expect(result.date).toBe('2026-12-31');
@@ -98,6 +108,7 @@ describe('fetch-schedule utilities', () => {
   });
 
   describe('resolveCasts', () => {
+    // W杯の通常マッチ（日本以外）はDAZNのみで放映される
     it('returns default casts for wc2026', () => {
       const event = {
         lg: 'wc2026',
@@ -108,6 +119,7 @@ describe('fetch-schedule utilities', () => {
       expect(result).toEqual(['dazn']);
     });
 
+    // W杯の日本マッチは複数放送局でオーバーライドされる（DAZN+NHK+日本テレビ+フジ）
     it('applies overrides for wc2026 Japan matches', () => {
       const event = {
         lg: 'wc2026',
@@ -118,6 +130,7 @@ describe('fetch-schedule utilities', () => {
       expect(result).toEqual(['dazn', 'nhk', 'ntv', 'fuji']);
     });
 
+    // 国際マッチ（intl）はリーグ別に放送局が決定（例：PLはU-NEXTとAbema）
     it('applies competition-based casts for intl', () => {
       const event = {
         lg: 'intl',
@@ -128,6 +141,7 @@ describe('fetch-schedule utilities', () => {
       expect(result).toEqual(['unext', 'abema']);
     });
 
+    // エラーハンドリング：不明な競技には放送局情報がない場合は空配列を返す
     it('returns default casts for unknown competition', () => {
       const event = {
         lg: 'intl',
@@ -138,6 +152,7 @@ describe('fetch-schedule utilities', () => {
       expect(result).toEqual([]);
     });
 
+    // エラーハンドリング：不明なリーグは空配列を返す
     it('returns empty array for unknown league', () => {
       const event = {
         lg: 'unknown',
@@ -148,6 +163,7 @@ describe('fetch-schedule utilities', () => {
       expect(result).toEqual([]);
     });
 
+    // F1は放送局がDAZN+SKYで固定（コンペティション名は不要）
     it('returns default casts for f1', () => {
       const event = {
         lg: 'f1',
@@ -160,34 +176,40 @@ describe('fetch-schedule utilities', () => {
   });
 
   describe('ja (team name translation)', () => {
+    // チーム名辞書に登録されている場合は日本語に翻訳される
     it('translates registered team names', () => {
       expect(ja('Japan')).toBe('日本');
       expect(ja('Brazil')).toBe('ブラジル');
       expect(ja('Real Madrid CF')).toBe('レアル・マドリード');
     });
 
+    // フォールバック：辞書に存在しないチーム名は原文のまま返される
     it('returns original name if not found', () => {
       expect(ja('Unknown Team')).toBe('Unknown Team');
     });
   });
 
   describe('f1ja (F1 GP name translation)', () => {
+    // F1グランプリ名辞書に登録されている場合は「XXX県GP」形式で日本語翻訳
     it('translates registered GP names', () => {
       expect(f1ja('Japanese Grand Prix')).toBe('日本GP');
       expect(f1ja('Monaco Grand Prix')).toBe('モナコGP');
     });
 
+    // フォールバック：辞書に存在しないGP名は原文のまま返される
     it('returns original name if not found', () => {
       expect(f1ja('Unknown GP')).toBe('Unknown GP');
     });
   });
 
   describe('catja (category translation)', () => {
+    // カテゴリコード（GROUP_STAGEなど）を日本語に翻訳する
     it('translates registered categories', () => {
       expect(catja('GROUP_STAGE')).toBe('グループステージ');
       expect(catja('FINAL')).toBe('決勝');
     });
 
+    // フォールバック：未登録のカテゴリはコードのまま返される
     it('returns original category if not found', () => {
       expect(catja('UNKNOWN')).toBe('UNKNOWN');
     });
@@ -202,6 +224,7 @@ describe('fetch-schedule utilities', () => {
       jest.restoreAllMocks();
     });
 
+    // 正常系：API応答をEvent型に変換し、チーム名翻訳・放送局割り当てが正しく機能することを確認
     it('fetches and transforms football matches correctly', async () => {
       const mockResponse = {
         matches: [
@@ -234,6 +257,7 @@ describe('fetch-schedule utilities', () => {
       expect(result[0].casts).toContain('nhk');
     });
 
+    // エラーハンドリング：APIが4xx/5xxエラーを返した場合は例外発生
     it('throws error when API returns non-OK status', async () => {
       jest.spyOn(global, 'fetch').mockResolvedValueOnce({
         ok: false,
@@ -245,6 +269,7 @@ describe('fetch-schedule utilities', () => {
       );
     });
 
+    // 設定エラー：FOOTBALL_DATA_TOKEN環境変数が未設定の場合は例外発生
     it('throws error when FOOTBALL_DATA_TOKEN is not set', async () => {
       const originalToken = process.env.FOOTBALL_DATA_TOKEN;
       delete process.env.FOOTBALL_DATA_TOKEN;
@@ -266,6 +291,7 @@ describe('fetch-schedule utilities', () => {
       jest.restoreAllMocks();
     });
 
+    // 正常系：予選と決勝の両方が別のイベントとして返される
     it('fetches and transforms F1 races correctly', async () => {
       const mockResponse = {
         MRData: {
@@ -300,6 +326,7 @@ describe('fetch-schedule utilities', () => {
       expect(result[1].cat).toBe('決勝');
     });
 
+    // エッジケース：予選情報がないレースは決勝のみを返す（オプショナルなフィールド）
     it('handles races without qualifying', async () => {
       const mockResponse = {
         MRData: {
@@ -327,6 +354,7 @@ describe('fetch-schedule utilities', () => {
       expect(result[0].cat).toBe('決勝');
     });
 
+    // エラーハンドリング：APIが5xxエラーを返した場合は例外発生
     it('throws error when API returns non-OK status', async () => {
       jest.spyOn(global, 'fetch').mockResolvedValueOnce({
         ok: false,
@@ -346,6 +374,7 @@ describe('fetch-schedule utilities', () => {
       jest.restoreAllMocks();
     });
 
+    // 正常系：試合結果がスコア（前半・後半）とともに正しく変換される
     it('fetches and transforms football results correctly', async () => {
       const mockResponse = {
         matches: [
@@ -376,6 +405,7 @@ describe('fetch-schedule utilities', () => {
       });
     });
 
+    // エッジケース：同点（ドロー）の試合は winner: 'draw' として記録される
     it('handles draw results', async () => {
       const mockResponse = {
         matches: [
@@ -401,6 +431,7 @@ describe('fetch-schedule utilities', () => {
       expect(result['fb-401234'].score?.winner).toBe('draw');
     });
 
+    // エッジケース：スケジュール済み試合はスコア情報がないため undefined を返す
     it('handles scheduled matches without scores', async () => {
       const mockResponse = {
         matches: [
@@ -428,6 +459,7 @@ describe('fetch-schedule utilities', () => {
   });
 
   describe('mkF1', () => {
+    // ファクトリ関数：F1イベントオブジェクトの生成（GP名翻訳・放送局割り当てを含む）
     it('creates F1 event with correct structure', () => {
       const result = mkF1('f1-1-r', 'Japanese Grand Prix', '決勝', {
         date: '2026-10-03',
@@ -457,6 +489,8 @@ describe('fetch-schedule utilities', () => {
       jest.restoreAllMocks();
     });
 
+    // 複雑な正常系：複数ラウンドの予選・決勝結果をそれぞれ取得・変換
+    // URLパターンに応じてモックレスポンスを振り分ける必要がある
     it('fetches qualifying and race results for multiple rounds', async () => {
       const racesResponse = {
         MRData: {
@@ -573,6 +607,7 @@ describe('fetch-schedule utilities', () => {
       }
     });
 
+    // エッジケース：予選APIが失敗した場合、予選結果は含めず決勝のみを返す（グレースフルデグラデーション）
     it('handles missing qualifying results gracefully', async () => {
       const racesResponse = {
         MRData: {
@@ -630,6 +665,7 @@ describe('fetch-schedule utilities', () => {
       expect(result['f1-1-r']).toBeDefined();
     });
 
+    // エラーハンドリング：最初のレース一覧取得が失敗した場合は例外発生（依存する）
     it('throws error when initial races request fails', async () => {
       jest.spyOn(global, 'fetch').mockResolvedValueOnce({
         ok: false,
@@ -639,6 +675,7 @@ describe('fetch-schedule utilities', () => {
       await expect(fetchF1Results(2026)).rejects.toThrow('jolpica f1: 500');
     });
 
+    // エッジケース：レース一覧が空の場合は空のオブジェクトを返す（例：オフシーズン）
     it('handles empty races list', async () => {
       const racesResponse = {
         MRData: {
@@ -668,6 +705,7 @@ describe('fetch-schedule utilities', () => {
       jest.restoreAllMocks();
     });
 
+    // 正常系：チャンピオンシップ順位表をドライバー情報・チーム情報とともに変換
     it('fetches and transforms championship standings correctly', async () => {
       const mockResponse = {
         MRData: {
@@ -727,6 +765,7 @@ describe('fetch-schedule utilities', () => {
       });
     });
 
+    // エッジケース：Constructorsフィールドが空の場合は'Unknown'にフォールバック
     it('handles missing constructor information', async () => {
       const mockResponse = {
         MRData: {
@@ -763,6 +802,7 @@ describe('fetch-schedule utilities', () => {
       });
     });
 
+    // エラーハンドリング：APIが404エラーを返した場合は例外発生
     it('throws error when API returns non-OK status', async () => {
       jest.spyOn(global, 'fetch').mockResolvedValueOnce({
         ok: false,
@@ -772,6 +812,7 @@ describe('fetch-schedule utilities', () => {
       await expect(fetchF1Championship(2026)).rejects.toThrow('jolpica championship: 404');
     });
 
+    // エッジケース：順位表が空の場合は空配列を返す（例：シーズン開始前）
     it('handles empty standings', async () => {
       const mockResponse = {
         MRData: {
