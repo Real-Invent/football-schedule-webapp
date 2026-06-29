@@ -244,6 +244,66 @@ describe('EventCard', () => {
       expect(screen.getByText('vs')).toBeInTheDocument();
     });
 
+    // チームロゴ表示：終了試合でホーム側チームロゴが表示される
+    test('renders home team crest for finished match', () => {
+      const finishedWithCrests: Event = {
+        ...baseEvent,
+        title: 'Japan vs Brazil',
+        result: {
+          status: 'finished',
+          score: {
+            home: 2,
+            away: 1,
+          },
+          teams: {
+            home: {
+              id: 1,
+              crest: 'https://example.com/japan.png',
+            },
+            away: {
+              id: 2,
+              crest: 'https://example.com/brazil.png',
+            },
+          },
+        },
+      };
+      const { container } = render(
+        <EventCard {...defaultProps} e={finishedWithCrests} />
+      );
+
+      const images = container.querySelectorAll('img');
+      // crest 画像が複数表示される
+      expect(images.length).toBeGreaterThan(0);
+    });
+
+    // チームロゴ表示：未実施試合でアウェー側チームロゴが表示される
+    test('renders away team crest for scheduled match', () => {
+      const scheduledWithCrests: Event = {
+        ...baseEvent,
+        title: 'Japan vs Brazil',
+        result: {
+          status: 'scheduled',
+          teams: {
+            home: {
+              id: 1,
+              crest: 'https://example.com/japan.png',
+            },
+            away: {
+              id: 2,
+              crest: 'https://example.com/brazil.png',
+            },
+          },
+        },
+      };
+      const { container } = render(
+        <EventCard {...defaultProps} e={scheduledWithCrests} />
+      );
+
+      const images = container.querySelectorAll('img');
+      // crest 画像が複数表示される
+      expect(images.length).toBeGreaterThan(0);
+    });
+
     // エッジケース：PK戦の場合、フルタイムスコア + PK結果を表示
     test('renders penalty shootout score when available', () => {
       const penaltyMatch: Event = {

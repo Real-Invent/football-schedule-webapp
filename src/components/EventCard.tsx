@@ -18,6 +18,7 @@ export function EventCard({ e, isFavorite, onToggleFavorite, onDetailClick }: Ev
   return (
     <div
       onClick={onDetailClick}
+      data-testid="event-card"
       className="relative bg-white rounded-2xl border border-slate-200 px-4 py-3 flex gap-3 items-center shadow-sm cursor-pointer hover:shadow-md hover:border-slate-300 transition-shadow"
     >
       <button

@@ -3,6 +3,7 @@ import { useState } from "react";
 import type { Event } from "../types";
 import { LEAGUES } from "../constants/leagues";
 import { BROADCASTERS } from "../constants/broadcasters";
+import { getGeminiApiKey } from "../config/env";
 
 type EventDetailModalProps = {
   event: Event;
@@ -35,7 +36,7 @@ export function EventDetailModal({ event: e, onClose }: EventDetailModalProps) {
   const [usedModel, setUsedModel] = useState<string | null>(null);
 
   const handleAIPrediction = async () => {
-    const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+    const apiKey = getGeminiApiKey();
     if (!apiKey) {
       alert("APIキーが設定されていません");
       return;
