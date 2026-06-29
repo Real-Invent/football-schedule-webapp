@@ -190,6 +190,7 @@ export async function fetchFootballResults(
   const res = await fetch(url, { headers: { "X-Auth-Token": token } });
   if (!res.ok) throw new Error(`football-data ${competitionCode}: ${res.status}`);
   const data: any = await res.json();
+  console.log(`[DEBUG] ${competitionCode}: retrieved ${data.matches?.length ?? 0} matches`);
 
   const results: Record<string, MatchResult> = {};
   for (const m of data.matches ?? []) {
@@ -403,6 +404,7 @@ async function main() {
     // 2026年データを取得（過去含める。将来的に複数年対応時はここを拡張）
     const from = "2026-01-01";
     const to = new Date(Date.now() + 60 * 864e5).toISOString().slice(0, 10);
+    console.log(`[DEBUG] Fetching data from ${from} to ${to}`);
 
     all.push(...(await fetchFootball("wc2026", "WC", from, to)));
     all.push(...(await fetchFootball("intl", "PL", from, to)));
