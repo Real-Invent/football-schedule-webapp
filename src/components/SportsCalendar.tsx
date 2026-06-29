@@ -56,7 +56,7 @@ export function SportsCalendar() {
         if (date >= today) {
           const element = sectionRefs.current[date];
           if (element) {
-            element.scrollIntoView({ behavior: 'instant', block: 'nearest' });
+            element.scrollIntoView({ behavior: 'instant', block: 'start' });
             hasScrolledRef.current = true;
           }
           break;
